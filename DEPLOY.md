@@ -1,11 +1,11 @@
-# Deploy projectzomboidcheats.com
+# Deploy warframecheats.net
 
-Step-by-step guide to deploy the Project Zomboid Cheats static site to **projectzomboidcheats.com** on Cloudflare Pages, configure DNS, and submit to Google Search Console.
+Step-by-step guide to deploy the Warframe Cheats static site to **warframecheats.net** on Cloudflare Pages, configure DNS, and submit to Google Search Console.
 
 ## Prerequisites
 
 - Node.js **≥ 22.12.0**
-- Cloudflare account with access to **projectzomboidcheats.com** DNS
+- Cloudflare account with access to **warframecheats.net** DNS
 - Wrangler CLI (included as dev dependency): `npx wrangler login`
 
 ## 1. Build and validate locally
@@ -71,9 +71,9 @@ Or for Pages: `npm run pages:deploy` (see `wrangler.toml`).
 
 ## 3. Custom domain and DNS
 
-Add **projectzomboidcheats.com** as the primary custom domain on the Pages project.
+Add **warframecheats.net** as the primary custom domain on the Pages project.
 
-### Apex (projectzomboidcheats.com)
+### Apex (warframecheats.net)
 
 In **Cloudflare DNS** for the zone:
 
@@ -87,8 +87,8 @@ Cloudflare CNAME flattening handles apex records automatically.
 
 1. Add a DNS record for `www` pointing to the same Pages project (proxied CNAME or A record).
 2. In **Rules** → **Redirect Rules** (or Bulk Redirects), create:
-   - **Source:** `www.projectzomboidcheats.com/*`
-   - **Target:** `https://projectzomboidcheats.com/${1}`
+   - **Source:** `www.warframecheats.net/*`
+   - **Target:** `https://warframecheats.net/${1}`
    - **Status:** 301
 
 The deployed `functions/_middleware.js` also enforces apex canonical host, legacy domain redirects (`rusthacks.xyz`, `.net`, `.com`), and legacy path redirects.
@@ -103,33 +103,33 @@ The deployed `functions/_middleware.js` also enforces apex canonical host, legac
 
 Verify these URLs return **200** with correct content:
 
-- `https://projectzomboidcheats.com/`
-- `https://projectzomboidcheats.com/es/`
-- `https://projectzomboidcheats.com/project-zomboid-cheats/`
-- `https://projectzomboidcheats.com/project-zomboid-aimbot/`
-- `https://projectzomboidcheats.com/sitemap-index.xml`
-- `https://projectzomboidcheats.com/robots.txt`
+- `https://warframecheats.net/`
+- `https://warframecheats.net/es/`
+- `https://warframecheats.net/warframe-cheats/`
+- `https://warframecheats.net/warframe-aimbot/`
+- `https://warframecheats.net/sitemap-index.xml`
+- `https://warframecheats.net/robots.txt`
 
 Verify redirects:
 
-- `https://projectzomboidcheats.com` → `https://projectzomboidcheats.com` (301)
-- `https://projectzomboidcheats.com` → `https://projectzomboidcheats.com` (301)
-- `https://rusthacks.xyz` → `https://projectzomboidcheats.com` (301)
-- Legacy paths (e.g. `/warzone-aimbot/`) → Project Zomboid equivalents (301)
+- `https://warframecheats.net` → `https://warframecheats.net` (301)
+- `https://warframecheats.net` → `https://warframecheats.net` (301)
+- `https://rusthacks.xyz` → `https://warframecheats.net` (301)
+- Legacy paths (e.g. `/warzone-aimbot/`) → Warframe equivalents (301)
 
 ## 5. Google Search Console
 
 1. Go to [Google Search Console](https://search.google.com/search-console).
-2. **Add property** → choose **Domain** → enter `projectzomboidcheats.com`.
+2. **Add property** → choose **Domain** → enter `warframecheats.net`.
 3. Verify ownership via the **DNS TXT record** Cloudflare provides (add in Cloudflare DNS, wait for propagation, then confirm in GSC).
 4. After verification, open **Sitemaps** and submit:
    ```
-   https://projectzomboidcheats.com/sitemap-index.xml
+   https://warframecheats.net/sitemap-index.xml
    ```
 5. Use **URL Inspection** to request indexing for:
    - Homepage (`/`)
-   - Pillar page (`/project-zomboid-cheats/`)
-   - Key landing pages (`/project-zomboid-aimbot/`, `/project-zomboid-esp/`, `/project-zomboid-cheats-2026/`, etc.)
+   - Pillar page (`/warframe-cheats/`)
+   - Key landing pages (`/warframe-aimbot/`, `/warframe-esp/`, `/warframe-cheats-2026/`, etc.)
    - A sample of locale homepages (`/es/`, `/de/`, `/fr/`)
 6. Monitor **Pages** (Coverage), **Core Web Vitals**, and **International targeting** (hreflang) over the following weeks.
 
@@ -147,11 +147,11 @@ Verify redirects:
 
 - [ ] `npm run build:validate` passes locally
 - [ ] Cloudflare Pages project attached to this repo
-- [ ] Custom domain `projectzomboidcheats.com` attached and active
+- [ ] Custom domain `warframecheats.net` attached and active
 - [ ] `www` redirects to apex
-- [ ] Legacy domains 301 to `projectzomboidcheats.com`
+- [ ] Legacy domains 301 to `warframecheats.net`
 - [ ] Always Use HTTPS enabled
-- [ ] `robots.txt` and sitemaps serve from `https://projectzomboidcheats.com`
+- [ ] `robots.txt` and sitemaps serve from `https://warframecheats.net`
 - [ ] Google Search Console domain verified
 - [ ] `sitemap-index.xml` submitted in GSC
-- [ ] Homepage and `/project-zomboid-cheats/` requested for indexing
+- [ ] Homepage and `/warframe-cheats/` requested for indexing

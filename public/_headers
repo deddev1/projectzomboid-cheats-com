@@ -13,17 +13,20 @@
 /
   Content-Type: text/html; charset=utf-8
   Cache-Control: public, max-age=0, must-revalidate
-  CDN-Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  CDN-Cache-Control: no-store
+  Cloudflare-CDN-Cache-Control: no-store
 
 /*/
   Content-Type: text/html; charset=utf-8
   Cache-Control: public, max-age=0, must-revalidate
-  CDN-Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  CDN-Cache-Control: no-store
+  Cloudflare-CDN-Cache-Control: no-store
 
 /*.html
   Content-Type: text/html; charset=utf-8
   Cache-Control: public, max-age=0, must-revalidate
-  CDN-Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  CDN-Cache-Control: no-store
+  Cloudflare-CDN-Cache-Control: no-store
 
 /images/*
   Cache-Control: public, max-age=31536000, immutable

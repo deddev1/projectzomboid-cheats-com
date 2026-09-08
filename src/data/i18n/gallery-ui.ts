@@ -11,16 +11,16 @@ export type GalleryUi = {
 };
 
 const enGallery: GalleryUi = {
-	eyebrow: 'Project Zomboid Cheats',
-	title: 'Project Zomboid gallery',
+	eyebrow: 'Warframe Cheats',
+	title: 'Warframe gallery',
 	subtitle:
-		'Real Project Zomboid cheat screenshots — ESP boxes, wallhack overlays, aimbot menus, and radar — from the undetected PC package players use in survival, multiplayer, and Knox County looting.',
+		'Real Warframe cheat screenshots — ESP boxes, wallhack overlays, aimbot menus, and radar — from the undetected PC package players use in Steel Path, Sorties, and open world missions.',
 	lead:
-		'Project Zomboid Cheats is built for Project Zomboid on Windows PC: read zombies, survivors, and special infected through cover, track flank horde spawns on a 2D radar, tune soft aim before missions, and buy one license that covers ESP, wallhack, and aimbot together.',
+		'Warframe Cheats is built for Warframe on Windows PC: read Grineer, Corpus, and Sentient units through cover, track flank spawns on a 2D radar, tune soft aim before missions, and buy one license that covers ESP, wallhack, and aimbot together.',
 	highlights: [
 		{
 			title: 'Enemy & objective ESP',
-			copy: 'Box, skeleton, and health-bar readouts on zombies, survivors, and special infected through map zone geometry so you pick fights with real intel.',
+			copy: 'Box, skeleton, and health-bar readouts on Grineer, Corpus, and Sentient units through tileset geometry so you pick fights with real intel.',
 		},
 		{
 			title: 'Wallhack & distance ESP',
@@ -28,30 +28,30 @@ const enGallery: GalleryUi = {
 		},
 		{
 			title: 'Radar & flank detection',
-			copy: 'Compact 2D radar overlay highlights threats outside your FOV during horde waves, exfil timers, and multi-floor missions.',
+			copy: 'Compact 2D radar overlay highlights threats outside your FOV during defense waves, exfil timers, and multi-floor missions.',
 		},
 		{
 			title: 'Soft aim & hitbox aimbot',
-			copy: 'Tune smoothness, FOV, weak-spot priority, and per-weapon profiles for pistols, shotguns, and rifles before you commit to a license.',
+			copy: 'Tune smoothness, FOV, weak-spot priority, and per-weapon profiles for rifles, shotguns, and snipers before you commit to a license.',
 		},
 		{
-			title: 'Why players pick Project Zomboid Cheats',
+			title: 'Why players pick Warframe Cheats',
 			copy: 'One license covers ESP, wallhack-style boxes, soft aim, and radar — no stacking three subscriptions or paying for modules you never open.',
 		},
 		{
 			title: 'Anti-cheat maintenance',
-			copy: 'After Project Zomboid anti-cheat patches we rebuild and post status on Updates before you queue — less guesswork on patch day.',
+			copy: 'After Digital Extremes anti-cheat patches we rebuild and post status on Updates before you queue — less guesswork on patch day.',
 		},
 		{
 			title: 'PC + controller ready',
-			copy: 'Profiles and hotkeys for mouse/keyboard plus controller support so the same build works in Knox County zones and loot runs.',
+			copy: 'Profiles and hotkeys for mouse/keyboard plus controller support so the same build works in open world zones and Steel Path.',
 		},
 		{
 			title: 'Clear buy advantages',
 			copy: 'Instant digital delivery, public pricing ($35/mo or $150 lifetime), and support with your order ID — built for players who want online fast.',
 		},
 	],
-	updatesLabel: 'Project Zomboid Cheats updates',
+	updatesLabel: 'Warframe Cheats updates',
 	updatesShort: 'Patches',
 };
 

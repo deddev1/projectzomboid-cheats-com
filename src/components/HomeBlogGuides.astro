@@ -1,17 +1,17 @@
 ---
 import { getPostsByCategory } from '../data/blog/helpers';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
-import ZomboidAuthorityLinks from './ZomboidAuthorityLinks.astro';
+import WarframeAuthorityLinks from './WarframeAuthorityLinks.astro';
 
 interface Props {
 	locale?: LocaleCode;
 }
 
 const locale = Astro.props.locale ?? defaultLocale;
-const guides = getPostsByCategory(locale, 'Project Zomboid Game Guides').slice(0, 3);
+const guides = getPostsByCategory(locale, 'Warframe Game Guides').slice(0, 3);
 
 function guideCardLabel(title: string): string {
-	const trimmed = title.replace(/^Project Zomboid\s+/i, '').trim();
+	const trimmed = title.replace(/^Warframe\s+/i, '').trim();
 	if (trimmed.length <= 42) return trimmed;
 	const cut = trimmed.slice(0, 42);
 	const lastSpace = cut.lastIndexOf(' ');
@@ -25,10 +25,10 @@ function guideCardLabel(title: string): string {
 			<div class="home-guides__head">
 				<h2 id="home-guides-title" class="home-guides__title">
 					<span class="home-guides__accent" aria-hidden="true" />
-					Project Zomboid guides
+					Warframe guides
 				</h2>
 				<p class="home-guides__intro">
-					Game guides on loot runs, Knox County, factions, and patch notes — linked to official Project Zomboid
+					Game guides on Steel Path, open world, factions, and patch notes — linked to official Warframe
 					resources.
 				</p>
 			</div>
@@ -59,7 +59,7 @@ function guideCardLabel(title: string): string {
 				<a href="/guides/">Browse all guides</a>
 			</p>
 
-			<ZomboidAuthorityLinks headingLevel="h3" />
+			<WarframeAuthorityLinks headingLevel="h3" />
 		</section>
 	) : null
 }
@@ -90,7 +90,7 @@ function guideCardLabel(title: string): string {
 		width: 0.22rem;
 		height: 1.35rem;
 		border-radius: 999px;
-		background: linear-gradient(180deg, #858e63, #687052);
+		background: linear-gradient(180deg, #20BFC0, #174143);
 		flex-shrink: 0;
 	}
 

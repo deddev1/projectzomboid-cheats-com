@@ -1,4 +1,4 @@
-name = "project-zomboid-cheats-net"
+name = "warframe-cheats-net"
 compatibility_date = "2026-01-01"
 main = "worker.js"
 

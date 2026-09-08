@@ -1,4 +1,4 @@
-import { horde spawn } from 'node:child_process';
+import { spawn } from 'node:child_process';
 import { networkInterfaces } from 'node:os';
 
 const PORT = 4321;
@@ -16,13 +16,13 @@ function getLanIp() {
 
 const ip = getLanIp();
 console.log('');
-console.log('  Project Zomboid Cheats dev server');
+console.log('  Warframe Cheats dev server');
 console.log('  --------------------');
 console.log(`  Local:   http://localhost:${PORT}/`);
 console.log(`  Network: http://${ip}:${PORT}/`);
 console.log('');
 
-const child = horde spawn('npx', ['astro', 'dev', '--host', '0.0.0.0', '--port', String(PORT)], {
+const child = spawn('npx', ['astro', 'dev', '--host', '0.0.0.0', '--port', String(PORT)], {
 	stdio: 'inherit',
 	shell: true,
 });

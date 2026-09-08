@@ -171,7 +171,7 @@ export function getLocaleRedirectTarget(
 	if (preferred === currentLocale) return null;
 
 	const targetPath = getLocalizedPath(pageId, preferred);
-	const target = new URL(targetPath, 'https://projectzomboidcheats.com');
+	const target = new URL(targetPath, 'https://warframecheats.net');
 	target.search = search;
 	return target.pathname + target.search;
 }

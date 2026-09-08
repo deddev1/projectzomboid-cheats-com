@@ -1,6 +1,6 @@
-# Project Zomboid Cheats — Marketing Site
+# Warframe Cheats — Marketing Site
 
-Static Astro 7 site for [projectzomboidcheats.com](https://projectzomboidcheats.com). Primary SEO focus: **Project Zomboid Cheats** (supporting: Project Zomboid cheats, project zomboid esp, project zomboid aimbot).
+Static Astro 7 site for [warframecheats.net](https://warframecheats.net). Primary SEO focus: **Warframe Cheats** (supporting: Warframe cheats, warframe esp, warframe aimbot).
 
 ## Stack
 
@@ -22,7 +22,7 @@ Build and validate sitemaps:
 npm run build:validate
 ```
 
-Refresh Project Zomboid atmosphere images (optional):
+Refresh Warframe atmosphere images (optional):
 
 ```bash
 npm run fetch:images
@@ -31,11 +31,11 @@ npm run optimize:images
 
 ## Deploy (Cloudflare Pages)
 
-1. Create a Cloudflare Pages project named **project-zomboidcheats**
+1. Create a Cloudflare Pages project named **warframecheats**
 2. Connect this repo or upload `dist/` after `npm run build`
 3. Build command: `npm run build`
 4. Output directory: `dist`
-5. Custom domain **projectzomboidcheats.com** (apex) and redirect **www** → apex
+5. Custom domain **warframecheats.net** (apex) and redirect **www** → apex
 6. Enable SSL **Always Use HTTPS**
 
 CLI deploy:
@@ -48,8 +48,8 @@ npm run pages:deploy
 
 - Node.js >= 22.12.0
 - Checkout URL in `src/data/site.ts` (`siteConfig.checkoutUrl`)
-- Canonical site URL: `https://projectzomboidcheats.com`
+- Canonical site URL: `https://warframecheats.net`
 
 ## License
 
-Private — for projectzomboidcheats.com deployment only.
+Private — for warframecheats.net deployment only.

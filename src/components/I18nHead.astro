@@ -1,6 +1,6 @@
 ---
 import { locales, type LocaleCode } from '../data/i18n/locales';
-import { getHreflangAlternates, getCanonicalPageId, type PageId } from '../data/i18n/routing';
+import { getHreflangAlternates, type PageId } from '../data/i18n/routing';
 import { getUi } from '../data/i18n';
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 
 const { pageId, locale = 'en' } = Astro.props;
 const ui = getUi(locale);
-const alternates = getHreflangAlternates(getCanonicalPageId(pageId));
+const alternates = getHreflangAlternates(pageId);
 ---
 
 {

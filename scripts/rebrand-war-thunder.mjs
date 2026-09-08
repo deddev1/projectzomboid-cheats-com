@@ -167,7 +167,7 @@ const REPLACEMENTS = [
 	['Enemy hero ESP', 'Vehicle ESP'],
 	['enemy heroes', 'enemy tanks and aircraft'],
 	['enemy hero', 'enemy vehicle'],
-	['zombie skeleton boxes', 'vehicle module boxes'],
+	['hero skeleton boxes', 'vehicle module boxes'],
 	['hero ESP', 'vehicle ESP'],
 	['Hero ESP', 'Vehicle ESP'],
 	['health pack markers', 'repair point markers'],

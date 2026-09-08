@@ -5,25 +5,37 @@ import SiteFooter from './SiteFooter.astro';
 import { siteConfig } from '../data/site';
 import {
 	absoluteGuideUrl,
-	getNativeZomboidGuides,
+	getMixedExternalGuides,
+	getNativeWarframeGuides,
 	guidesBasePath,
 } from '../data/guides/helpers';
-import ZomboidAuthorityLinks from './ZomboidAuthorityLinks.astro';
+import WarframeAuthorityLinks from './WarframeAuthorityLinks.astro';
 import { getLocalizedPath } from '../data/i18n/routing';
 import { defaultLocale } from '../data/i18n/locales';
 
+import type { ResolvedExternalGuide } from '../data/guides/types';
+
 const locale = defaultLocale;
-const nativeGuides = getNativeZomboidGuides();
+const nativeGuides = getNativeWarframeGuides();
+const otherGameGuides = getMixedExternalGuides();
 const homeHref = getLocalizedPath('home', locale);
 
+function externalGuideLabel(guide: ResolvedExternalGuide): string {
+	const topic = guide.title.match(/Guide:\s*(.+)$/i)?.[1]?.split('&')[0].trim() ?? 'Guide';
+	const shortTopic = topic.length > 18 ? `${topic.slice(0, 15).trimEnd()}…` : topic;
+	const date = new Date(`${guide.published}T00:00:00Z`);
+	const stamp = `${date.getUTCMonth() + 1}/${date.getUTCDate()}`;
+	return `${guide.gameName}: ${shortTopic} · ${stamp}`;
+}
+
 function nativeGuideLabel(title: string): string {
-	const trimmed = title.replace(/^Project Zomboid\s+/i, '').trim();
+	const trimmed = title.replace(/^Warframe\s+/i, '').trim();
 	return trimmed.length <= 38 ? trimmed : `${trimmed.slice(0, 35).trimEnd()}…`;
 }
 
-const title = 'Project Zomboid Guides Hub | Survival, Loot & Cheats Tips';
+const title = 'Game Guides Hub | Warframe & Multi-Game Gameplay Guides';
 const description =
-	'Native Project Zomboid guides covering survival basics, Knox County loot routes, zombie types, game modes, patch notes, and cheat feature walkthroughs.';
+	'Warframe progression guides plus dedicated gameplay guides for Fortnite, Tarkov, Valorant, Palworld, and dozens more titles.';
 
 const canonicalURL = absoluteGuideUrl();
 
@@ -52,18 +64,17 @@ const extraGraph = [
 	<main class="guides">
 		<header class="guides__hero">
 			<p class="guides__eyebrow">Guides hub</p>
-			<h1>Project Zomboid guides</h1>
+			<h1>Game guides</h1>
 			<p class="guides__intro">
-				Survival walkthroughs, loot routes, zombie types, and patch-day checklists — everything on this hub is
-				written for Project Zomboid players.
+				Start with our native Warframe progression guides, then browse dedicated gameplay guides for other
+				titles below.
 			</p>
 		</header>
 
 		<section class="guides__section guides__section--native" aria-labelledby="native-guides-title">
-			<h2 id="native-guides-title" class="guides__section-title">All guides</h2>
+			<h2 id="native-guides-title" class="guides__section-title">Warframe guides</h2>
 			<p class="guides__section-intro">
-				Start with new-player progression, then dive into loot farming, zombie behavior, game modes, and how to
-				read official patch notes.
+				Our primary guides covering Steel Path, open world farming, factions, mission types, and patch notes.
 			</p>
 			<div class="guides__grid">
 		{
@@ -78,7 +89,7 @@ const extraGraph = [
 						decoding="async"
 					/>
 					<div class="guides__card-body">
-						<span class="guides__cat">Project Zomboid</span>
+						<span class="guides__cat">Warframe</span>
 						<h3 class="guides__card-title">
 							<a href={post.canonicalPath}>{nativeGuideLabel(post.translation.title)}</a>
 						</h3>
@@ -89,7 +100,38 @@ const extraGraph = [
 		}
 			</div>
 
-			<ZomboidAuthorityLinks headingLevel="h3" />
+			<WarframeAuthorityLinks headingLevel="h3" />
+		</section>
+
+		<section class="guides__section guides__section--external" aria-labelledby="external-guides-title">
+			<h2 id="external-guides-title" class="guides__section-title">Other Games Guides</h2>
+			<p class="guides__section-intro">
+				Gameplay guides for other titles — each article focuses on one game&apos;s core loop, progression,
+				and decision-making.
+			</p>
+
+			<div class="guides__grid">
+				{
+					otherGameGuides.map((guide, index) => (
+						<article class="guides__card">
+							<img
+								src={guide.imageSrc}
+								alt={guide.imageAlt}
+								width="640"
+								height="360"
+								loading={index < 4 ? 'lazy' : 'lazy'}
+								decoding="async"
+							/>
+							<div class="guides__card-body">
+								<span class="guides__cat">{guide.gameName}</span>
+								<h3 class="guides__card-title">
+									<a href={guide.canonicalPath}>{externalGuideLabel(guide)}</a>
+								</h3>
+							</div>
+						</article>
+					))
+				}
+			</div>
 		</section>
 	</main>
 	<SiteFooter locale={locale} />
@@ -108,7 +150,7 @@ const extraGraph = [
 
 	.guides__eyebrow {
 		margin: 0 0 0.5rem;
-		color: #d2ae76;
+		color: #20bfc0;
 		font-size: 0.75rem;
 		font-weight: 700;
 		letter-spacing: 0.08em;
@@ -131,6 +173,11 @@ const extraGraph = [
 
 	.guides__section {
 		margin-bottom: 3rem;
+	}
+
+	.guides__section--external {
+		padding-top: 2rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.guides__section-title {
@@ -156,21 +203,18 @@ const extraGraph = [
 		display: flex;
 		flex-direction: column;
 		border-radius: 0.95rem;
-		border: 1px solid rgba(104, 112, 82, 0.18);
-		background: linear-gradient(145deg, rgba(23, 27, 26, 0.92) 0%, rgba(17, 21, 20, 0.88) 100%);
+		border: 1px solid rgba(32, 191, 192, 0.14);
+		background: rgba(20, 24, 30, 0.88);
 		overflow: hidden;
 		color: inherit;
-		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 		transition:
 			border-color 0.2s ease,
-			transform 0.2s ease,
-			box-shadow 0.2s ease;
+			transform 0.2s ease;
 	}
 
 	.guides__card:hover {
-		border-color: rgba(210, 174, 118, 0.4);
+		border-color: rgba(32, 191, 192, 0.38);
 		transform: translateY(-2px);
-		box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
 	}
 
 	.guides__card img {
@@ -186,7 +230,7 @@ const extraGraph = [
 	}
 
 	.guides__cat {
-		color: #d2ae76;
+		color: #20bfc0;
 		font-size: 0.68rem;
 		font-weight: 800;
 		letter-spacing: 0.06em;
@@ -207,7 +251,7 @@ const extraGraph = [
 	}
 
 	.guides__card-title a:hover {
-		color: #d2ae76;
+		color: #20bfc0;
 	}
 
 	.guides__card-body p:not(.guides__card-title) {

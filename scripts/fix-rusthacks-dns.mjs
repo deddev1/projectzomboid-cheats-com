@@ -1,5 +1,5 @@
 /**
- * Attach projectzomboidcheats.com to Worker islecheat and create DNS CNAMEs.
+ * Attach warframecheats.net to Worker islecheat and create DNS CNAMEs.
  * Uses wrangler OAuth token from local config.
  */
 import { readFileSync } from 'node:fs';
@@ -10,7 +10,7 @@ const ACCOUNT_ID = '002527a31814aabc946cce93095ec7a5';
 const ZONE_ID = '19b024cbc6f2e427a849d1b1af8b6fc7';
 const SCRIPT = 'islecheat';
 const TARGET = 'islecheat.notfaadi.workers.dev';
-const DOMAINS = ['projectzomboidcheats.com', 'www.projectzomboidcheats.com'];
+const DOMAINS = ['warframecheats.net', 'www.warframecheats.net'];
 
 function getToken() {
 	const configPath = join(
@@ -73,10 +73,10 @@ async function listDns() {
 }
 
 async function ensureCname(name, content) {
-	const fqdn = name.includes('.') ? name : `${name}.projectzomboidcheats.com`;
+	const fqdn = name.includes('.') ? name : `${name}.warframecheats.net`;
 	const existing = await listDns();
 	const hit = existing.find(
-		(r) => r.name === fqdn || r.name === name || (name === '@' && r.name === 'projectzomboidcheats.com'),
+		(r) => r.name === fqdn || r.name === name || (name === '@' && r.name === 'warframecheats.net'),
 	);
 	if (hit) {
 		if (hit.type === 'CNAME' && hit.content === content && hit.proxied) {
@@ -92,7 +92,7 @@ async function ensureCname(name, content) {
 		return;
 	}
 
-	const recordName = name === 'projectzomboidcheats.com' || name === '@' ? 'projectzomboidcheats.com' : name;
+	const recordName = name === 'warframecheats.net' || name === '@' ? 'warframecheats.net' : name;
 	console.log(`Creating CNAME ${recordName} -> ${content}`);
 	const { json } = await api(`/zones/${ZONE_ID}/dns_records`, {
 		method: 'POST',
@@ -131,7 +131,7 @@ async function main() {
 		(scripts.result ?? []).map((s) => s.id).join(', ') || JSON.stringify(scripts.errors),
 	);
 
-	await ensureCname('projectzomboidcheats.com', TARGET);
+	await ensureCname('warframecheats.net', TARGET);
 	await ensureCname('www', TARGET);
 
 	for (const host of DOMAINS) {

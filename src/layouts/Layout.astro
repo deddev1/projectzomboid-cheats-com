@@ -1,13 +1,11 @@
 ---
 import '../styles/global.css';
-import '../styles/footer.css';
 import { productInfo, siteConfig } from '../data/site';
-import WingmanGuide from '../components/WingmanGuide.astro';
+import { metaKeywordsContent } from '../data/seo';
 import I18nHead from '../components/I18nHead.astro';
 import LocaleSuggest from '../components/LocaleSuggest.astro';
 import { defaultLocale, localeMap, locales, type LocaleCode } from '../data/i18n/locales';
 import type { PageId } from '../data/i18n/content.generated';
-import { SUPABASE_CDN_ORIGIN } from '../lib/performance';
 
 interface Crumb {
 	label: string;
@@ -38,7 +36,7 @@ const {
 	canonicalPath = Astro.url.pathname,
 	ogImage = siteConfig.defaultOgImage,
 	ogImageAlt = title,
-	keywords,
+	keywords = metaKeywordsContent,
 	noindex = false,
 	type = 'website',
 	breadcrumbs,
@@ -66,7 +64,6 @@ const siteDescription = `${productInfo.tagline}. ${productInfo.summary}`;
 const localeMeta = localeMap[locale];
 const schemaLanguage = localeMeta.ogLocale.replace('_', '-');
 const ogLocale = localeMeta.ogLocale;
-const ogLocaleAlternates = locales.filter((entry) => entry.code !== locale);
 
 const graph: Record<string, unknown>[] = [
 	{
@@ -156,15 +153,13 @@ if (softwareNode) {
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="color-scheme" content="dark" />
-		<meta name="theme-color" content="#090B0B" />
+		<meta name="theme-color" content="#061112" />
 		<meta name="robots" content={robots} />
 		<meta name="googlebot" content={robots} />
 		<meta name="description" content={description} />
-		{keywords && <meta name="keywords" content={keywords} />}
+		<meta name="keywords" content={keywords} />
 		<meta name="author" content={siteConfig.name} />
 		<link rel="canonical" href={canonicalURL} />
-		<link rel="dns-prefetch" href={SUPABASE_CDN_ORIGIN} />
-		<link rel="preconnect" href={SUPABASE_CDN_ORIGIN} crossorigin />
 		{pageId && <I18nHead pageId={pageId} locale={locale} />}
 		<link rel="icon" href="/favicon.ico" sizes="any" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -224,12 +219,6 @@ if (softwareNode) {
 		<meta property="og:image:height" content={ogImageHeight} />
 		<meta property="og:image:alt" content={ogImageAlt} />
 		<meta property="og:locale" content={ogLocale} />
-		{
-			pageId &&
-				ogLocaleAlternates.map((entry) => (
-					<meta property="og:locale:alternate" content={entry.ogLocale} />
-				))
-		}
 
 		<meta name="twitter:card" content={twitterCard} />
 		<meta name="twitter:title" content={title} />
@@ -237,20 +226,15 @@ if (softwareNode) {
 		<meta name="twitter:image" content={ogImageURL} />
 		<meta name="twitter:image:alt" content={ogImageAlt} />
 
-		{!noindex && (
+		{!noindex && locale === defaultLocale && (
 			<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
 		)}
 
 		<title>{title}</title>
 		<script is:inline src="/trusted-types-policy.js"></script>
 	</head>
-	<body data-page-id={pageId ?? ''}>
+	<body>
 		{pageId && <LocaleSuggest currentLocale={locale} pageId={pageId} />}
-		<WingmanGuide pageId={pageId} />
 		<slot />
-		<script>
-			import '../scripts/inspira-ripple-button.ts';
-			import '../scripts/wingman-guide.ts';
-		</script>
 	</body>
 </html>
