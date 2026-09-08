@@ -57,12 +57,7 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 	<div class="pricing-features__grid">
 		{
 			productFeatureCategories.map((category) => (
-				<article
-					class:list={[
-						'pricing-features__card',
-						category.columns === 2 && 'pricing-features__card--wide',
-					]}
-				>
+				<article class="pricing-features__card">
 					<h3 class="pricing-features__card-title">{category.title}</h3>
 					<ul
 						class:list={[
@@ -230,24 +225,6 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		column-gap: 1.15rem;
 		row-gap: 0.7rem;
-	}
-
-	@media (min-width: 1101px) {
-		.pricing-features__card--wide {
-			grid-column: 1 / -1;
-		}
-
-		.pricing-features__card--wide .pricing-features__list--two-col {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-			column-gap: 1.5rem;
-			row-gap: 0.75rem;
-		}
-	}
-
-	@media (min-width: 1400px) {
-		.pricing-features__card--wide .pricing-features__list--two-col {
-			grid-template-columns: repeat(4, minmax(0, 1fr));
-		}
 	}
 
 	.pricing-features__list li {
