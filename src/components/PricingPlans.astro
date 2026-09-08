@@ -1,10 +1,9 @@
 ---
-import { pricingGallery } from '../data/zomboid';
+import { pricingGallery } from '../data/warframe';
 import { getUi } from '../data/i18n';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
 import { productInfo, siteConfig } from '../data/site';
 import RelatedPages from './RelatedPages.astro';
-import RippleButton from './inspira/RippleButton.astro';
 import { contentSrc, contentSrcSet, productMainSizes, productThumbSizes } from '../lib/responsive-images';
 
 interface Props {
@@ -55,11 +54,12 @@ const featurePills = [
 				height="720"
 				class="pricing-showcase__image"
 				data-main-image
-				loading="lazy"
+				loading="eager"
+				fetchpriority="high"
 				decoding="async"
 			/>
 		</figure>
-		<div class="pricing-showcase__thumbs" role="group" aria-label="Project Zomboid cheats screenshots">
+		<div class="pricing-showcase__thumbs" role="group" aria-label="Warframe cheats screenshots">
 			{
 				galleryImages.map((image, index) => (
 					<button
@@ -79,7 +79,7 @@ const featurePills = [
 							sizes={productThumbSizes}
 							width="320"
 							height="200"
-							loading={index === 0 ? 'eager' : 'lazy'}
+							loading={index < 4 ? 'eager' : 'lazy'}
 							decoding="async"
 						/>
 					</button>
@@ -100,7 +100,7 @@ const featurePills = [
 				showPageTitle ? (
 					<h1 class="pricing-showcase__title">{productInfo.name}</h1>
 				) : (
-					<h2 class="sr-only">{ui.nav.pricing}</h2>
+					<h2 class="pricing-showcase__title">{ui.nav.pricing}</h2>
 				)
 			}
 			<span class="pricing-showcase__status">
@@ -136,6 +136,12 @@ const featurePills = [
 						data-checkout-url={siteConfig.checkoutUrl}
 						aria-pressed="false"
 					>
+						<span class="pricing-showcase__plan-badge">
+							<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+								<path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5.1L12 14.8 7.5 16.8l.9-5.1L4.8 8.2l5-.7L12 3z"></path>
+							</svg>
+							Most popular
+						</span>
 						<span class="pricing-showcase__plan-main">
 							<span class="pricing-showcase__plan-name">{ui.product.lifetime}</span>
 							<span class="pricing-showcase__plan-price">${lifetimePlan.price}</span>
@@ -146,10 +152,9 @@ const featurePills = [
 			}
 		</div>
 
-		<RippleButton
+		<a
 			href={siteConfig.checkoutUrl}
-			variant="buy"
-			class="pricing-showcase__cart"
+			class="pricing-showcase__cart btn-buy"
 			data-plan-buy
 			rel="noopener noreferrer"
 		>
@@ -164,7 +169,7 @@ const featurePills = [
 				<circle cx="18" cy="20" r="1.25" fill="currentColor"></circle>
 			</svg>
 			<span data-plan-buy-label>{ui.product.addToCart}</span>
-		</RippleButton>
+		</a>
 
 		<div class="pricing-showcase__pills" aria-label="Package highlights">
 			{
@@ -253,10 +258,10 @@ const featurePills = [
 		margin: 0;
 		padding: clamp(0.9rem, 1.8vw, 1.25rem);
 		border-radius: var(--radius-card);
-		border: 1px solid rgba(104, 112, 82, 0.18);
-		background: linear-gradient(145deg, rgba(17, 21, 20, 0.96) 0%, rgba(10, 28, 29, 0.98) 100%);
+		border: 1px solid rgba(32, 191, 192, 0.18);
+		background: linear-gradient(145deg, rgba(13, 35, 36, 0.96) 0%, rgba(10, 28, 29, 0.98) 100%);
 		box-shadow:
-			0 0 0 1px rgba(104, 112, 82, 0.05) inset,
+			0 0 0 1px rgba(32, 191, 192, 0.05) inset,
 			0 16px 40px rgba(0, 0, 0, 0.28);
 	}
 
@@ -270,7 +275,7 @@ const featurePills = [
 	.pricing-showcase__figure {
 		margin: 0;
 		aspect-ratio: 16 / 10;
-		border: 1px solid rgba(104, 112, 82, 0.2);
+		border: 1px solid rgba(32, 191, 192, 0.2);
 		border-radius: 0.85rem;
 		overflow: hidden;
 	}
@@ -304,9 +309,9 @@ const featurePills = [
 		flex: 0 0 5.75rem;
 		padding: 0;
 		aspect-ratio: 16 / 10;
-		border: 2px solid rgba(104, 112, 82, 0.2);
+		border: 2px solid rgba(32, 191, 192, 0.2);
 		border-radius: 0.65rem;
-		background: rgba(17, 21, 20, 0.8);
+		background: rgba(13, 35, 36, 0.8);
 		cursor: pointer;
 		overflow: hidden;
 		scroll-snap-align: start;
@@ -354,8 +359,8 @@ const featurePills = [
 		flex-shrink: 0;
 		padding: 0.35rem 0.7rem;
 		border-radius: 999px;
-		border: 1px solid rgba(104, 112, 82, 0.35);
-		background: rgba(104, 112, 82, 0.1);
+		border: 1px solid rgba(32, 191, 192, 0.35);
+		background: rgba(32, 191, 192, 0.1);
 		color: var(--color-mint);
 		font-size: 0.68rem;
 		font-weight: 800;
@@ -387,8 +392,8 @@ const featurePills = [
 		margin: 0;
 		padding: 0.85rem 0.9rem;
 		border-radius: 0.75rem;
-		border: 1px solid rgba(104, 112, 82, 0.22);
-		background: rgba(17, 21, 20, 0.85);
+		border: 1px solid rgba(32, 191, 192, 0.22);
+		background: rgba(13, 35, 36, 0.85);
 		color: inherit;
 		font: inherit;
 		text-align: left;
@@ -400,16 +405,36 @@ const featurePills = [
 	}
 
 	.pricing-showcase__plan:hover {
-		border-color: rgba(104, 112, 82, 0.45);
+		border-color: rgba(32, 191, 192, 0.45);
 	}
 
 	.pricing-showcase__plan.is-selected {
-		border-color: rgba(104, 112, 82, 0.45);
-		background: rgba(104, 112, 82, 0.14);
+		border-color: rgba(32, 191, 192, 0.45);
+		background: rgba(23, 65, 67, 0.14);
 	}
 
 	.pricing-showcase__plan--featured {
 		position: relative;
+		padding-top: 1.55rem;
+	}
+
+	.pricing-showcase__plan-badge {
+		position: absolute;
+		top: 0.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		padding: 0.2rem 0.55rem;
+		border-radius: 999px;
+		background: rgba(23, 65, 67, 0.35);
+		border: 1px solid rgba(32, 191, 192, 0.35);
+		color: var(--color-orchid);
+		font-size: 0.62rem;
+		font-weight: 800;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
 	}
 
 	.pricing-showcase__plan-main {
@@ -476,8 +501,8 @@ const featurePills = [
 		min-height: auto;
 		padding: 0.55rem 0.65rem;
 		border-radius: 0.6rem;
-		border: 1px solid rgba(104, 112, 82, 0.14);
-		background: rgba(17, 21, 20, 0.75);
+		border: 1px solid rgba(32, 191, 192, 0.14);
+		background: rgba(13, 35, 36, 0.75);
 		color: var(--color-muted);
 		font-size: 0.72rem;
 		font-weight: 600;
@@ -504,8 +529,8 @@ const featurePills = [
 		gap: 0.65rem;
 		padding: 0.75rem 0.85rem;
 		border-radius: 0.7rem;
-		border: 1px solid rgba(104, 112, 82, 0.14);
-		background: rgba(17, 21, 20, 0.55);
+		border: 1px solid rgba(32, 191, 192, 0.14);
+		background: rgba(13, 35, 36, 0.55);
 	}
 
 	.pricing-showcase__guarantee-icon {
@@ -515,8 +540,8 @@ const featurePills = [
 		width: 2rem;
 		height: 2rem;
 		border-radius: 999px;
-		background: rgba(104, 112, 82, 0.12);
-		border: 1px solid rgba(104, 112, 82, 0.3);
+		background: rgba(32, 191, 192, 0.12);
+		border: 1px solid rgba(32, 191, 192, 0.3);
 		color: var(--color-mint);
 	}
 
@@ -568,7 +593,7 @@ const featurePills = [
 
 	.pricing-showcase__thumb.is-active,
 	.pricing-showcase__thumb:hover {
-		border-color: rgba(104, 112, 82, 0.45);
+		border-color: rgba(32, 191, 192, 0.45);
 	}
 
 	@media (max-width: 480px) {

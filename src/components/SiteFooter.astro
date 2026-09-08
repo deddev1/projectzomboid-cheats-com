@@ -10,120 +10,142 @@ interface Props {
 
 const locale = Astro.props.locale ?? defaultLocale;
 const ui = getUi(locale);
-const year = new Date().getUTCFullYear();
 
-const exploreLinks = [
-	{ label: ui.nav.home, href: getLocalizedPath('home', locale) },
-	{ label: ui.nav.cheats, href: getLocalizedPath('hacks', locale) },
-	{ label: ui.nav.esp, href: getLocalizedPath('project-zomboid-esp', locale) },
-	{ label: ui.nav.aimbot, href: getLocalizedPath('project-zomboid-aimbot', locale) },
+const mainLinks = [
+	{ label: ui.nav.esp, href: getLocalizedPath('warframe-esp', locale) },
+	{ label: ui.nav.aimbot, href: getLocalizedPath('warframe-aimbot', locale) },
 	{ label: 'Wallhack', href: getLocalizedPath('wallhack', locale) },
 	{ label: 'Radar', href: getLocalizedPath('radar', locale) },
-	{ label: ui.nav.features, href: getLocalizedPath('features', locale) },
-];
-
-const blogLinks = [
-	{ label: ui.nav.blog, href: '/blog/' },
-	{ label: ui.nav.reviews, href: '/reviews/' },
-	{ label: 'Guides', href: '/guides/' },
-	{ label: ui.nav.features, href: getLocalizedPath('features', locale) },
-];
-
-const supportLinks = [
-	{ label: ui.nav.faq, href: getLocalizedPath('faq', locale) },
 	{ label: ui.nav.setup, href: getLocalizedPath('setup', locale) },
-	{ label: ui.nav.updates, href: getLocalizedPath('updates', locale) },
-	{ label: 'Support', href: getLocalizedPath('support', locale) },
-	{ label: 'Contact us', href: `mailto:${siteConfig.supportEmail}` },
+	{ label: 'Guides', href: '/guides/' },
+		{ label: 'Blog posts', href: '/blog/' },
 ];
 
 const legalLinks = [
-	{ label: 'Terms and Conditions', href: getLocalizedPath('terms', locale) },
-	{ label: 'Privacy Policy', href: getLocalizedPath('privacy', locale) },
-	{ label: 'Refund Policy', href: getLocalizedPath('refund', locale) },
-	{ label: ui.nav.pricing, href: getLocalizedPath('pricing', locale) },
+	{ label: 'Support', href: getLocalizedPath('support', locale) },
+	{ label: 'Privacy', href: getLocalizedPath('privacy', locale) },
+	{ label: 'Terms', href: getLocalizedPath('terms', locale) },
+	{ label: 'Refund', href: getLocalizedPath('refund', locale) },
 ];
+
+const year = new Date().getUTCFullYear();
 ---
 
 <footer class="footer" id="support-footer">
-	<div class="footer__main">
-		<div class="shell footer__main-inner">
-			<div class="footer__nav">
-				<nav class="footer__col" aria-label={ui.footer.explore}>
-					<p class="footer__col-title">{ui.footer.explore}</p>
-					<ul class="footer__list">
-						{
-							exploreLinks.map((link) => (
-								<li>
-									<a href={link.href}>{link.label}</a>
-								</li>
-							))
-						}
-					</ul>
-				</nav>
-
-				<nav class="footer__col" aria-label={ui.nav.blog}>
-					<p class="footer__col-title">{ui.nav.blog}</p>
-					<ul class="footer__list">
-						{
-							blogLinks.map((link) => (
-								<li>
-									<a href={link.href}>{link.label}</a>
-								</li>
-							))
-						}
-					</ul>
-				</nav>
-
-				<nav class="footer__col" aria-label="Support">
-					<p class="footer__col-title">Support</p>
-					<ul class="footer__list">
-						{
-							supportLinks.map((link) => (
-								<li>
-									<a href={link.href}>{link.label}</a>
-								</li>
-							))
-						}
-					</ul>
-				</nav>
-
-				<nav class="footer__col" aria-label={ui.footer.help}>
-					<p class="footer__col-title">Legal</p>
-					<ul class="footer__list">
-						{
-							legalLinks.map((link) => (
-								<li>
-									<a href={link.href}>{link.label}</a>
-								</li>
-							))
-						}
-					</ul>
-				</nav>
-			</div>
-
-			<div class="footer__art" aria-hidden="true">
-				<img
-					src="/images/zomboid-wingman.webp"
-					alt=""
-					width="396"
-					height="439"
-					loading="lazy"
-					decoding="async"
-					class="footer__art-img"
-				/>
-			</div>
+	<div class="shell footer__inner">
+		<div class="footer__top">
+			<p class="footer__name">{ui.product.title}</p>
+			<p class="footer__tagline">{ui.footer.tagline}</p>
 		</div>
-	</div>
 
-	<div class="footer__bar">
-		<div class="shell footer__bar-inner">
-			<p class="footer__copy">
-				{siteConfig.name} | Copyright © {year}. All Rights Reserved.
-			</p>
-			<p class="footer__credit">
-				Site by <a href={siteConfig.url}>projectzomboidcheats.com</a>
-			</p>
+		<nav class="footer__links" aria-label="Footer">
+			{
+				mainLinks.map((link) => (
+					<a href={link.href}>{link.label}</a>
+				))
+			}
+		</nav>
+
+		<div class="footer__bottom">
+			<nav class="footer__legal" aria-label="Legal">
+				{
+					legalLinks.map((link) => (
+						<a href={link.href}>{link.label}</a>
+					))
+				}
+			</nav>
+			<p class="footer__copy">© {year} {siteConfig.name}</p>
 		</div>
 	</div>
 </footer>
+
+<style>
+	.footer {
+		border-top: 1px solid rgba(255, 255, 255, 0.06);
+		padding-block: 1.75rem;
+		padding-bottom: calc(1.75rem + env(safe-area-inset-bottom, 0px));
+	}
+
+	.footer__inner {
+		display: grid;
+		gap: 1.1rem;
+	}
+
+	.footer__top {
+		display: grid;
+		gap: 0.35rem;
+	}
+
+	.footer__name {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: 0.95rem;
+		font-weight: 800;
+		letter-spacing: -0.02em;
+	}
+
+	.footer__tagline {
+		margin: 0;
+		color: var(--color-faint);
+		font-size: 0.84rem;
+		line-height: 1.5;
+		max-width: 32rem;
+	}
+
+	.footer__links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.45rem 0.85rem;
+	}
+
+	.footer__links a {
+		color: var(--color-muted);
+		font-size: 0.84rem;
+		font-weight: 600;
+		transition: color 0.2s ease;
+	}
+
+	.footer__links a:hover {
+		color: var(--color-ink);
+	}
+
+	.footer__bottom {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.65rem 1rem;
+		padding-top: 0.85rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	.footer__legal {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.55rem 0.9rem;
+	}
+
+	.footer__legal a {
+		color: var(--color-faint);
+		font-size: 0.78rem;
+		font-weight: 500;
+		transition: color 0.2s ease;
+	}
+
+	.footer__legal a:hover {
+		color: var(--color-muted);
+	}
+
+	.footer__copy {
+		margin: 0;
+		color: var(--color-faint);
+		font-size: 0.78rem;
+	}
+
+	@media (max-width: 560px) {
+		.footer__bottom {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+</style>

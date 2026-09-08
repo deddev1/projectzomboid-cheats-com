@@ -2,13 +2,13 @@
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
-import { customerReviews, productInfo, siteConfig } from '../../data/site';
+import { customerReviewStats, customerReviews, productInfo, siteConfig } from '../../data/site';
 import { getReviewPath, reviewsBasePath } from '../../data/reviews';
 import RelatedPages from '../../components/RelatedPages.astro';
 
-const title = 'Project Zomboid Cheats Reviews | ESP Soft Aim Feedback';
+const title = 'Warframe Cheats Reviews | ESP Soft Aim Feedback';
 const description =
-	'Real Project Zomboid Cheats reviews from buyers: ESP boxes, soft aim, radar, controllers, and cloud DMA.';
+	'Real Warframe Cheats reviews from buyers: ESP boxes, soft aim, radar, controllers, and cloud DMA.';
 
 function stars(rating: number): string {
 	return '★'.repeat(rating) + '☆'.repeat(5 - rating);
@@ -31,14 +31,42 @@ const canonicalURL = new URL(reviewsBasePath, siteConfig.url).href;
 
 const extraGraph: Record<string, unknown>[] = [
 	{
+		'@type': 'Product',
+		'@id': `${siteConfig.url}/#product`,
+		name: productInfo.name,
+		description: productInfo.summary,
+		image: new URL(siteConfig.defaultOgImage, siteConfig.url).href,
+		brand: { '@type': 'Brand', name: productInfo.brand },
+		url: `${siteConfig.url}/`,
+		aggregateRating: {
+			'@type': 'AggregateRating',
+			ratingValue: customerReviewStats.averageRating.toFixed(1),
+			reviewCount: customerReviewStats.totalCount,
+			bestRating: '5',
+			worstRating: '1',
+		},
+		review: customerReviews.map((review) => ({
+			'@type': 'Review',
+			'@id': `${new URL(getReviewPath(review.slug), siteConfig.url).href}#review`,
+			url: new URL(getReviewPath(review.slug), siteConfig.url).href,
+			author: { '@type': 'Person', name: review.handle },
+			datePublished: review.date,
+			reviewRating: {
+				'@type': 'Rating',
+				ratingValue: String(review.rating),
+				bestRating: '5',
+				worstRating: '1',
+			},
+			reviewBody: review.text,
+		})),
+	},
+	{
 		'@type': 'ItemList',
 		'@id': `${canonicalURL}#list`,
-		name: 'Project Zomboid Cheats customer reviews',
 		itemListElement: sortedReviews.map((review, index) => ({
 			'@type': 'ListItem',
 			position: index + 1,
 			url: new URL(getReviewPath(review.slug), siteConfig.url).href,
-			name: review.title,
 		})),
 	},
 ];
@@ -49,7 +77,7 @@ const extraGraph: Record<string, unknown>[] = [
 	description={description}
 	canonicalPath={reviewsBasePath}
 	ogImage={siteConfig.defaultOgImage}
-	ogImageAlt="Project Zomboid Cheats customer reviews for ESP soft aim and cloud DMA"
+	ogImageAlt="Warframe Cheats customer reviews for ESP soft aim and cloud DMA"
 	locale="en"
 	breadcrumbs={[
 		{ label: 'Home', href: '/' },
@@ -67,9 +95,9 @@ const extraGraph: Record<string, unknown>[] = [
 			</nav>
 
 			<header class="reviews-index__head">
-				<h1>Project Zomboid Cheats reviews</h1>
+				<h1>Warframe Cheats reviews</h1>
 				<p class="reviews-index__intro">
-					Unedited feedback from people who bought Project Zomboid Cheats — setup, features, support, and
+					Unedited feedback from people who bought Warframe Cheats — setup, features, support, and
 					day-to-day use.
 				</p>
 			</header>
@@ -102,8 +130,8 @@ const extraGraph: Record<string, unknown>[] = [
 				}
 			</div>
 
-			<section class="reviews-index__cta" aria-label="Buy Project Zomboid Cheats">
-				<h2>Ready to try Project Zomboid Cheats?</h2>
+			<section class="reviews-index__cta" aria-label="Buy Warframe Cheats">
+				<h2>Ready to try Warframe Cheats?</h2>
 				<p>
 					ESP wallhack, soft aim, radar, and cloud DMA in one undetected package for Windows PC and
 					controllers — with anti-cheat maintenance after patches.
@@ -114,8 +142,8 @@ const extraGraph: Record<string, unknown>[] = [
 					</a>
 					<a href="/pricing/" class="reviews-index__link-btn">Compare pricing</a>
 					<a href="/features/" class="reviews-index__link-btn">See features</a>
-					<a href="/project-zomboid-esp/" class="reviews-index__link-btn">ESP guide</a>
-					<a href="/project-zomboid-aimbot/" class="reviews-index__link-btn">Aimbot guide</a>
+					<a href="/warframe-esp/" class="reviews-index__link-btn">ESP guide</a>
+					<a href="/warframe-aimbot/" class="reviews-index__link-btn">Aimbot guide</a>
 				</div>
 			</section>
 
@@ -187,8 +215,8 @@ const extraGraph: Record<string, unknown>[] = [
 		gap: 0.6rem;
 		padding: 1.05rem 1.1rem;
 		border-radius: 0.95rem;
-		border: 1px solid rgba(104, 112, 82, 0.14);
-		background: linear-gradient(145deg, rgba(23, 27, 26, 0.92) 0%, rgba(17, 21, 20, 0.88) 100%);
+		border: 1px solid rgba(32, 191, 192, 0.14);
+		background: rgba(26, 22, 38, 0.72);
 		transition:
 			border-color 0.2s ease,
 			transform 0.2s ease,
@@ -196,7 +224,7 @@ const extraGraph: Record<string, unknown>[] = [
 	}
 
 	.reviews-index__card:hover {
-		border-color: rgba(104, 112, 82, 0.38);
+		border-color: rgba(32, 191, 192, 0.38);
 		transform: translateY(-2px);
 		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 	}
@@ -223,8 +251,8 @@ const extraGraph: Record<string, unknown>[] = [
 		width: 2.15rem;
 		height: 2.15rem;
 		border-radius: 999px;
-		border: 1px solid rgba(104, 112, 82, 0.3);
-		background: rgba(17, 21, 20, 0.7);
+		border: 1px solid rgba(32, 191, 192, 0.3);
+		background: rgba(13, 35, 36, 0.7);
 		color: var(--color-orchid);
 		font-size: 0.9rem;
 		font-weight: 800;
@@ -258,8 +286,8 @@ const extraGraph: Record<string, unknown>[] = [
 		align-self: start;
 		padding: 0.2rem 0.55rem;
 		border-radius: 999px;
-		border: 1px solid rgba(104, 112, 82, 0.22);
-		background: rgba(9, 11, 11, 0.45);
+		border: 1px solid rgba(32, 191, 192, 0.22);
+		background: rgba(6, 17, 18, 0.45);
 		color: var(--color-orchid);
 		font-size: 0.68rem;
 		font-weight: 700;
@@ -269,13 +297,13 @@ const extraGraph: Record<string, unknown>[] = [
 	}
 
 	a.reviews-index__tag:hover {
-		border-color: rgba(104, 112, 82, 0.45);
+		border-color: rgba(32, 191, 192, 0.45);
 		color: var(--color-ink);
 	}
 
 	.reviews-index__text {
 		margin: 0;
-		color: var(--color-muted);
+		color: #d4cae6;
 		font-size: 0.92rem;
 		line-height: 1.6;
 		flex-grow: 1;
@@ -300,8 +328,8 @@ const extraGraph: Record<string, unknown>[] = [
 		gap: 0.65rem;
 		padding: clamp(1.25rem, 3vw, 1.75rem);
 		border-radius: var(--radius-card, 1.1rem);
-		border: 1px solid rgba(104, 112, 82, 0.18);
-		background: linear-gradient(145deg, rgba(23, 27, 26, 0.94) 0%, rgba(17, 21, 20, 0.9) 100%);
+		border: 1px solid rgba(32, 191, 192, 0.18);
+		background: rgba(26, 22, 38, 0.72);
 	}
 
 	.reviews-index__cta h2 {
@@ -353,8 +381,8 @@ const extraGraph: Record<string, unknown>[] = [
 		justify-content: center;
 		padding: 0.8rem 1.1rem;
 		border-radius: 0.85rem;
-		border: 1px solid rgba(104, 112, 82, 0.28);
-		background: rgba(17, 21, 20, 0.55);
+		border: 1px solid rgba(32, 191, 192, 0.28);
+		background: rgba(13, 35, 36, 0.55);
 		color: var(--color-ink);
 		font-size: 0.9rem;
 		font-weight: 700;
@@ -364,8 +392,8 @@ const extraGraph: Record<string, unknown>[] = [
 	}
 
 	.reviews-index__link-btn:hover {
-		border-color: rgba(104, 112, 82, 0.5);
-		background: rgba(17, 21, 20, 0.85);
+		border-color: rgba(32, 191, 192, 0.5);
+		background: rgba(13, 35, 36, 0.85);
 		color: var(--color-ink);
 	}
 

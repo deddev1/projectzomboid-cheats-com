@@ -3,7 +3,6 @@ import { getUi } from '../data/i18n';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
 import { siteConfig } from '../data/site';
 import { heroPreloadSrc, heroSizes, heroSrcSet, heroIsExternal } from '../lib/responsive-images';
-import HeroCtaButton from './inspira/HeroCtaButton.astro';
 
 interface Props {
 	accent?: string;
@@ -42,7 +41,7 @@ const buyUrl = siteConfig.checkoutUrl;
 						height="900"
 						class="hero__poster-img"
 						fetchpriority="high"
-						decoding="sync"
+						decoding="async"
 					/>
 				) : (
 					<>
@@ -60,7 +59,7 @@ const buyUrl = siteConfig.checkoutUrl;
 							height="900"
 							class="hero__poster-img"
 							fetchpriority="high"
-							decoding="sync"
+							decoding="async"
 						/>
 					</>
 				)
@@ -79,11 +78,9 @@ const buyUrl = siteConfig.checkoutUrl;
 			<p class="hero__subtitle hero__subtitle--full">{subtitle}</p>
 			<p class="hero__subtitle hero__subtitle--short">{subtitleShort}</p>
 			<div class="hero__cta">
-				<HeroCtaButton
-					href={buyUrl}
-					label={ui.hero.buyNow}
-					ariaLabel={ui.hero.buyNow}
-				/>
+				<a href={buyUrl} class="btn-buy" rel="noopener noreferrer" aria-label={ui.hero.buyNow}>
+					{ui.hero.buyNow}
+				</a>
 			</div>
 		</div>
 	</div>
@@ -115,7 +112,7 @@ const buyUrl = siteConfig.checkoutUrl;
 		position: absolute;
 		inset: 0;
 		z-index: 0;
-		background: #090B0B;
+		background: #061112;
 	}
 
 	.hero__poster,
@@ -135,8 +132,8 @@ const buyUrl = siteConfig.checkoutUrl;
 
 	.hero__poster-img {
 		object-fit: cover;
-		object-position: 72% center;
-		background: #090B0B;
+		object-position: center;
+		background: #061112;
 		transform: scale(1.05);
 		transform-origin: center center;
 		filter: brightness(1.12) contrast(1.04) saturate(1.08);
@@ -174,8 +171,8 @@ const buyUrl = siteConfig.checkoutUrl;
 		inset: 0;
 		z-index: 3;
 		background:
-			linear-gradient(90deg, rgba(9, 11, 11, 0.82) 0%, rgba(9, 11, 11, 0.52) 28%, rgba(9, 11, 11, 0.22) 52%, transparent 100%),
-			linear-gradient(180deg, rgba(9, 11, 11, 0.28) 0%, transparent 42%, rgba(9, 11, 11, 0.45) 100%);
+			linear-gradient(90deg, rgba(6, 17, 18, 0.82) 0%, rgba(6, 17, 18, 0.52) 28%, rgba(6, 17, 18, 0.22) 52%, transparent 100%),
+			linear-gradient(180deg, rgba(6, 17, 18, 0.28) 0%, transparent 42%, rgba(6, 17, 18, 0.45) 100%);
 		pointer-events: none;
 	}
 
@@ -215,10 +212,10 @@ const buyUrl = siteConfig.checkoutUrl;
 		display: flex;
 		flex-direction: column;
 		gap: 0.06em;
-		color: var(--color-ink);
+		color: #ffffff;
 		text-shadow:
-			0 2px 18px rgba(9, 11, 11, 0.95),
-			0 4px 36px rgba(9, 11, 11, 0.75);
+			0 2px 18px rgba(6, 17, 18, 0.95),
+			0 4px 36px rgba(6, 17, 18, 0.75);
 	}
 
 	.hero__line {
@@ -252,8 +249,8 @@ const buyUrl = siteConfig.checkoutUrl;
 		font-weight: 700;
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
-		color: #D2AE76;
-		text-shadow: 0 1px 14px rgba(9, 11, 11, 0.9);
+		color: #20BFC0;
+		text-shadow: 0 1px 14px rgba(6, 17, 18, 0.9);
 	}
 
 	.hero__subtitle {
@@ -262,8 +259,8 @@ const buyUrl = siteConfig.checkoutUrl;
 		font-size: clamp(1rem, 1.65vw, 1.12rem);
 		font-weight: 400;
 		line-height: 1.62;
-		color: #ffffff;
-		text-shadow: 0 1px 14px rgba(9, 11, 11, 0.88);
+		color: #B8D0D0;
+		text-shadow: 0 1px 14px rgba(6, 17, 18, 0.88);
 		animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
 	}
 
@@ -293,21 +290,21 @@ const buyUrl = siteConfig.checkoutUrl;
 	}
 
 	.hero__btn--ghost {
-		border: 1px solid rgba(104, 112, 82, 0.35);
-		background: rgba(17, 21, 20, 0.85);
+		border: 1px solid rgba(32, 191, 192, 0.35);
+		background: rgba(13, 35, 36, 0.85);
 		color: var(--color-ink);
 	}
 
 	@media (min-width: 761px) {
 		.hero__btn--ghost {
-			background: rgba(17, 21, 20, 0.55);
+			background: rgba(13, 35, 36, 0.55);
 			backdrop-filter: blur(8px);
 		}
 	}
 
 	.hero__btn--ghost:hover {
-		border-color: rgba(104, 112, 82, 0.55);
-		background: rgba(17, 21, 20, 0.7);
+		border-color: rgba(32, 191, 192, 0.55);
+		background: rgba(13, 35, 36, 0.7);
 	}
 
 	@keyframes rise-in {
@@ -372,7 +369,7 @@ const buyUrl = siteConfig.checkoutUrl;
 		}
 
 		.hero__poster-img {
-			object-position: 68% 35%;
+			object-position: center 32%;
 		}
 
 		.hero__video {
@@ -394,8 +391,8 @@ const buyUrl = siteConfig.checkoutUrl;
 
 		.hero__veil {
 			background:
-				linear-gradient(180deg, rgba(9, 11, 11, 0.42) 0%, rgba(9, 11, 11, 0.2) 40%, rgba(9, 11, 11, 0.72) 100%),
-				linear-gradient(90deg, rgba(9, 11, 11, 0.62), rgba(9, 11, 11, 0.22) 80%);
+				linear-gradient(180deg, rgba(6, 17, 18, 0.42) 0%, rgba(6, 17, 18, 0.2) 40%, rgba(6, 17, 18, 0.72) 100%),
+				linear-gradient(90deg, rgba(6, 17, 18, 0.62), rgba(6, 17, 18, 0.22) 80%);
 		}
 
 		.hero__inner {

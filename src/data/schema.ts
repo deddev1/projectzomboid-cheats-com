@@ -1,114 +1,96 @@
 /** Page-specific FAQ clusters for FAQ rich results on pillar landing pages. */
-import { productInfo, siteConfig, customerReviewStats } from './site';
-import type { PageId } from './i18n/routing';
-import { getCanonicalPageId, sitemapPageIds } from './i18n/routing';
-
 export const pageFaqClusters: Partial<
-	Record<PageId, ReadonlyArray<{ question: string; answer: string }>>
+	Record<import('./i18n/routing').PageId, ReadonlyArray<{ question: string; answer: string }>>
 > = {
 	hacks: [
 		{
-			question: 'What are Project Zomboid cheats?',
+			question: 'What are Warframe cheats?',
 			answer:
-				'Project Zomboid cheats are Windows PC tools for Project Zomboid with ESP, wallhack, and aimbot controls. Project Zomboid Cheats licenses include anti-cheat maintenance updates and setup support.',
+				'Warframe cheats are Windows PC tools for Warframe with ESP, wallhack, and aimbot controls. Warframe Cheats licenses include anti-cheat maintenance updates and setup support.',
 		},
 		{
-			question: 'Are Project Zomboid cheats permanently undetected?',
+			question: 'Are Warframe cheats permanently undetected?',
 			answer:
 				'No package can promise that. We rebuild after anti-cheat and game patches and post status on Updates. Check there before you load in.',
 		},
 		{
-			question: 'What is included in the Project Zomboid Cheats package?',
+			question: 'What is included in the Warframe Cheats package?',
 			answer:
-				'Zombie ESP, medical supply markers, radar cues, and configurable aimbot in one license. See Features, ESP, and Aimbot for control detail.',
+				'Enemy ESP, health pickup markers, radar cues, and configurable aimbot in one license. See Features, ESP, and Aimbot for control detail.',
 		},
 	],
-	'project-zomboid-esp': [
+	'warframe-esp': [
 		{
-			question: 'What is a Project Zomboid wallhack?',
+			question: 'What is a Warframe wallhack?',
 			answer:
-				'A Project Zomboid wallhack is an ESP overlay that shows zombies, survivors, and loot through cover. Project Zomboid Cheats wallhack includes distance readouts, team colours, and toggleable categories for survival and Knox County looting.',
+				'A Warframe wallhack is an ESP overlay that shows enemy units and Sentients, heavy attacks, and loot through cover. Warframe Cheats wallhack includes distance readouts, team colours, and toggleable categories for Steel Path missions and open world missions.',
 		},
 		{
-			question: 'Does Project Zomboid Cheats include a radar hack?',
+			question: 'Does Warframe Cheats include a radar hack?',
 			answer:
-				'Yes. Project Zomboid Cheats includes 2D radar-style overlays that highlight nearby threats outside your direct view — useful for reading flanks during team pushes.',
+				'Yes. Warframe Cheats includes 2D radar-style overlays that highlight nearby threats outside your direct view — useful for reading flanks during team pushes.',
 		},
 		{
-			question: 'Does this fit survival and Knox County loot runs?',
+			question: 'Does this fit Steel Path missions and open world missions runs?',
 			answer:
 				'Yes. ESP and radar help you read nearby enemies and loot; aimbot covers the firefight. Tuned for solo and team push play.',
 		},
 	],
-	'project-zomboid-aimbot': [
+	'warframe-aimbot': [
 		{
-			question: 'What is Project Zomboid aimbot?',
+			question: 'What is Warframe aimbot?',
 			answer:
-				'Project Zomboid aimbot is configurable aim assist with smoothness, FOV, and head priority controls. It ships bundled with ESP and radar in the Project Zomboid Cheats license for Windows PC.',
+				'Warframe aimbot is configurable aim assist with smoothness, FOV, and bone priority controls. It ships bundled with ESP and radar in the Warframe Cheats license for Windows PC.',
 		},
 		{
-			question: 'Can I use Project Zomboid aimbot with a controller?',
+			question: 'Can I use Warframe aimbot with a controller?',
 			answer:
-				'Yes. Project Zomboid Cheats supports controller play on Windows PC. Tune FOV and smoothness per weapon profile after setup.',
+				'Yes. Warframe Cheats supports controller play on Windows PC. Tune FOV and smoothness per weapon profile after setup.',
 		},
 		{
-			question: 'Are Project Zomboid cheats permanently undetected?',
+			question: 'Are Warframe cheats permanently undetected?',
 			answer:
 				'No package can promise that. We rebuild after anti-cheat and game patches and post status on Updates. Check there before you load in.',
 		},
 	],
 	pricing: [
 		{
-			question: 'How are Project Zomboid Cheats licenses delivered?',
+			question: 'How are Warframe Cheats licenses delivered?',
 			answer:
 				'Digitally after payment confirmation. Timing can vary by payment method — keep your order confirmation if you contact support.',
 		},
 		{
 			question: 'What does the $35/month plan include?',
 			answer:
-				'The monthly license includes ESP, wallhack overlays, radar, and aimbot controls with anti-cheat maintenance updates for Project Zomboid on Windows PC.',
+				'The monthly license includes ESP, wallhack overlays, radar, and aimbot controls with anti-cheat maintenance updates for Warframe on Windows PC.',
 		},
 		{
 			question: 'Is the $150 lifetime license worth it?',
 			answer:
-				'Lifetime pays off if you play Project Zomboid across multiple seasons. It includes the same feature stack as monthly with long-term maintenance after patches.',
+				'Lifetime pays off if you play Warframe across multiple seasons. It includes the same feature stack as monthly with long-term maintenance after patches.',
 		},
 	],
 	features: [
 		{
-			question: 'What is included in Project Zomboid Cheats?',
+			question: 'What is included in Warframe Cheats?',
 			answer:
-				'Zombie ESP, medical supply markers, radar cues, and configurable aimbot in one license. See Features, ESP, and Aimbot for control detail.',
+				'Enemy ESP, health pickup markers, radar cues, and configurable aimbot in one license. See Features, ESP, and Aimbot for control detail.',
 		},
 		{
-			question: 'Does Project Zomboid Cheats work on Windows PC?',
+			question: 'Does Warframe Cheats work on Windows PC?',
 			answer:
-				'Yes — Project Zomboid Cheats is built for Project Zomboid on Windows 10 and 11 with in-client toggles for ESP, radar, and aimbot.',
+				'Yes — Warframe Cheats is built for Warframe on Windows 10 and 11 with in-client toggles for ESP, radar, and aimbot.',
 		},
 		{
-			question: 'How does anti-cheat affect Project Zomboid Cheats?',
+			question: 'How does anti-cheat affect Warframe Cheats?',
 			answer:
-				'Anti-cheat monitors Project Zomboid on Windows PC. Project Zomboid Cheats publishes maintenance notes after patches that may require a rebuild. Read the maintenance guide page for how updates are handled.',
-		},
-	],
-	updates: [
-		{
-			question: 'When should I check Project Zomboid Cheats updates?',
-			answer:
-				'Check the Updates page before launching after any Project Zomboid patch or anti-cheat maintenance from The Indie Stone. Patch-day queues are when outdated ESP, aimbot, or radar builds matter most.',
-		},
-		{
-			question: 'What happens after a Project Zomboid patch?',
-			answer:
-				'We review ESP wallhack, radar, and aimbot modules against the new build, publish status on this page, and ship rebuilt packages to active monthly and lifetime licenses.',
-		},
-		{
-			question: 'Do monthly and lifetime licenses get rebuilds?',
-			answer:
-				'Yes. Active monthly ($35) and lifetime ($150) licenses include maintenance rebuilds when anti-cheat or game updates require them. See Pricing for plan details.',
+				'Anti-cheat monitors Warframe on Windows PC. Warframe Cheats publishes maintenance notes after patches that may require a rebuild. Read the maintenance guide page for how updates are handled.',
 		},
 	],
 };
+
+import { productInfo, siteConfig } from './site';
+import type { PageId } from './i18n/routing';
 
 const priceValidUntil = '2027-12-31';
 
@@ -154,34 +136,6 @@ export function buildSoftwareApplicationSchema(canonicalURL: string, heroImage: 
 		image: heroImage,
 		brand: { '@type': 'Brand', name: productInfo.brand },
 		offers: buildAggregateOffer(canonicalURL),
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: customerReviewStats.averageRating.toFixed(1),
-			reviewCount: customerReviewStats.totalCount,
-			bestRating: '5',
-			worstRating: '1',
-		},
-	};
-}
-
-/** Site-wide Product node — referenced by review schema via @id. */
-export function buildSiteProductSchema(heroImage: string) {
-	return {
-		'@type': 'Product',
-		'@id': `${siteConfig.url}/#product`,
-		name: productInfo.name,
-		description: productInfo.summary,
-		image: heroImage,
-		brand: { '@type': 'Brand', name: productInfo.brand },
-		url: `${siteConfig.url}/`,
-		offers: buildAggregateOffer(`${siteConfig.url}/`),
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: customerReviewStats.averageRating.toFixed(1),
-			reviewCount: customerReviewStats.totalCount,
-			bestRating: '5',
-			worstRating: '1',
-		},
 	};
 }
 
@@ -201,7 +155,12 @@ export function buildFaqSchemaNode(
 }
 
 const schemaRichPages = new Set<PageId>([
-	...sitemapPageIds.filter((id) => id !== 'home' && id !== 'privacy' && id !== 'refund' && id !== 'terms'),
+	'hacks',
+	'warframe-esp',
+	'warframe-aimbot',
+	'pricing',
+	'features',
+	'faq',
 ]);
 
 export function buildPageExtraGraph(
@@ -210,16 +169,15 @@ export function buildPageExtraGraph(
 	heroImage: string,
 	allFaqs: ReadonlyArray<{ question: string; answer: string }>,
 ): Record<string, unknown>[] {
-	const canonicalId = getCanonicalPageId(pageId);
-	if (!schemaRichPages.has(canonicalId)) return [];
+	if (!schemaRichPages.has(pageId)) return [];
 
 	const nodes: Record<string, unknown>[] = [];
 
-	if (canonicalId !== 'faq') {
+	if (pageId !== 'faq') {
 		nodes.push(buildSoftwareApplicationSchema(canonicalURL, heroImage));
 	}
 
-	const faqs = canonicalId === 'faq' ? allFaqs : (pageFaqClusters[canonicalId] ?? []);
+	const faqs = pageId === 'faq' ? allFaqs : (pageFaqClusters[pageId] ?? []);
 	if (faqs.length > 0) {
 		nodes.push(buildFaqSchemaNode(canonicalURL, faqs));
 	}

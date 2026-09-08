@@ -1,15 +1,9 @@
 ---
-import { featureGallery, featureSectionImages } from '../data/zomboid';
+import { featureGallery, featureSectionImages } from '../data/warframe';
 import { getUi } from '../data/i18n';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
 import { productFeatureDetails, productInfo, siteConfig } from '../data/site';
-import {
-	contentSrc,
-	contentSrcSet,
-	featureDetailSizes,
-	featureGallerySizes,
-} from '../lib/responsive-images';
-import RippleButton from './inspira/RippleButton.astro';
+import { contentSrc, contentSrcSet, galleryTileSizes, productMainSizes } from '../lib/responsive-images';
 
 interface Props {
 	locale?: LocaleCode;
@@ -35,10 +29,10 @@ const responsiveImage = (src: string) => ({
 						<img
 							src={image.src}
 							srcset={image.srcset}
-							sizes={featureDetailSizes}
+							sizes={productMainSizes}
 							alt={shot.alt}
-							width="480"
-							height="300"
+							width="960"
+							height="600"
 							loading={index === 0 ? 'eager' : 'lazy'}
 							decoding="async"
 						/>
@@ -64,44 +58,41 @@ const responsiveImage = (src: string) => ({
 		})
 	}
 
-	<section class="features-detail__gallery" aria-label="Project Zomboid cheats screenshots">
+	<section class="features-detail__gallery" aria-label="Warframe cheats screenshots">
 		<header class="features-detail__gallery-head">
 			<h2>In-game screenshots</h2>
-			<p>Menu, ESP, aimbot, and radar from live Project Zomboid sessions.</p>
+			<p>Menu, ESP, aimbot, and radar from live Warframe sessions.</p>
 		</header>
-		<div class="features-detail__gallery-grid">
-			{
+		<div class="features-detail__gallery-scroller" tabindex="0" aria-label="Scroll through Warframe screenshots">
+			<div class="features-detail__gallery-track">
+				{
 				featureGallery.map((image) => {
 					const responsive = responsiveImage(image.src);
 					return (
-						<figure class="features-detail__gallery-item media-frame">
-							<img
-								src={responsive.src}
-								srcset={responsive.srcset}
-								sizes={featureGallerySizes}
-								alt={image.alt}
-								width="360"
-								height="225"
-								loading="lazy"
-								decoding="async"
-								draggable="false"
-							/>
-						</figure>
+					<figure class="features-detail__gallery-item media-frame">
+						<img
+							src={responsive.src}
+							srcset={responsive.srcset}
+							sizes={galleryTileSizes}
+							alt={image.alt}
+							width="640"
+							height="400"
+							loading="lazy"
+							decoding="async"
+							draggable="false"
+						/>
+					</figure>
 					);
 				})
-			}
+				}
+			</div>
 		</div>
 	</section>
 
 	<div class="features-detail__cta">
-		<RippleButton
-			href={siteConfig.checkoutUrl}
-			variant="buy"
-			class="features-detail__pricing-link"
-			rel="noopener noreferrer"
-		>
+		<a href={siteConfig.checkoutUrl} class="features-detail__pricing-link btn-buy" rel="noopener noreferrer">
 			{ui.common.buyNow} — from ${productInfo.plans[0].price}/mo
-		</RippleButton>
+		</a>
 		<a href={siteConfig.checkoutUrl} class="features-detail__checkout-link" rel="noopener noreferrer">
 			{ui.product.addToCart}
 		</a>
@@ -111,43 +102,29 @@ const responsiveImage = (src: string) => ({
 <style>
 	.features-detail {
 		display: grid;
-		gap: clamp(1.35rem, 3vw, 2rem);
+		gap: clamp(2rem, 4vw, 3rem);
 		width: 100%;
 		margin: 0;
 	}
 
 	.features-detail__section {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr);
-		gap: 1rem 1.35rem;
-		align-items: start;
-		padding: clamp(1rem, 2vw, 1.35rem);
+		gap: 1.35rem;
+		padding: clamp(1.1rem, 2vw, 1.5rem);
 		border-radius: var(--radius-card);
 		border: 1px solid var(--color-border);
-		background: rgba(17, 21, 20, 0.55);
-	}
-
-	@media (min-width: 768px) {
-		.features-detail__section {
-			grid-template-columns: 240px minmax(0, 1fr);
-		}
+		background: rgba(13, 35, 36, 0.55);
 	}
 
 	.features-detail__figure {
 		margin: 0;
 		width: 100%;
-		max-width: 240px;
-		aspect-ratio: 16 / 10;
-		border: 1px solid rgba(104, 112, 82, 0.16);
-		border-radius: 0.75rem;
+		max-width: 52rem;
+		margin-inline: auto;
+		aspect-ratio: 16 / 9;
+		border: 1px solid rgba(32, 191, 192, 0.16);
+		border-radius: 0.85rem;
 		overflow: hidden;
-	}
-
-	@media (min-width: 768px) {
-		.features-detail__figure {
-			position: sticky;
-			top: 5.5rem;
-		}
 	}
 
 	.features-detail__figure.media-frame img,
@@ -164,32 +141,34 @@ const responsiveImage = (src: string) => ({
 
 	.features-detail__section-body {
 		display: grid;
-		gap: 1rem;
-		min-width: 0;
+		gap: 1.25rem;
+		max-width: 52rem;
+		margin-inline: auto;
+		width: 100%;
 	}
 
 	.features-detail__section-head {
 		display: grid;
-		gap: 0.45rem;
-		padding-bottom: 0.85rem;
-		border-bottom: 1px solid rgba(104, 112, 82, 0.12);
+		gap: 0.5rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid rgba(32, 191, 192, 0.12);
 	}
 
 	.features-detail__section-head h2 {
 		margin: 0;
 		font-family: var(--font-display);
-		font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+		font-size: clamp(1.25rem, 2.4vw, 1.5rem);
 		font-weight: 800;
 		letter-spacing: -0.02em;
 		color: var(--color-ink);
-		line-height: 1.25;
 	}
 
 	.features-detail__section-head p {
 		margin: 0;
+		max-width: 40rem;
 		color: var(--color-muted);
-		font-size: 0.9rem;
-		line-height: 1.55;
+		font-size: 0.95rem;
+		line-height: 1.6;
 	}
 
 	.features-detail__list {
@@ -202,22 +181,9 @@ const responsiveImage = (src: string) => ({
 
 	.features-detail__item {
 		display: grid;
-		grid-template-columns: 0.85rem minmax(0, 1fr);
-		column-gap: 0.55rem;
-		row-gap: 0.2rem;
-		padding: 0.75rem 0;
-		border-bottom: 1px solid rgba(104, 112, 82, 0.1);
-		align-items: start;
-	}
-
-	.features-detail__item::before {
-		content: '›';
-		grid-column: 1;
-		grid-row: 1;
-		color: var(--color-orchid);
-		font-weight: 800;
-		font-size: 0.95rem;
-		line-height: 1.35;
+		gap: 0.3rem;
+		padding: 0.95rem 0;
+		border-bottom: 1px solid rgba(32, 191, 192, 0.1);
 	}
 
 	.features-detail__item:last-child {
@@ -230,67 +196,103 @@ const responsiveImage = (src: string) => ({
 	}
 
 	.features-detail__item h3 {
-		grid-column: 2;
 		margin: 0;
-		font-size: 0.9rem;
+		font-size: 0.92rem;
 		font-weight: 700;
 		color: var(--color-ink);
 		line-height: 1.35;
 	}
 
+	.features-detail__item h3::before {
+		content: '›';
+		margin-right: 0.45rem;
+		color: var(--color-orchid);
+		font-weight: 800;
+	}
+
 	.features-detail__item p {
-		grid-column: 2;
 		margin: 0;
-		padding-left: 0;
+		padding-left: 1.1rem;
 		color: var(--color-muted);
-		font-size: 0.86rem;
-		line-height: 1.5;
+		font-size: 0.88rem;
+		line-height: 1.55;
 	}
 
 	.features-detail__gallery {
 		display: grid;
-		gap: 1rem;
-		padding: clamp(1rem, 2vw, 1.35rem);
+		gap: 1.25rem;
+		padding: clamp(1.1rem, 2vw, 1.5rem);
 		border-radius: var(--radius-card);
 		border: 1px solid var(--color-border);
-		background: rgba(17, 21, 20, 0.55);
+		background: rgba(13, 35, 36, 0.55);
 	}
 
 	.features-detail__gallery-head {
 		display: grid;
-		gap: 0.35rem;
+		gap: 0.45rem;
+		max-width: 36rem;
+		margin-inline: auto;
 		text-align: center;
 	}
 
 	.features-detail__gallery-head h2 {
 		margin: 0;
 		font-family: var(--font-display);
-		font-size: clamp(1.1rem, 2vw, 1.3rem);
+		font-size: clamp(1.2rem, 2.2vw, 1.4rem);
 		font-weight: 800;
 		color: var(--color-ink);
 	}
 
 	.features-detail__gallery-head p {
-		margin: 0 auto;
-		max-width: 34rem;
+		margin: 0;
 		color: var(--color-muted);
-		font-size: 0.88rem;
-		line-height: 1.5;
+		font-size: 0.9rem;
+		line-height: 1.55;
 	}
 
-	.features-detail__gallery-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-		gap: 0.65rem;
-		width: 100%;
+	.features-detail__gallery-scroller {
+		overflow-x: auto;
+		overflow-y: hidden;
+		margin: 0 -0.25rem;
+		padding: 0.15rem 0.25rem 0.65rem;
+		scroll-snap-type: x mandatory;
+		scroll-padding-inline: 0.25rem;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: thin;
+		scrollbar-color: rgba(32, 191, 192, 0.45) transparent;
+		mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+	}
+
+	.features-detail__gallery-scroller:focus-visible {
+		outline: 2px solid var(--color-cyan);
+		outline-offset: 2px;
+		border-radius: 0.5rem;
+	}
+
+	.features-detail__gallery-scroller::-webkit-scrollbar {
+		height: 6px;
+	}
+
+	.features-detail__gallery-scroller::-webkit-scrollbar-thumb {
+		border-radius: 999px;
+		background: rgba(32, 191, 192, 0.45);
+	}
+
+	.features-detail__gallery-track {
+		display: flex;
+		gap: 0.85rem;
+		width: max-content;
+		min-width: 100%;
 	}
 
 	.features-detail__gallery-item {
+		flex: 0 0 clamp(240px, 38vw, 340px);
 		margin: 0;
 		aspect-ratio: 16 / 10;
-		border: 1px solid rgba(104, 112, 82, 0.12);
-		border-radius: 0.6rem;
+		border: 1px solid rgba(32, 191, 192, 0.12);
+		border-radius: 0.7rem;
 		overflow: hidden;
+		scroll-snap-align: start;
 	}
 
 	.features-detail__gallery-item img {
@@ -305,7 +307,7 @@ const responsiveImage = (src: string) => ({
 		flex-wrap: wrap;
 		gap: 0.75rem;
 		justify-content: center;
-		padding-top: 0.15rem;
+		padding-top: 0.25rem;
 	}
 
 	.features-detail__pricing-link {
@@ -325,7 +327,7 @@ const responsiveImage = (src: string) => ({
 		padding: 0.95rem 1.35rem;
 		border-radius: 0.75rem;
 		border: 1px solid var(--color-border);
-		background: rgba(17, 21, 20, 0.9);
+		background: rgba(13, 35, 36, 0.9);
 		color: var(--color-muted);
 		font-weight: 650;
 		text-decoration: none;
@@ -334,19 +336,12 @@ const responsiveImage = (src: string) => ({
 
 	.features-detail__checkout-link:hover {
 		color: var(--color-ink);
-		border-color: rgba(104, 112, 82, 0.45);
-	}
-
-	@media (max-width: 767px) {
-		.features-detail__figure {
-			max-width: min(100%, 280px);
-			margin-inline: auto;
-		}
+		border-color: rgba(32, 191, 192, 0.45);
 	}
 
 	@media (max-width: 640px) {
-		.features-detail__gallery-grid {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
+		.features-detail__gallery-item {
+			flex-basis: clamp(220px, 78vw, 300px);
 		}
 
 		.features-detail__cta {

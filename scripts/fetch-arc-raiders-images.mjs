@@ -6,42 +6,42 @@ import sharp from 'sharp';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const outDir = join(root, 'public', 'images');
 
-/** Seven unique Project Zomboid cheat screenshots — keyword-mapped for projectzomboidcheats.com SEO. */
+/** Seven unique Warframe cheat screenshots — keyword-mapped for warframecheats.net SEO. */
 const SOURCES = [
 	{
 		url: 'https://cdn.wh-satano.ru/arcane-wt-s1.webp',
-		file: 'zomboid-cheats-hero.webp',
-		alt: 'Project Zomboid cheats main menu with ESP, wallhack, and aimbot toggles on PC',
+		file: 'warframe-cheats-hero.webp',
+		alt: 'Warframe cheats main menu with ESP, wallhack, and aimbot toggles on PC',
 	},
 	{
 		url: 'https://cdn.wh-satano.ru/arcane-wt-s2.webp',
-		file: 'zomboid-esp-overlay.webp',
-		alt: 'Project Zomboid ESP overlay showing zombie or survivor positions and module health through terrain',
+		file: 'warframe-esp-overlay.webp',
+		alt: 'Warframe ESP overlay showing enemy Warframe positions and module health through terrain',
 	},
 	{
 		url: 'https://cdn.wh-satano.ru/arcane-wt-s3.webp',
-		file: 'zomboid-esp-zombies.webp',
-		alt: 'Project Zomboid wallhack ESP with enemy outline boxes and distance readouts in loot runs',
+		file: 'warframe-esp-enemies.webp',
+		alt: 'Warframe wallhack ESP with enemy outline boxes and distance readouts in Steel Path missions',
 	},
 	{
 		url: 'https://cdn.wh-satano.ru/smg-wt-s1.webp',
-		file: 'zomboid-esp-modules.webp',
-		alt: 'Project Zomboid aimbot lead calculator lock on zombie or survivor turret during combat encounter',
+		file: 'warframe-esp-modules.webp',
+		alt: 'Warframe aimbot lead calculator lock on enemy Warframe turret during mission fight',
 	},
 	{
 		url: 'https://cdn.wh-satano.ru/smg-wt-s2.webp',
-		file: 'zomboid-aimbot-menu.webp',
-		alt: 'Project Zomboid cheats cheat menu with aimbot, ballistic prediction, and FOV settings',
+		file: 'warframe-aimbot-menu.webp',
+		alt: 'Warframe cheats cheat menu with aimbot, ballistic prediction, and FOV settings',
 	},
 	{
 		url: 'https://cdn.wh-satano.ru/smg-wt-s3.webp',
-		file: 'zomboid-radar-hack.webp',
-		alt: 'Project Zomboid radar hack 2D overlay showing zombie horde spawn routes and enemy aircraft',
+		file: 'warframe-radar-hack.webp',
+		alt: 'Warframe radar hack 2D overlay showing spawn routes and enemy aircraft',
 	},
 	{
 		url: 'https://cdn.wh-satano.ru/wtfecs1.webp',
-		file: 'zomboid-survival.webp',
-		alt: 'Project Zomboid cheats survival run with ESP boxes and aimbot active on capture zone',
+		file: 'warframe-mission.webp',
+		alt: 'Warframe cheats Steel Path mission with ESP boxes and aimbot active on capture zone',
 	},
 ];
 
@@ -80,4 +80,4 @@ for (const item of SOURCES) {
 	console.log(`  ✓ ${item.file} (+ variants)`);
 }
 
-console.log('Done — 7 Project Zomboid cheat images installed.');
+console.log('Done — 7 Warframe cheat images installed.');

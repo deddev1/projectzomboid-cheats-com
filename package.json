@@ -1,5 +1,5 @@
 {
-	"name": "project-zomboid-cheats",
+	"name": "warframe-cheats",
 	"type": "module",
 	"version": "1.0.0",
 	"engines": {
@@ -25,7 +25,7 @@
 		"fetch:guide-images": "node scripts/fetch-guide-ign-images.mjs",
 		"deploy": "npm run build && wrangler deploy",
 		"cf:deploy": "npm run build:cf && wrangler deploy",
-		"pages:deploy": "wrangler pages deploy dist --project-name=project-zomboidcheats",
+		"pages:deploy": "wrangler pages deploy dist --project-name=warframecheats",
 		"astro": "astro"
 	},
 	"dependencies": {

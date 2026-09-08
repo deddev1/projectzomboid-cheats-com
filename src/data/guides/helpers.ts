@@ -6,40 +6,40 @@ import { externalGuidePosts } from './posts.generated';
 import type { ExternalGuidePost, ResolvedExternalGuide } from './types';
 
 export const guidesBasePath = '/guides/';
-export const NATIVE_GAME_GUIDES_CATEGORY = 'Project Zomboid Game Guides';
+export const NATIVE_GAME_GUIDES_CATEGORY = 'Warframe Game Guides';
 
-/** Trusted third-party Project Zomboid resources shown below native guides on /guides/. */
-export const zomboidAuthorityLinks = [
+/** Trusted third-party Warframe resources shown below native guides on /guides/. */
+export const warframeAuthorityLinks = [
 	{
-		title: 'Project Zomboid on Steam',
+		title: 'Warframe on Steam',
 		description: 'Official store page, system requirements, and player reviews.',
-		href: 'https://store.steampowered.com/app/108600/Project_Zomboid/',
+		href: 'https://store.steampowered.com/app/230410/Warframe/',
 	},
 	{
-		title: 'Project Zomboid patch notes & news',
+		title: 'Warframe patch notes & news',
 		description: 'Read official PC update posts before you change your loadout.',
-		href: 'https://projectzomboid.com/blog/',
+		href: 'https://forums.warframe.com/forum/3-pc-update-notes/',
 	},
 	{
-		title: 'Official Project Zomboid website',
-		description: 'Game overview, news, and resources from The Indie Stone.',
-		href: 'https://projectzomboid.com/',
+		title: 'Official Warframe website',
+		description: 'Game overview, news, and resources from Digital Extremes.',
+		href: 'https://www.warframe.com/',
 	},
 	{
-		title: 'Project Zomboid Steam community hub',
+		title: 'Warframe Steam community hub',
 		description: 'Announcements, guides, and community discussions.',
-		href: 'https://steamcommunity.com/app/108600',
+		href: 'https://steamcommunity.com/app/230410',
 	},
 ] as const;
 
-/** Pedagogical order for native Project Zomboid guides on the hub. */
+/** Pedagogical order for native Warframe guides on the hub. */
 const NATIVE_GUIDE_ORDER = [
-	'project-zomboid-new-player-guide',
-	'project-zomboid-gameplay-modes-explained',
-	'project-zomboid-zombie-types-guide',
-	'project-zomboid-loot-farming-guide',
-	'project-zomboid-survival-beginners-guide',
-	'project-zomboid-patch-notes-guide',
+	'warframe-new-player-guide',
+	'warframe-mission-types-guide',
+	'warframe-factions-explained',
+	'warframe-open-world-farming',
+	'warframe-steel-path-guide',
+	'warframe-patch-notes-guide',
 ];
 
 export function getGuidePath(slug: string): string {
@@ -69,8 +69,8 @@ export function getExternalGuideBySlug(slug: string): ResolvedExternalGuide | un
 	return post ? resolveExternalGuide(post) : undefined;
 }
 
-/** Native Project Zomboid game guides from the blog — shown at top of /guides/. */
-export function getNativeZomboidGuides() {
+/** Native Warframe game guides from the blog — shown at top of /guides/. */
+export function getNativeWarframeGuides() {
 	const guides = getPostsByCategory(defaultLocale, NATIVE_GAME_GUIDES_CATEGORY);
 	const order = new Map(NATIVE_GUIDE_ORDER.map((id, index) => [id, index]));
 	return [...guides].sort((a, b) => {
@@ -144,7 +144,7 @@ export function getGuidesSitemapEntries() {
 				{
 					url: new URL(siteConfig.defaultOgImage, siteConfig.url).href,
 					title: 'Game guides hub',
-					caption: 'Project Zomboid survival and gameplay guides',
+					caption: 'Warframe native guides and multi-game gameplay guides',
 				},
 			],
 		},

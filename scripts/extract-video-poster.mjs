@@ -16,10 +16,10 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const VIDEO_URL =
 	'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/ef/fafa.mp4';
 const videoDir = join(root, 'public', 'videos');
-const outVideo = join(videoDir, 'zomboid-cheats-preview.mp4');
+const outVideo = join(videoDir, 'warframe-cheats-preview.mp4');
 const outDir = join(root, 'public', 'images');
 const tmpFrame = join(outDir, '.tmp-product-poster.png');
-const outWebp = join(outDir, 'zomboid-cheats-video-poster.webp');
+const outWebp = join(outDir, 'warframe-cheats-video-poster.webp');
 
 mkdirSync(videoDir, { recursive: true });
 mkdirSync(outDir, { recursive: true });

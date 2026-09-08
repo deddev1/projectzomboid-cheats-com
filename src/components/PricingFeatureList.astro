@@ -9,24 +9,20 @@ interface Props {
 	locale?: LocaleCode;
 	showFullLink?: boolean;
 	showRelatedPages?: boolean;
-	/** On /pricing/ the page banner already has the main title — use a descriptive subheading. */
-	compactHeading?: boolean;
 }
 
 const locale = Astro.props.locale ?? defaultLocale;
 const showFullLink = Astro.props.showFullLink ?? true;
 const showRelatedPages = Astro.props.showRelatedPages ?? true;
-const compactHeading = Astro.props.compactHeading ?? false;
 const ui = getUi(locale);
 const featuresHref = getLocalizedPath('features', locale);
-const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.features;
 ---
 
 <section class="pricing-features" aria-labelledby="pricing-features-title">
 	<header class="pricing-features__head">
-		<h2 id="pricing-features-title" class="pricing-features__title">{sectionTitle}</h2>
+		<h2 id="pricing-features-title" class="pricing-features__title">Features</h2>
 		<p class="pricing-features__subtitle">
-			Everything included for survival, multiplayer, and Knox County looting on Windows PC.
+			Everything included for Steel Path, Sorties, and open world missions on Windows PC.
 		</p>
 		<div class="pricing-features__badges">
 			<span class="pricing-features__badge">
@@ -56,51 +52,24 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 
 	<div class="pricing-features__grid">
 		{
-			productFeatureCategories.map((category) => {
-				const splitAt = Math.ceil(category.items.length / 2);
-				const leftItems = category.items.slice(0, splitAt);
-				const rightItems = category.items.slice(splitAt);
-
-				return (
-					<article
+			productFeatureCategories.map((category) => (
+				<article class="pricing-features__card">
+					<h3 class="pricing-features__card-title">{category.title}</h3>
+					<ul
 						class:list={[
-							'pricing-features__card',
-							category.columns === 2 && 'pricing-features__card--split',
+							'pricing-features__list',
+							category.columns === 2 && 'pricing-features__list--two-col',
 						]}
 					>
-						<h3 class="pricing-features__card-title">{category.title}</h3>
-						{category.columns === 2 ? (
-							<div class="pricing-features__list-cols">
-								<ul class="pricing-features__list pricing-features__list--col">
-									{leftItems.map((item) => (
-										<li>
-											<span class="pricing-features__bullet" aria-hidden="true"></span>
-											<span class="pricing-features__item-text">{item}</span>
-										</li>
-									))}
-								</ul>
-								<ul class="pricing-features__list pricing-features__list--col">
-									{rightItems.map((item) => (
-										<li>
-											<span class="pricing-features__bullet" aria-hidden="true"></span>
-											<span class="pricing-features__item-text">{item}</span>
-										</li>
-									))}
-								</ul>
-							</div>
-						) : (
-							<ul class="pricing-features__list">
-								{category.items.map((item) => (
-									<li>
-										<span class="pricing-features__bullet" aria-hidden="true"></span>
-										<span class="pricing-features__item-text">{item}</span>
-									</li>
-								))}
-							</ul>
-						)}
-					</article>
-				);
-			})
+						{category.items.map((item) => (
+							<li>
+								<span class="pricing-features__bullet" aria-hidden="true"></span>
+								<span class="pricing-features__item-text">{item}</span>
+							</li>
+						))}
+					</ul>
+				</article>
+			))
 		}
 	</div>
 
@@ -128,7 +97,7 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 		margin: 0;
 		padding: clamp(0.9rem, 1.8vw, 1.25rem);
 		border-radius: var(--radius-card);
-		border: 1px solid rgba(104, 112, 82, 0.14);
+		border: 1px solid rgba(32, 191, 192, 0.14);
 		background: rgba(10, 28, 29, 0.92);
 	}
 
@@ -159,7 +128,7 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 		width: 2.5rem;
 		height: 3px;
 		border-radius: 999px;
-		background: linear-gradient(90deg, #D2AE76, #687052);
+		background: linear-gradient(90deg, #20BFC0, #174143);
 	}
 
 	.pricing-features__subtitle {
@@ -184,8 +153,8 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 		gap: 0.4rem;
 		padding: 0.4rem 0.8rem;
 		border-radius: 999px;
-		border: 1px solid rgba(104, 112, 82, 0.35);
-		background: rgba(104, 112, 82, 0.12);
+		border: 1px solid rgba(32, 191, 192, 0.35);
+		background: rgba(23, 65, 67, 0.12);
 		color: var(--color-orchid);
 		font-size: 0.68rem;
 		font-weight: 800;
@@ -207,12 +176,10 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 	}
 
 	.pricing-features__card {
-		padding: 1.2rem 1.25rem 1.35rem;
+		padding: 1.15rem 1.2rem 1.25rem;
 		border-radius: 0.85rem;
-		border: 1px solid rgba(104, 112, 82, 0.22);
-		background: linear-gradient(145deg, rgba(23, 27, 26, 0.98) 0%, rgba(17, 21, 20, 0.98) 100%);
-		display: flex;
-		flex-direction: column;
+		border: 1px solid rgba(32, 191, 192, 0.22);
+		background: rgba(28, 24, 38, 0.98);
 		transition:
 			transform 0.22s ease,
 			border-color 0.22s ease,
@@ -222,7 +189,7 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 	@media (hover: hover) and (pointer: fine) {
 		.pricing-features__card:hover {
 			transform: translateY(-4px);
-			border-color: rgba(104, 112, 82, 0.42);
+			border-color: rgba(32, 191, 192, 0.42);
 			box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
 		}
 	}
@@ -230,13 +197,12 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 	.pricing-features__card-title {
 		margin: 0 0 0.85rem;
 		padding-bottom: 0.7rem;
-		border-bottom: 1px solid rgba(104, 112, 82, 0.2);
+		border-bottom: 1px solid rgba(32, 191, 192, 0.2);
 		font-family: var(--font-display);
 		font-size: 1.02rem;
 		font-weight: 700;
 		letter-spacing: -0.01em;
-		line-height: 1.3;
-		color: var(--color-ink);
+		color: #ede9fe;
 	}
 
 	.pricing-features__list {
@@ -244,59 +210,36 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 		padding: 0;
 		list-style: none;
 		display: grid;
-		gap: 0.65rem;
-		flex: 1;
+		gap: 0.5rem;
 	}
 
-	.pricing-features__list-cols {
-		display: grid;
+	.pricing-features__list--two-col {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		align-items: start;
-		column-gap: 0.85rem;
-		flex: 1;
-	}
-
-	.pricing-features__list--col {
-		gap: 0.55rem;
-	}
-
-	.pricing-features__card--split {
-		padding-inline: 1rem;
-	}
-
-	.pricing-features__card--split .pricing-features__card-title {
-		margin-bottom: 0.75rem;
-		padding-bottom: 0.6rem;
-		font-size: 0.98rem;
-	}
-
-	.pricing-features__card--split .pricing-features__list li {
-		font-size: 0.8125rem;
-		line-height: 1.35;
+		gap: 0.5rem 1rem;
 	}
 
 	.pricing-features__list li {
 		display: flex;
 		align-items: flex-start;
-		gap: 0.5rem;
+		gap: 0.55rem;
 		color: rgba(255, 255, 255, 0.92);
-		font-size: 0.88rem;
+		font-size: 0.9rem;
 		font-weight: 500;
-		line-height: 1.45;
+		line-height: 1.5;
 	}
 
 	.pricing-features__bullet {
-		flex: 0 0 0.45rem;
-		width: 0.45rem;
-		height: 0.45rem;
-		margin-top: 0.42em;
+		flex-shrink: 0;
+		width: 0.42rem;
+		height: 0.42rem;
+		margin-top: 0.48rem;
 		border-radius: 50%;
-		background: #d2ae76;
-		box-shadow: 0 0 0 2px rgba(104, 112, 82, 0.18);
+		background: #20BFC0;
+		box-shadow: 0 0 0 2px rgba(32, 191, 192, 0.18);
 	}
 
 	.pricing-features__item-text {
-		flex: 1 1 auto;
+		flex: 1;
 		min-width: 0;
 	}
 
@@ -308,8 +251,8 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 		width: 100%;
 		padding: 0.95rem 1.15rem;
 		border-radius: 0.75rem;
-		border: 1px solid rgba(104, 112, 82, 0.35);
-		background: linear-gradient(180deg, rgba(104, 112, 82, 0.22), rgba(17, 21, 20, 0.18));
+		border: 1px solid rgba(32, 191, 192, 0.35);
+		background: linear-gradient(180deg, rgba(23, 65, 67, 0.22), rgba(13, 35, 36, 0.18));
 		color: var(--color-ink);
 		font-size: 0.92rem;
 		font-weight: 700;
@@ -321,8 +264,8 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 	}
 
 	.pricing-features__full-link:hover {
-		border-color: rgba(104, 112, 82, 0.55);
-		background: linear-gradient(180deg, rgba(104, 112, 82, 0.32), rgba(17, 21, 20, 0.24));
+		border-color: rgba(32, 191, 192, 0.55);
+		background: linear-gradient(180deg, rgba(23, 65, 67, 0.32), rgba(13, 35, 36, 0.24));
 		transform: translateY(-1px);
 		color: var(--color-ink);
 	}
@@ -332,20 +275,8 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 			grid-template-columns: 1fr;
 		}
 
-		.pricing-features__card--split {
-			padding-inline: 1.25rem;
-		}
-
-		.pricing-features__card--split .pricing-features__list li {
-			font-size: 0.88rem;
-			line-height: 1.45;
-		}
-	}
-
-	@media (max-width: 520px) {
-		.pricing-features__list-cols {
+		.pricing-features__list--two-col {
 			grid-template-columns: 1fr;
-			row-gap: 0.65rem;
 		}
 	}
 </style>

@@ -1,5 +1,5 @@
 ---
-import { zomboidAuthorityLinks } from '../data/guides/helpers';
+import { warframeAuthorityLinks } from '../data/guides/helpers';
 
 interface Props {
 	headingLevel?: 'h2' | 'h3';
@@ -9,8 +9,8 @@ const { headingLevel = 'h3' } = Astro.props;
 const HeadingTag = headingLevel;
 ---
 
-<section class="authority-links" aria-labelledby="project-zomboid-authority-title">
-	<HeadingTag id="project-zomboid-authority-title" class="authority-links__title">
+<section class="authority-links" aria-labelledby="warframe-authority-title">
+	<HeadingTag id="warframe-authority-title" class="authority-links__title">
 		Official game guides &amp; resources
 	</HeadingTag>
 	<p class="authority-links__intro">
@@ -19,7 +19,7 @@ const HeadingTag = headingLevel;
 	</p>
 	<ul class="authority-links__list">
 		{
-			zomboidAuthorityLinks.map((link) => (
+			warframeAuthorityLinks.map((link) => (
 				<li>
 					<a
 						class="authority-links__item"
@@ -89,7 +89,7 @@ const HeadingTag = headingLevel;
 	}
 
 	.authority-links__item-title {
-		color: #d2ae76;
+		color: #20bfc0;
 		font-size: 0.95rem;
 		font-weight: 700;
 		line-height: 1.35;

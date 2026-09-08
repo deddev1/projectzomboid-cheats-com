@@ -1,5 +1,5 @@
 {
-	"name": "project-zomboid-cheats-net",
+	"name": "warframe-cheats-net",
 	"install": "npm install && npm run generate:i18n && npm run fetch:images && npm run extract:video-poster",
 	"start": "npm run dev",
 	"ports": [

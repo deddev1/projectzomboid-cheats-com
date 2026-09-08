@@ -1,31 +1,29 @@
-import { gameplayImages } from './gameplay-images';
-
 export const siteConfig = {
-	name: 'Project Zomboid Cheats',
-	url: 'https://projectzomboidcheats.com',
+	name: 'Warframe Cheats',
+	url: 'https://warframecheats.net',
 	locale: 'en',
 	market: 'Worldwide',
-	supportEmail: 'support@projectzomboidcheats.com',
+	supportEmail: 'support@warframecheats.net',
 	logo: '/favicon.png',
 	logoRaster: '/favicon.png',
 	logoRasterWidth: 192,
 	logoRasterHeight: 192,
-	logoAlt: 'Project Zomboid Cheats logo',
-	checkoutUrl: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fproject-zomboid',
-	defaultOgImage: gameplayImages.cheatMenuUi.src,
+	logoAlt: 'Warframe Cheats logo',
+	checkoutUrl: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fwarframe',
+	defaultOgImage: '/images/warframe-esp-overlay.webp',
 } as const;
 
 export const productInfo = {
-	name: 'Project Zomboid Cheats',
-	shortName: 'PZ',
-	brand: 'Project Zomboid Cheats',
-	tagline: 'Project Zomboid cheats for PC — ESP, aimbot, and wallhack with updates after anti-cheat patches',
+	name: 'Warframe Cheats',
+	shortName: 'WF',
+	brand: 'Warframe Cheats',
+	tagline: 'Warframe cheats for PC — ESP, aimbot, and wallhack with updates after anti-cheat patches',
 	summary:
-		'Project Zomboid Cheats is a Windows PC package with ESP, aimbot, and wallhack for Project Zomboid. It works in survival, multiplayer, and Knox County looting, and we update it after anti-cheat and game patches.',
-	game: 'Project Zomboid',
+		'Warframe Cheats is a Windows PC package with ESP, aimbot, and wallhack for Warframe. It works in Steel Path, Sorties, and open world missions, and we update it after anti-cheat and game patches.',
+	game: 'Warframe',
 	delivery: 'Digital license delivery after purchase confirmation',
 	platforms: ['Windows PC', 'Controllers'],
-	updateCadence: 'Updates are published when Project Zomboid or anti-cheat patches require maintenance',
+	updateCadence: 'Updates are published when Warframe or anti-cheat patches require maintenance',
 	supportHours: 'Support requests are reviewed daily',
 	plans: [
 		{ id: 'monthly', label: 'Monthly', price: 35, duration: 'P30D' },
@@ -48,29 +46,29 @@ export const productInfo = {
 	},
 	features: {
 		esp: [
-			'Player & zombie ESP across survival, multiplayer, and Knox County looting',
-			'Enemy unit, special infected, and special infected outlines through terrain and obstacles',
-			'Health and status markers for zombies and survivors',
+			'Frame ESP across Steel Path, Sorties, and open world missions',
+			'Enemy unit, Sentient, and heavy unit outlines through terrain and obstacles',
+			'Ability cooldown and health markers for frames and bosses',
 			'Distance readouts and snapline options',
 			'Toggleable ESP categories to cut overlay noise',
-			'Team and enemy colour coding for group fights',
+			'Team and enemy colour coding for squad fights',
 		],
 		aimbot: [
-			'Smooth aim targeting for melee weapons, firearms, and shotguns',
+			'Smooth aim targeting for primaries, secondaries, and melee',
 			'Smoothness, FOV, and sensitivity controls',
-			'Headshot priority and target selection options',
-			'Hotkey toggles mid-combat without opening menus',
-			'Per-weapon profiles for pistols, shotguns, and rifles',
+			'Weak-spot priority and target selection options',
+			'Hotkey toggles mid-fight without opening menus',
+			'Per-weapon profiles for rifles, shotguns, and snipers',
 		],
 		radar: [
 			'2D radar for enemies outside your line of sight',
-			'Directional cues for flanks and horde pushes',
+			'Directional cues for flanks and spawn pushes',
 			'Configurable radar range for early rotations',
 		],
 		general: [
 			'In-client toggles for ESP, radar, and aimbot',
 			'Monthly and lifetime licenses',
-			'Anti-cheat maintenance notes after Project Zomboid patches',
+			'Anti-cheat maintenance notes after Warframe patches',
 			'Setup, delivery, and billing support',
 		],
 	},
@@ -89,8 +87,8 @@ export const productFeatureCategories = [
 			'Custom aim hotkey',
 			'Hold & toggle aim modes',
 			'Aim smoothing slider',
-			'Target type filter',
-			'Headshot targeting',
+			'Enemy type filter',
+			'Weak-point targeting',
 			'Per-weapon profiles',
 		],
 	},
@@ -98,16 +96,16 @@ export const productFeatureCategories = [
 		title: 'ESP & overlays',
 		columns: 1 as const,
 		items: [
-			'Zombie, survivor & loot ESP',
+			'Grineer, Corpus & Infested ESP',
 			'Outlines through terrain',
-			'Zombie bounding boxes',
-			'Headshot markers',
-			'Zombie facing indicator',
-			'Entity name labels',
+			'Enemy bounding boxes',
+			'Weak-point markers',
+			'Enemy facing indicator',
+			'Unit name labels',
 			'Distance readout',
 			'ESP distance filter',
 			'Health orb & pickup ESP',
-			'Boss zombie & special infected ESP',
+			'Boss, lich & Sentient ESP',
 		],
 	},
 	{
@@ -116,16 +114,16 @@ export const productFeatureCategories = [
 		items: [
 			'2D off-screen radar',
 			'Defense wave direction cues',
-			'In-session hotkey toggles',
+			'In-mission hotkey toggles',
 			'Hotkey profiles',
 			'Controller support',
 			'Patch maintenance status',
 			'In-game mod menu',
-			'Loot & container markers',
-			'Stamina and status tracking',
+			'Resource & locker markers',
+			'Ability cooldown tracking',
 			'Custom crosshair',
 			'Squad colour coding',
-			'Survival & horde presets',
+			'Steel Path & Sortie presets',
 		],
 	},
 ] as const;
@@ -136,26 +134,26 @@ export const productFeatureDetails = [
 		id: 'aimbot',
 		title: 'Combat assist',
 		summary:
-			'Configurable aim assistance for melee weapons, firearms, and shotguns — tuned for survival, multiplayer, and Knox County looting.',
+			'Configurable aim assistance for primaries, secondaries, and melee — tuned for Steel Path, Sorties, and open world missions.',
 		items: [
 			{
 				name: 'Line-of-sight visibility check',
 				description:
-					'Only locks onto enemies your character can actually hit — reduces obvious snaps through walls and building walls.',
+					'Only locks onto enemies your Warframe can actually hit — reduces obvious snaps through walls and ability barriers.',
 			},
 			{
 				name: 'Custom FOV arc',
 				description:
-					'Set how wide the aimbot scans for zombies, survivors, and special infected so close fights and sniper lanes both feel natural.',
+					'Set how wide the aimbot scans for Grineer, Corpus, and Infested units so close fights and sniper lanes both feel natural.',
 			},
 			{
 				name: 'FOV circle overlay',
-				description: 'Optional on-screen ring showing the active aimbot radius for quick tuning in zombie hordes and loot trips.',
+				description: 'Optional on-screen ring showing the active aimbot radius for quick tuning in Sorties and Steel Path.',
 			},
 			{
 				name: 'Target snapline',
 				description:
-					'Snapline from crosshair to the current lock — useful for verifying headshot priority on special infected and tough zombies.',
+					'Snapline from crosshair to the current lock — useful for verifying weak-point priority on heavy units and Sentients.',
 			},
 			{
 				name: 'Custom aim hotkey',
@@ -167,22 +165,22 @@ export const productFeatureDetails = [
 			},
 			{
 				name: 'Aim smoothing slider',
-				description: 'Control how fast the reticle moves to the target — higher smoothness looks more natural in public servers.',
+				description: 'Control how fast the reticle moves to the target — higher smoothness looks more natural in public missions.',
 			},
 			{
-				name: 'Target type filter',
+				name: 'Enemy type filter',
 				description:
-					'Prioritise closest enemy, lowest health, special infected, or bosses like special infected and boss zombies.',
+					'Prioritise closest enemy, lowest health, heavy units, or bosses like liches, sisters, and archons.',
 			},
 			{
-				name: 'Headshot targeting',
+				name: 'Weak-point targeting',
 				description:
-					'Bias locks toward headshot hitboxes on zombies, survivors, and special infected.',
+					'Bias locks toward weak-point hitboxes on Grineer, Corpus, Infested, and Sentient units.',
 			},
 			{
 				name: 'Per-weapon profiles',
 				description:
-					'Save separate aim settings for rifles, shotguns, snipers, and melee — swap mid-session without retuning.',
+					'Save separate aim settings for rifles, shotguns, snipers, and melee — swap mid-mission without retuning.',
 			},
 		],
 	},
@@ -190,33 +188,33 @@ export const productFeatureDetails = [
 		id: 'visual',
 		title: 'ESP & overlays',
 		summary:
-			'ESP and wallhack overlays that surface enemies, loot, and mission threats through terrain and building cover.',
+			'ESP and wallhack overlays that surface enemies, loot, and mission threats through terrain and ability effects.',
 		items: [
 			{
-				name: 'Zombie, survivor & loot ESP',
+				name: 'Grineer, Corpus & Infested ESP',
 				description:
-					'Highlights zombies and survivors with boxes, health bars, and distance readouts across the Knox County map.',
+					'Highlights enemy factions with boxes, health bars, and distance readouts across the Star Chart.',
 			},
 			{
 				name: 'Outlines through terrain',
 				description:
-					'Clean outlines on zombies, survivors, and special infected — even through smoke, cover, and building cover.',
+					'Clean outlines on Grineer, Corpus, Infested, and Sentient units — even through smoke, cover, and ability effects.',
 			},
 			{
-				name: 'Zombie bounding boxes',
-				description: 'Box ESP sized to each unit type for precise reads during melee combat and Knox County loot trips.',
+				name: 'Enemy bounding boxes',
+				description: 'Box ESP sized to each unit type for precise reads during parkour combat and open world bounties.',
 			},
 			{
-				name: 'Headshot markers',
-				description: 'Mark headshot hitboxes for precision shots on special infected, special infected, and tough infected fights.',
+				name: 'Weak-point markers',
+				description: 'Mark weak-point hitboxes for precision shots on heavy units, demolysts, and boss phases.',
 			},
 			{
-				name: 'Zombie facing indicator',
-				description: 'See which way an enemy is facing before you push a corridor or capture a safehouse perimeter.',
+				name: 'Enemy facing indicator',
+				description: 'See which way an enemy is facing before you push a corridor or capture a defense point.',
 			},
 			{
-				name: 'Entity name labels',
-				description: 'Display unit names above ESP boxes — walkers, runners, crawlers, and sprinters.',
+				name: 'Unit name labels',
+				description: 'Display unit names above ESP boxes — Grineer lancers, Corpus MOAs, Infested runners, and more.',
 			},
 			{
 				name: 'Distance readout',
@@ -225,16 +223,16 @@ export const productFeatureDetails = [
 			{
 				name: 'ESP distance filter',
 				description:
-					'Hide far-away clutter — keep overlays readable in Knox County and Riverside, and horde waves.',
+					'Hide far-away clutter — keep overlays readable in Plains of Eidolon, Orb Vallis, and defense waves.',
 			},
 			{
 				name: 'Health orb & pickup ESP',
-				description: 'Mark medical supplies, food, and ammo during long survival and loot trips.',
+				description: 'Mark health orbs, energy pickups, and ammo during long Steel Path and survival runs.',
 			},
 			{
-				name: 'Boss zombie & special infected ESP',
+				name: 'Boss, lich & Sentient ESP',
 				description:
-					'Dedicated styling for special infected, boss zombies, and horde leaders in late-game hordes.',
+					'Dedicated styling for liches, sisters of parvos, archons, and Sentient fragments in endgame content.',
 			},
 		],
 	},
@@ -246,15 +244,15 @@ export const productFeatureDetails = [
 		items: [
 			{
 				name: '2D off-screen radar',
-				description: 'Minimap-style blips for enemies outside your camera — great for zombie hordes, survival, and loot runs.',
+				description: 'Minimap-style blips for enemies outside your camera — great for defense, survival, and interception.',
 			},
 			{
 				name: 'Defense wave direction cues',
-				description: 'Directional hints when new enemy waves push toward your base defense or survival objective.',
+				description: 'Directional hints when new enemy waves push toward your defense or survival objective.',
 			},
 			{
-				name: 'In-session hotkey toggles',
-				description: 'Flip ESP, radar, and aimbot on or off mid-session without alt-tabbing.',
+				name: 'In-mission hotkey toggles',
+				description: 'Flip ESP, radar, and aimbot on or off mid-mission without alt-tabbing.',
 			},
 			{
 				name: 'Hotkey profiles',
@@ -266,19 +264,19 @@ export const productFeatureDetails = [
 			},
 			{
 				name: 'Patch maintenance status',
-				description: 'Maintenance status published on Updates after The Indie Stone and Project Zomboid patches.',
+				description: 'Maintenance status published on Updates after Digital Extremes and Warframe patches.',
 			},
 			{
 				name: 'In-game mod menu',
 				description: 'Full in-game menu for colours, categories, and per-module enable/disable.',
 			},
 			{
-				name: 'Loot & container markers',
-				description: 'Highlight resources, items, and containers during town looting, warehouse runs, and Knox County routes.',
+				name: 'Resource & locker markers',
+				description: 'Highlight resources, mods, and lockers during farm runs, relic missions, and open world bounties.',
 			},
 			{
-				name: 'Stamina and status tracking',
-				description: 'Track enemy status timers and your own cooldowns during complex special infected fights.',
+				name: 'Ability cooldown tracking',
+				description: 'Track enemy ability timers and your own cooldowns during complex boss and lich fights.',
 			},
 			{
 				name: 'Custom crosshair',
@@ -286,12 +284,12 @@ export const productFeatureDetails = [
 			},
 			{
 				name: 'Squad colour coding',
-				description: 'Separate colours for your squad members, allies, and enemies in public servers.',
+				description: 'Separate colours for your squad Warframes, allies, and enemies in public missions.',
 			},
 			{
-				name: 'Survival & horde presets',
+				name: 'Steel Path & Sortie presets',
 				description:
-					'One-click ESP and radar profiles tuned for horde density and sandbox population settings.',
+					'One-click ESP and radar profiles tuned for Steel Path enemy density and Sortie modifier stacks.',
 			},
 		],
 	},
@@ -299,26 +297,26 @@ export const productFeatureDetails = [
 
 export const trustSignals = {
 	status: 'Online',
-	statusNote: 'Project Zomboid Cheats is live for Project Zomboid on Windows PC.',
+	statusNote: 'Warframe Cheats is live for Warframe on Windows PC.',
 	delivery: 'Instant digital delivery',
 	platform: 'Windows 10 & 11',
 	antiCheat: 'Anti-cheat maintenance supported',
 } as const;
 
 export const seoLandingPages = [
-	{ label: 'Project Zomboid Cheats', href: '/project-zomboid-cheats/' },
-	{ label: 'Project Zomboid ESP', href: '/project-zomboid-esp/' },
-	{ label: 'Project Zomboid Aimbot', href: '/project-zomboid-aimbot/' },
-	{ label: 'Project Zomboid wallhack', href: '/project-zomboid-wallhack/' },
-	{ label: 'Undetected status', href: '/project-zomboid-cheats/' },
+	{ label: 'Warframe Cheats', href: '/warframe-cheats/' },
+	{ label: 'Warframe ESP', href: '/warframe-esp/' },
+	{ label: 'Warframe Aimbot', href: '/warframe-aimbot/' },
+	{ label: 'Warframe wallhack', href: '/warframe-wallhack/' },
+	{ label: 'Undetected status', href: '/warframe-cheats/' },
 	{ label: 'Pricing', href: '/pricing/' },
 ] as const;
 
 export const mainNav = [
 	{ label: 'Home', href: '/' },
-	{ label: 'Cheats', href: '/project-zomboid-cheats/' },
-	{ label: 'Aimbot', href: '/project-zomboid-aimbot/' },
-	{ label: 'ESP', href: '/project-zomboid-esp/' },
+	{ label: 'Cheats', href: '/warframe-cheats/' },
+	{ label: 'Aimbot', href: '/warframe-aimbot/' },
+	{ label: 'ESP', href: '/warframe-esp/' },
 	{ label: 'Features', href: '/features/' },
 	{ label: 'Pricing', href: '/pricing/' },
 	{ label: 'Setup', href: '/setup/' },
@@ -327,7 +325,7 @@ export const mainNav = [
 ] as const;
 
 export const footerNav = [
-	{ label: 'Project Zomboid update log', href: '/updates/' },
+	{ label: 'Warframe update log', href: '/updates/' },
 	{ label: 'Contact support', href: '/support/' },
 	{ label: 'Refund policy details', href: '/refund-policy/' },
 	{ label: 'Privacy policy details', href: '/privacy-policy/' },
@@ -336,9 +334,9 @@ export const footerNav = [
 
 export const footerExplore = [
 	{ label: 'Home', href: '/' },
-	{ label: 'Project Zomboid Cheats', href: '/project-zomboid-cheats/' },
-	{ label: 'ESP', href: '/project-zomboid-esp/' },
-	{ label: 'Aimbot', href: '/project-zomboid-aimbot/' },
+	{ label: 'Warframe Cheats', href: '/warframe-cheats/' },
+	{ label: 'ESP', href: '/warframe-esp/' },
+	{ label: 'Aimbot', href: '/warframe-aimbot/' },
 	{ label: 'Features', href: '/features/' },
 	{ label: 'Pricing', href: '/pricing/' },
 	{ label: 'Setup', href: '/setup/' },
@@ -348,15 +346,15 @@ export const footerExplore = [
 export const homeFaqs = [
 	{
 		category: 'Getting started',
-		question: 'What is Project Zomboid Cheats?',
+		question: 'What is Warframe Cheats?',
 		answer:
-			'Project Zomboid Cheats is a maintained Windows PC package for <a href="https://projectzomboid.com/" target="_blank" rel="noopener noreferrer">Project Zomboid</a> with <a href="/project-zomboid-esp/">ESP page</a>, <a href="/project-zomboid-wallhack/">wallhack</a>, <a href="/project-zomboid-radar/">radar</a>, and <a href="/project-zomboid-aimbot/">aimbot</a> controls. One license covers the full feature set plus <a href="/setup/">setup help</a>.',
+			'Warframe Cheats is a maintained Windows PC package for <a href="https://www.warframe.com/" target="_blank" rel="noopener noreferrer">Warframe</a> with <a href="/warframe-esp/">ESP page</a>, <a href="/warframe-wallhack/">wallhack</a>, <a href="/warframe-radar/">radar</a>, and <a href="/warframe-aimbot/">aimbot</a> controls. One license covers the full feature set plus <a href="/setup/">setup help</a>.',
 	},
 	{
 		category: 'Getting started',
 		question: 'What is included in one license?',
 		answer:
-			'Zombie ESP boxes, health and loot markers, 2D radar overlays, and configurable aim assist — including per-weapon profiles and optional cloud DMA. See the <a href="/features/">full feature list</a> and compare <a href="/pricing/">license plans</a>.',
+			'Enemy ESP boxes, health and pickup markers, 2D radar overlays, and configurable aim assist — including per-weapon profiles and optional cloud DMA. See the <a href="/features/">full feature list</a> and compare <a href="/pricing/">license plans</a>.',
 	},
 	{
 		category: 'Getting started',
@@ -366,9 +364,9 @@ export const homeFaqs = [
 	},
 	{
 		category: 'Features & gameplay',
-		question: 'Does this work for survival, multiplayer, and Knox County?',
+		question: 'Does this work for Steel Path, Sorties, and open world?',
 		answer:
-			'Yes. ESP and radar help you read enemy positions in survival and during hordes, and <a href="/blog/project-zomboid-loot-farming-guide/">Knox County</a> towns like Muldraugh, West Point, and Riverside. Aim assist covers pistol, shotgun, and rifle profiles for solo or multiplayer.',
+			'Yes. ESP and radar help you read enemy positions in Steel Path, Sorties, and <a href="/blog/warframe-open-world-farming-guide/">open world</a> tilesets like Plains of Eidolon, Orb Vallis, and Deimos. Aim assist covers rifle, shotgun, and sniper profiles for solo or squad play.',
 	},
 	{
 		category: 'Features & gameplay',
@@ -380,25 +378,25 @@ export const homeFaqs = [
 		category: 'Features & gameplay',
 		question: 'What is cloud DMA and do I need it?',
 		answer:
-			'Cloud DMA is an optional setup path for buyers who want hardware-assisted isolation instead of a standard loader. Most players start with the regular package. Read the <a href="/project-zomboid-cheats/">main guide</a> and ask <a href="/support/">support</a> before choosing DMA.',
+			'Cloud DMA is an optional setup path for buyers who want hardware-assisted isolation instead of a standard loader. Most players start with the regular package. Read the <a href="/warframe-cheats/">main guide</a> and ask <a href="/support/">support</a> before choosing DMA.',
 	},
 	{
 		category: 'Updates & support',
-		question: 'Is Project Zomboid Cheats permanently undetected?',
+		question: 'Is Warframe Cheats permanently undetected?',
 		answer:
-			'No tool can promise permanent undetected status. Project Zomboid is maintained by <a href="https://projectzomboid.com/" target="_blank" rel="noopener noreferrer">The Indie Stone</a> and receives regular patches. We rebuild after anti-cheat updates and post status on the <a href="/updates/">status page</a> — check there before you load in.',
+			'No tool can promise permanent undetected status. Warframe is maintained by <a href="https://www.digitalextremes.com/" target="_blank" rel="noopener noreferrer">Digital Extremes</a> and receives regular patches. We rebuild after anti-cheat updates and post status on the <a href="/updates/">status page</a> — check there before you load in.',
 	},
 	{
 		category: 'Updates & support',
-		question: 'Where do I check status after a Project Zomboid patch?',
+		question: 'Where do I check status after a Warframe patch?',
 		answer:
-			'Start with our <a href="/updates/">Updates page</a>, then cross-check <a href="https://projectzomboid.com/blog/" target="_blank" rel="noopener noreferrer">official PC update notes</a>. For how patches affect gameplay, read our <a href="/blog/project-zomboid-patch-notes-guide/">patch notes guide</a>.',
+			'Start with our <a href="/updates/">Updates page</a>, then cross-check <a href="https://forums.warframe.com/forum/3-pc-update-notes/" target="_blank" rel="noopener noreferrer">official PC update notes</a>. For how patches affect gameplay, read our <a href="/blog/warframe-patch-notes-guide/">patch notes guide</a>.',
 	},
 	{
 		category: 'Updates & support',
 		question: 'How do I contact support?',
 		answer:
-			'Use the <a href="/support/">Support page</a> or email support@projectzomboidcheats.com with your order ID, Windows version, and a short description of the issue. Refund questions are covered on the <a href="/refund-policy/">refund policy</a> page.',
+			'Use the <a href="/support/">Support page</a> or email support@warframecheats.net with your order ID, Windows version, and a short description of the issue. Refund questions are covered on the <a href="/refund-policy/">refund policy</a> page.',
 	},
 ] as const;
 
@@ -406,27 +404,27 @@ export const seoFaqs = [
 	...homeFaqs,
 	{
 		category: 'Product details',
-		question: 'What is a Project Zomboid wallhack?',
+		question: 'What is a Warframe wallhack?',
 		answer:
-			'A Project Zomboid wallhack is an ESP overlay that highlights zombies, survivors, and special infected through terrain. Project Zomboid Cheats <a href="/project-zomboid-wallhack/">wallhack</a> includes distance readouts, category toggles, and team colours for survival and open-world Knox County.',
+			'A Warframe wallhack is an ESP overlay that highlights Grineer, Corpus, Infested, and Sentient units through terrain. Warframe Cheats <a href="/warframe-wallhack/">wallhack</a> includes distance readouts, category toggles, and team colours for Steel Path and open world missions.',
 	},
 	{
 		category: 'Product details',
-		question: 'Does Project Zomboid Cheats include a radar hack?',
+		question: 'Does Warframe Cheats include a radar hack?',
 		answer:
-			'Yes. <a href="/project-zomboid-radar/">2D radar overlays</a> show nearby threats outside your direct view — useful for reading flanks during base defense, survival, and horde pushes.',
+			'Yes. <a href="/warframe-radar/">2D radar overlays</a> show nearby threats outside your direct view — useful for reading flanks during defense, survival, and squad pushes.',
 	},
 	{
 		category: 'Product details',
-		question: 'How does anti-cheat affect Project Zomboid Cheats?',
+		question: 'How does anti-cheat affect Warframe Cheats?',
 		answer:
-			'Anti-cheat monitors Project Zomboid on Windows PC. After major patches we publish maintenance notes on <a href="/updates/">Updates</a>. Read the <a href="/project-zomboid-cheats/">maintenance guide</a> and our <a href="/blog/undetected-project-zomboid-cheats-eac/">anti-cheat explainer</a> for what to expect on patch day.',
+			'Anti-cheat monitors Warframe on Windows PC. After major patches we publish maintenance notes on <a href="/updates/">Updates</a>. Read the <a href="/warframe-cheats/">maintenance guide</a> and our <a href="/blog/undetected-warframe-cheats-eac/">anti-cheat explainer</a> for what to expect on patch day.',
 	},
 	{
 		category: 'Product details',
-		question: 'Where can I read Project Zomboid game guides?',
+		question: 'Where can I read Warframe game guides?',
 		answer:
-			'Our <a href="/blog/">blog</a> covers Project Zomboid gameplay modes, survival tips, zombie types, Knox County loot routes, and how to read official patch notes — with links to the <a href="https://pzwiki.net/wiki/Main_Page" target="_blank" rel="noopener noreferrer">PZ Wiki</a> and <a href="https://projectzomboid.com/game-guide" target="_blank" rel="noopener noreferrer">official game guide</a>.',
+			'Our <a href="/blog/">blog</a> covers Warframe mission types, Steel Path, factions, open world farming, and how to read official patch notes — with links to the <a href="https://warframe.fandom.com/wiki/WARFRAME_Wiki" target="_blank" rel="noopener noreferrer">Warframe Wiki</a> and <a href="https://www.warframe.com/game-guide" target="_blank" rel="noopener noreferrer">official game guide</a>.',
 	},
 ] as const;
 
@@ -446,26 +444,26 @@ export type CustomerReview = {
 export const customerReviews = [
 	{
 		handle: 'krypt0_arc',
-		title: 'Soft aim in survival',
+		title: 'Soft aim on Steel Path',
 		rating: 5,
-		text: 'Using this for a few weeks in survival. Soft aim feels natural on rifles and I have not had issues in public servers. Took me a bit to figure out the menu layout but after that it has been smooth.',
-		short: 'Using this for a few weeks in survival. Soft aim feels natural on rifles and I have not had issues in public servers.',
-		slug: 'project-zomboid-soft-aim-review-xkrypt0',
-		seoTitle: 'Soft aim review by @krypt0_arc | Project Zomboid Cheats',
+		text: 'Using this for a few weeks on Steel Path. Soft aim feels natural on rifles and I have not had issues in public squads. Took me a bit to figure out the menu layout but after that it has been smooth.',
+		short: 'Using this for a few weeks on Steel Path. Soft aim feels natural on rifles and I have not had issues in public squads.',
+		slug: 'warframe-soft-aim-review-xkrypt0',
+		seoTitle: 'Soft aim review by @krypt0_arc | Warframe Cheats',
 		seoDescription:
-			'Buyer review from @krypt0_arc on soft aim for survival after setup on Windows PC.',
+			'Buyer review from @krypt0_arc on soft aim for Steel Path missions after setup on Windows PC.',
 		date: '2026-03-14',
 	},
 	{
 		handle: 'extractR4K',
-		title: 'ESP on Knox County',
+		title: 'ESP on open world',
 		rating: 4,
-		text: 'ESP helps a lot on Knox County and West Point when you are trying to spot hordes around corners before pushing the objective. Radar could be a little bigger on 1080p. Still happy with it for what I paid.',
-		short: 'ESP helps on Knox County and West Point when spotting heavies before pushing the objective. Radar could be bigger on 1080p.',
-		slug: 'project-zomboid-esp-realistic-review-buildsr4k',
-		seoTitle: 'ESP review by @extractR4K | Project Zomboid Cheats',
+		text: 'ESP helps a lot on Plains and Deimos when you are trying to spot heavies on ridges before pushing the objective. Radar could be a little bigger on 1080p. Still happy with it for what I paid.',
+		short: 'ESP helps on Plains and Deimos when spotting heavies before pushing the objective. Radar could be bigger on 1080p.',
+		slug: 'warframe-esp-realistic-review-buildsr4k',
+		seoTitle: 'ESP review by @extractR4K | Warframe Cheats',
 		seoDescription:
-			'Buyer review from @extractR4K on ESP boxes and radar during open-world Knox County.',
+			'Buyer review from @extractR4K on ESP boxes and radar during open world missions.',
 		date: '2026-02-08',
 	},
 	{
@@ -474,8 +472,8 @@ export const customerReviews = [
 		rating: 5,
 		text: 'I moved over from another tool that got flagged last patch. DMA setup sounded intimidating but support walked me through it on Discord in under an hour. Still running clean after the latest hotfix.',
 		short: 'Moved from another tool that got flagged. Support walked me through DMA setup on Discord. Still running after the latest hotfix.',
-		slug: 'zomboid-cloud-dma-review-dma-wizard',
-		seoTitle: 'Cloud DMA review by @jakeDMA | Project Zomboid Cheats',
+		slug: 'warframe-cloud-dma-review-dma-wizard',
+		seoTitle: 'Cloud DMA review by @jakeDMA | Warframe Cheats',
 		seoDescription:
 			'Buyer review from @jakeDMA on cloud DMA setup and patch-day stability.',
 		date: '2026-01-22',
@@ -486,8 +484,8 @@ export const customerReviews = [
 		rating: 4,
 		text: 'Did not expect controller support to work this well. Aim assist needed some FOV tweaking with my Xbox pad. Opening the menu with a controller is clunky but playable.',
 		short: 'Controller support works better than I expected. Needed some FOV tweaks with my Xbox pad.',
-		slug: 'zomboid-controller-aimbot-review-ctrl-player99',
-		seoTitle: 'Controller review by @padWarMain | Project Zomboid Cheats',
+		slug: 'warframe-controller-aimbot-review-ctrl-player99',
+		seoTitle: 'Controller review by @padWarMain | Warframe Cheats',
 		seoDescription:
 			'Buyer review from @padWarMain on aim assist and menu use with an Xbox controller.',
 		date: '2026-04-02',
@@ -496,10 +494,10 @@ export const customerReviews = [
 		handle: 'stormchaser07',
 		title: 'Setup took patience',
 		rating: 3,
-		text: 'Features are solid once everything is running. First launch was annoying because Windows Defender flagged the loader. Not entirely their fault, but the setup guide could be clearer. Support replied in a couple hours with a fix. ESP and pickup markers work well in Project Zomboid.',
+		text: 'Features are solid once everything is running. First launch was annoying because Windows Defender flagged the loader. Not entirely their fault, but the setup guide could be clearer. Support replied in a couple hours with a fix. ESP and pickup markers work well in Steel Path.',
 		short: 'Solid once running. Setup guide could be clearer and Defender flagged the loader at first. Support helped same day.',
-		slug: 'zomboid-cheat-setup-review-stormchaser07',
-		seoTitle: 'Setup review by @stormchaser07 | Project Zomboid Cheats',
+		slug: 'warframe-cheat-setup-review-stormchaser07',
+		seoTitle: 'Setup review by @stormchaser07 | Warframe Cheats',
 		seoDescription:
 			'Honest buyer review from @stormchaser07 on first-time setup and support response time.',
 		date: '2026-05-19',
@@ -508,36 +506,36 @@ export const customerReviews = [
 		handle: 'loot_goblin_42',
 		title: 'Resource ESP',
 		rating: 5,
-		text: 'Mostly bought this for loot tracking on long loot runs. Being able to see cooldowns and medical supplies without tabbing around saves a surprising amount of time.',
-		short: 'Mostly bought for loot tracking in survival. Cooldown and pickup markers save a lot of time.',
-		slug: 'zomboid-loot-esp-review-lootgoblinx',
-		seoTitle: 'Resource ESP review by @loot_goblin_42 | Project Zomboid Cheats',
+		text: 'Mostly bought this for resource tracking on long survival runs. Being able to see cooldowns and health pickups without tabbing around saves a surprising amount of time.',
+		short: 'Mostly bought for resource tracking on survival runs. Cooldown and pickup markers save a lot of time.',
+		slug: 'warframe-ability-esp-review-lootgoblinx',
+		seoTitle: 'Resource ESP review by @loot_goblin_42 | Warframe Cheats',
 		seoDescription:
-			'Buyer review from @loot_goblin_42 on resource ESP, cooldown markers, and loot runs.',
+			'Buyer review from @loot_goblin_42 on resource ESP, cooldown markers, and survival missions.',
 		date: '2026-06-11',
 	},
 	{
 		handle: 'steelpath42',
 		title: 'Weapon profiles',
 		rating: 4,
-		text: 'Been on this since early access. Separate profiles for pistol and shotgun actually matter in tight map zones. Only gripe is waiting about a day for an update after one patch. Updates page helped at least.',
-		short: 'Separate pistol and shotgun profiles matter in tight map zones. Waited about a day for one patch update.',
-		slug: 'project-zomboid-aimbot-realistic-review-steelpathgrind42',
-		seoTitle: 'Aim profiles review by @steelpath42 | Project Zomboid Cheats',
+		text: 'Been on this since early access. Separate profiles for rifle and shotgun actually matter in tight tilesets. Only gripe is waiting about a day for an update after one patch. Updates page helped at least.',
+		short: 'Separate rifle and shotgun profiles matter in tight tilesets. Waited about a day for one patch update.',
+		slug: 'warframe-aimbot-realistic-review-steelpathgrind42',
+		seoTitle: 'Aim profiles review by @steelpath42 | Warframe Cheats',
 		seoDescription:
 			'Buyer review from @steelpath42 on per-weapon aim profiles and post-patch update timing.',
 		date: '2026-03-28',
 	},
 	{
 		handle: 'vanlife_arc',
-		title: 'Radar on horde defense',
+		title: 'Radar on defense',
 		rating: 5,
-		text: 'Radar makes horde waves way less chaotic. Seeing flank routes before they reach your safe house is huge when you are in a pub squad and nobody is calling horde spawns.',
-		short: 'Radar makes horde waves less chaotic. Seeing flank routes before they reach your safe house is huge in pub squads.',
-		slug: 'project-zomboid-radar-hack-review-vanlifefn',
-		seoTitle: 'Radar review by @vanlife_arc | Project Zomboid Cheats',
+		text: 'Radar makes defense waves way less chaotic. Seeing flank routes before they hit the pod is huge when you are in a pub squad and nobody is calling spawns.',
+		short: 'Radar makes defense waves less chaotic. Seeing flank routes before they hit the pod is huge in pub squads.',
+		slug: 'warframe-radar-hack-review-vanlifefn',
+		seoTitle: 'Radar review by @vanlife_arc | Warframe Cheats',
 		seoDescription:
-			'Buyer review from @vanlife_arc on radar during zombie hordes and multiplayer.',
+			'Buyer review from @vanlife_arc on radar during defense missions and squad play.',
 		date: '2026-07-03',
 	},
 	{
@@ -546,20 +544,20 @@ export const customerReviews = [
 		rating: 4,
 		text: 'Every cheat goes down on patch day. Difference here is they posted a status update within a few hours and I was back the next morning. That is about all you can ask for.',
 		short: 'Goes down on patch day like everything else. Status update within a few hours and back the next morning.',
-		slug: 'zomboid-anti-cheat-update-review-patchdaymike',
-		seoTitle: 'Patch day review by @patchdaymike | Project Zomboid Cheats',
+		slug: 'warframe-anti-cheat-update-review-patchdaymike',
+		seoTitle: 'Patch day review by @patchdaymike | Warframe Cheats',
 		seoDescription:
-			'Buyer review from @patchdaymike on downtime and communication after a Project Zomboid patch.',
+			'Buyer review from @patchdaymike on downtime and communication after a Warframe patch.',
 		date: '2026-02-27',
 	},
 	{
 		handle: 'snipezonly',
 		title: 'Sniper profile',
 		rating: 5,
-		text: 'Sniper profile plus ESP tags is exactly what I wanted for Knox County loot runs. No complaints so far.',
-		short: 'Sniper profile plus ESP tags is exactly what I wanted for Knox County loot runs.',
-		slug: 'zomboid-sniper-aimbot-review-snipezonly',
-		seoTitle: 'Sniper profile review by @snipezonly | Project Zomboid Cheats',
+		text: 'Sniper profile plus ESP tags is exactly what I wanted for Eidolon hunts. No complaints so far.',
+		short: 'Sniper profile plus ESP tags is exactly what I wanted for Eidolon hunts.',
+		slug: 'warframe-sniper-aimbot-review-snipezonly',
+		seoTitle: 'Sniper profile review by @snipezonly | Warframe Cheats',
 		seoDescription:
 			'Buyer review from @snipezonly on the sniper aim profile and ESP tagging.',
 		date: '2026-07-21',
@@ -570,8 +568,8 @@ export const customerReviews = [
 		rating: 4,
 		text: 'Started on monthly to test it before committing. Performance has been stable enough that I will probably grab lifetime next sale. Menu is a little crowded but you get used to it.',
 		short: 'Started monthly to test it. Stable enough that I will probably grab lifetime next sale.',
-		slug: 'zomboid-monthly-sub-review-nightowl',
-		seoTitle: 'Monthly sub review by @nightowl_pc | Project Zomboid Cheats',
+		slug: 'warframe-monthly-sub-review-nightowl',
+		seoTitle: 'Monthly sub review by @nightowl_pc | Warframe Cheats',
 		seoDescription:
 			'Buyer review from @nightowl_pc on trying the monthly plan before upgrading.',
 		date: '2026-05-06',
@@ -582,22 +580,22 @@ export const customerReviews = [
 		rating: 5,
 		text: 'Picked up lifetime after bouncing between free menus for years. Having one package with ESP, aim assist, and radar that actually gets updated is worth it to me.',
 		short: 'Picked up lifetime after years of bouncing between free menus. One package that actually gets updated.',
-		slug: 'zomboid-lifetime-key-review-oldvet',
-		seoTitle: 'Lifetime key review by @oldvet_wf | Project Zomboid Cheats',
+		slug: 'warframe-lifetime-key-review-oldvet',
+		seoTitle: 'Lifetime key review by @oldvet_wf | Warframe Cheats',
 		seoDescription:
-			'Buyer review from @oldvet_wf on switching to a lifetime Project Zomboid Cheats key.',
+			'Buyer review from @oldvet_wf on switching to a lifetime Warframe Cheats key.',
 		date: '2026-01-09',
 	},
 	{
 		handle: 'duoqueue',
 		title: 'Playing with a friend',
 		rating: 4,
-		text: 'Me and a friend both run it for duo survival runs. ESP and radar make callouts way easier when we are on voice and not staring at the same screen. Wish there was a cleaner way to reset settings between missions.',
-		short: 'Friend and I both run it for duo survival runs. ESP and radar make callouts easier on voice.',
-		slug: 'zomboid-squad-play-review-duoqueue',
-		seoTitle: 'Squad play review by @duoqueue | Project Zomboid Cheats',
+		text: 'Me and a friend both run it for duo arbitrations. ESP and radar make callouts way easier when we are on voice and not staring at the same screen. Wish there was a cleaner way to reset settings between missions.',
+		short: 'Friend and I both run it for duo arbitrations. ESP and radar make callouts easier on voice.',
+		slug: 'warframe-squad-play-review-duoqueue',
+		seoTitle: 'Squad play review by @duoqueue | Warframe Cheats',
 		seoDescription:
-			'Buyer review from @duoqueue on using ESP and radar during duo survival runs.',
+			'Buyer review from @duoqueue on using ESP and radar during duo arbitration runs.',
 		date: '2026-04-18',
 	},
 ] as const satisfies readonly CustomerReview[];
