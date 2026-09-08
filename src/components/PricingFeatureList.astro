@@ -56,24 +56,51 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 
 	<div class="pricing-features__grid">
 		{
-			productFeatureCategories.map((category) => (
-				<article class="pricing-features__card">
-					<h3 class="pricing-features__card-title">{category.title}</h3>
-					<ul
+			productFeatureCategories.map((category) => {
+				const splitAt = Math.ceil(category.items.length / 2);
+				const leftItems = category.items.slice(0, splitAt);
+				const rightItems = category.items.slice(splitAt);
+
+				return (
+					<article
 						class:list={[
-							'pricing-features__list',
-							category.columns === 2 && 'pricing-features__list--two-col',
+							'pricing-features__card',
+							category.columns === 2 && 'pricing-features__card--split',
 						]}
 					>
-						{category.items.map((item) => (
-							<li>
-								<span class="pricing-features__bullet" aria-hidden="true"></span>
-								<span class="pricing-features__item-text">{item}</span>
-							</li>
-						))}
-					</ul>
-				</article>
-			))
+						<h3 class="pricing-features__card-title">{category.title}</h3>
+						{category.columns === 2 ? (
+							<div class="pricing-features__list-cols">
+								<ul class="pricing-features__list pricing-features__list--col">
+									{leftItems.map((item) => (
+										<li>
+											<span class="pricing-features__bullet" aria-hidden="true"></span>
+											<span class="pricing-features__item-text">{item}</span>
+										</li>
+									))}
+								</ul>
+								<ul class="pricing-features__list pricing-features__list--col">
+									{rightItems.map((item) => (
+										<li>
+											<span class="pricing-features__bullet" aria-hidden="true"></span>
+											<span class="pricing-features__item-text">{item}</span>
+										</li>
+									))}
+								</ul>
+							</div>
+						) : (
+							<ul class="pricing-features__list">
+								{category.items.map((item) => (
+									<li>
+										<span class="pricing-features__bullet" aria-hidden="true"></span>
+										<span class="pricing-features__item-text">{item}</span>
+									</li>
+								))}
+							</ul>
+						)}
+					</article>
+				);
+			})
 		}
 	</div>
 
@@ -221,40 +248,56 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 		flex: 1;
 	}
 
-	.pricing-features__list--two-col {
+	.pricing-features__list-cols {
+		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		column-gap: 1.15rem;
-		row-gap: 0.7rem;
+		align-items: start;
+		column-gap: 0.85rem;
+		flex: 1;
+	}
+
+	.pricing-features__list--col {
+		gap: 0.55rem;
+	}
+
+	.pricing-features__card--split {
+		padding-inline: 1rem;
+	}
+
+	.pricing-features__card--split .pricing-features__card-title {
+		margin-bottom: 0.75rem;
+		padding-bottom: 0.6rem;
+		font-size: 0.98rem;
+	}
+
+	.pricing-features__card--split .pricing-features__list li {
+		font-size: 0.8125rem;
+		line-height: 1.35;
 	}
 
 	.pricing-features__list li {
-		display: grid;
-		grid-template-columns: 0.45rem minmax(0, 1fr);
-		align-items: start;
-		column-gap: 0.65rem;
+		display: flex;
+		align-items: flex-start;
+		gap: 0.5rem;
 		color: rgba(255, 255, 255, 0.92);
 		font-size: 0.88rem;
 		font-weight: 500;
 		line-height: 1.45;
 	}
 
-	.pricing-features__list--two-col li {
-		padding-right: 0.15rem;
-	}
-
 	.pricing-features__bullet {
+		flex: 0 0 0.45rem;
 		width: 0.45rem;
 		height: 0.45rem;
-		margin-top: 0.38em;
+		margin-top: 0.42em;
 		border-radius: 50%;
 		background: #d2ae76;
 		box-shadow: 0 0 0 2px rgba(104, 112, 82, 0.18);
 	}
 
 	.pricing-features__item-text {
-		display: block;
+		flex: 1 1 auto;
 		min-width: 0;
-		padding-top: 0.02em;
 	}
 
 	.pricing-features__full-link {
@@ -289,13 +332,20 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 			grid-template-columns: 1fr;
 		}
 
-		.pricing-features__list--two-col {
-			grid-template-columns: 1fr;
-			row-gap: 0.65rem;
+		.pricing-features__card--split {
+			padding-inline: 1.25rem;
 		}
 
-		.pricing-features__list--two-col li {
-			padding-right: 0;
+		.pricing-features__card--split .pricing-features__list li {
+			font-size: 0.88rem;
+			line-height: 1.45;
+		}
+	}
+
+	@media (max-width: 520px) {
+		.pricing-features__list-cols {
+			grid-template-columns: 1fr;
+			row-gap: 0.65rem;
 		}
 	}
 </style>
