@@ -66,6 +66,14 @@
 	--touch-min: 2.75rem;
 }
 
+/* Always emit core palette tokens for scoped component styles (e.g. footer). */
+:root {
+	--color-surface-raised: #171b1a;
+	--color-surface-elevated: #202523;
+	--color-warm: #b58a58;
+	--color-teal: #687052;
+}
+
 @media (min-width: 761px) {
 	:root {
 		--font-display: "Syne Variable", ui-rounded, "Segoe UI Variable Display", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
