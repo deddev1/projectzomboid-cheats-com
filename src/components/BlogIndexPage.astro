@@ -21,8 +21,8 @@ const { locale } = Astro.props;
 const ui = blogUi[locale];
 const posts = getAllPostsForLocale(locale);
 const featured = getFeaturedPosts(locale, 3);
-const gameGuides = getPostsByCategory(locale, 'Warframe Game Guides');
-const productPosts = posts.filter((post) => post.category !== 'Warframe Game Guides');
+const gameGuides = getPostsByCategory(locale, 'Project Zomboid Game Guides');
+const productPosts = posts.filter((post) => post.category !== 'Project Zomboid Game Guides');
 const canonicalPath = getBlogBasePath(locale);
 const canonicalURL = absoluteBlogUrl(locale);
 const homeHref = getLocalizedPath('home', locale);
@@ -58,7 +58,7 @@ const articleListSchema = {
 	<Navbar locale={locale} />
 	<main class="blog">
 		<header class="blog__hero">
-			<p class="blog__eyebrow">Warframe guides &amp; product intel</p>
+			<p class="blog__eyebrow">Project Zomboid cheats guides</p>
 			<h1>{ui.blogH1}</h1>
 			<p class="blog__intro">{ui.blogIntro}</p>
 		</header>
@@ -76,7 +76,6 @@ const articleListSchema = {
 									height="360"
 									loading={index === 0 ? 'eager' : 'lazy'}
 									decoding="async"
-									fetchpriority={index === 0 ? 'high' : undefined}
 								/>
 								<div>
 									<span class="blog__cat">{post.category}</span>
@@ -91,15 +90,49 @@ const articleListSchema = {
 			)
 		}
 
+		<section class="blog__section" aria-labelledby="blog-product-posts">
+			<h2 id="blog-product-posts" class="blog__section-title">
+				Project Zomboid cheats guides
+			</h2>
+			<p class="blog__section-intro">
+				ESP, wallhack, radar, aimbot, setup, pricing, undetected anti-cheat notes, and vendor comparisons for
+				Windows PC.
+			</p>
+			<div class="blog__list" aria-label={ui.allPosts}>
+				{
+					productPosts.map((post) => (
+					<article class="blog__card">
+						<a href={post.canonicalPath}>
+							<img
+								src={post.imageSrc}
+								alt={post.translation.imageAlt}
+								width="480"
+								height="270"
+								loading="lazy"
+								decoding="async"
+							/>
+							<span class="blog__cat">{post.category}</span>
+							<h2>{post.translation.title}</h2>
+							<p>{post.translation.intro}</p>
+							<span class="blog__meta">
+								{ui.updated} {post.updated}
+							</span>
+						</a>
+					</article>
+				))
+			}
+			</div>
+		</section>
+
 		{
 			gameGuides.length > 0 && (
 				<section class="blog__section" aria-labelledby="blog-game-guides">
 					<h2 id="blog-game-guides" class="blog__section-title">
-						Warframe game guides
+						Knox County game guides
 					</h2>
 					<p class="blog__section-intro">
-						Steel Path, open world, factions, missions, and patch notes — with links to official Warframe
-						Wiki and Digital Extremes resources.
+						Survival tips, loot runs, zombie types, and patch notes — with links to the official Project
+						Zomboid Wiki and The Indie Stone.
 					</p>
 					<div class="blog__list">
 						{gameGuides.map((post) => (
@@ -126,36 +159,6 @@ const articleListSchema = {
 				</section>
 			)
 		}
-
-		<section class="blog__section" aria-labelledby="blog-product-posts">
-			<h2 id="blog-product-posts" class="blog__section-title">
-				Product guides &amp; comparisons
-			</h2>
-			<div class="blog__list" aria-label={ui.allPosts}>
-				{
-					productPosts.map((post) => (
-					<article class="blog__card">
-						<a href={post.canonicalPath}>
-							<img
-								src={post.imageSrc}
-								alt={post.translation.imageAlt}
-								width="480"
-								height="270"
-								loading="lazy"
-								decoding="async"
-							/>
-							<span class="blog__cat">{post.category}</span>
-							<h2>{post.translation.title}</h2>
-							<p>{post.translation.intro}</p>
-							<span class="blog__meta">
-								{ui.updated} {post.updated}
-							</span>
-						</a>
-					</article>
-				))
-			}
-			</div>
-		</section>
 	</main>
 	<SiteFooter locale={locale} />
 </Layout>
@@ -171,7 +174,7 @@ const articleListSchema = {
 	}
 	.blog__eyebrow {
 		margin: 0 0 0.5rem;
-		color: #20BFC0;
+		color: #D2AE76;
 		font-weight: 700;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
@@ -213,16 +216,29 @@ const articleListSchema = {
 		grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
 		gap: 1.25rem;
 		padding: 1rem;
-		border: 1px solid rgba(32, 191, 192, 0.22);
-		background: linear-gradient(135deg, rgba(40, 24, 64, 0.75), rgba(14, 10, 22, 0.9));
+		border-radius: 1rem;
+		border: 1px solid rgba(104, 112, 82, 0.22);
+		background: linear-gradient(145deg, rgba(23, 27, 26, 0.94) 0%, rgba(17, 21, 20, 0.92) 100%);
 		text-decoration: none;
 		color: inherit;
+		transition:
+			border-color 0.22s ease,
+			transform 0.22s ease,
+			box-shadow 0.22s ease;
 	}
+
+	.blog__feature-card:hover {
+		border-color: rgba(210, 174, 118, 0.38);
+		transform: translateY(-2px);
+		box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+	}
+
 	.blog__feature-card img {
 		width: 100%;
 		height: 100%;
 		max-height: 240px;
 		object-fit: cover;
+		border-radius: 0.75rem;
 	}
 	.blog__feature-card h2 {
 		margin: 0.4rem 0 0.6rem;
@@ -236,17 +252,30 @@ const articleListSchema = {
 	.blog__card a {
 		display: block;
 		height: 100%;
-		padding: 0.85rem;
-		border: 1px solid rgba(255, 255, 255, 0.08);
-		background: rgba(18, 14, 28, 0.85);
+		padding: 0.9rem;
+		border-radius: 0.95rem;
+		border: 1px solid rgba(104, 112, 82, 0.16);
+		background: linear-gradient(145deg, rgba(23, 27, 26, 0.92) 0%, rgba(17, 21, 20, 0.88) 100%);
 		text-decoration: none;
 		color: inherit;
+		transition:
+			border-color 0.22s ease,
+			transform 0.22s ease,
+			box-shadow 0.22s ease;
 	}
+
+	.blog__card a:hover {
+		border-color: rgba(210, 174, 118, 0.35);
+		transform: translateY(-2px);
+		box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+	}
+
 	.blog__card img {
 		width: 100%;
 		aspect-ratio: 16 / 9;
 		object-fit: cover;
 		margin-bottom: 0.75rem;
+		border-radius: 0.75rem;
 	}
 	.blog__card h2 {
 		margin: 0.35rem 0 0.5rem;
@@ -261,7 +290,7 @@ const articleListSchema = {
 	}
 	.blog__cat {
 		display: inline-block;
-		color: #20BFC0;
+		color: #D2AE76;
 		font-size: 0.72rem;
 		font-weight: 700;
 		text-transform: uppercase;
@@ -276,7 +305,7 @@ const articleListSchema = {
 		font-weight: 600;
 	}
 	.blog__more {
-		color: #20BFC0;
+		color: #D2AE76;
 	}
 	@media (max-width: 760px) {
 		.blog__feature-card {

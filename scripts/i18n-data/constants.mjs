@@ -6,42 +6,15 @@ export const LOCALES = [
 ];
 
 export const PAGE_IDS = [
-	'home', 'warframe-esp', 'warframe-aimbot', 'features', 'pricing', 'setup',
+	'home', 'project-zomboid-esp', 'project-zomboid-aimbot', 'features', 'pricing', 'setup',
 	'updates', 'faq', 'support', 'undetected', 'wallhack', 'radar', 'eac-bypass',
 	'cheats-2026', 'hacks', 'cheat-download', 'mod-menu', 'soft-aim', 'best-cheats',
 	'aimbot-hack', 'esp-hack', 'unlock-all', 'privacy', 'refund', 'terms',
 ];
 
-/**
- * Banner image per page — thematic Warframe screenshots (see public/images/warframe-*).
- */
-export const HERO_IMAGES = {
-	home: '/images/warframe-cheats-hero.webp',
-	'warframe-esp': '/images/warframe-esp-wallhack-overlay.webp',
-	'warframe-aimbot': '/images/warframe-sortie-aimbot-combat.webp',
-	features: '/images/warframe-cheats-main-menu.webp',
-	pricing: '/images/warframe-cheats-main-menu.webp',
-	setup: '/images/warframe-cheats-settings-panel.webp',
-	updates: '/images/warframe-steel-path-mission-esp.webp',
-	faq: '/images/warframe-cheats-settings-panel.webp',
-	support: '/images/warframe-cheats-main-menu.webp',
-	undetected: '/images/warframe-cheats-combat-esp.webp',
-	wallhack: '/images/warframe-esp-enemy-boxes.webp',
-	radar: '/images/warframe-radar-hack-minimap.webp',
-	'eac-bypass': '/images/warframe-steel-path-mission-esp.webp',
-	'cheats-2026': '/images/warframe-cheats-hero.webp',
-	hacks: '/images/warframe-cheats-combat-esp.webp',
-	'cheat-download': '/images/warframe-cheats-main-menu.webp',
-	'mod-menu': '/images/warframe-cheats-main-menu.webp',
-	'soft-aim': '/images/warframe-sortie-aimbot-combat.webp',
-	'best-cheats': '/images/warframe-steel-path-mission-esp.webp',
-	'aimbot-hack': '/images/warframe-aimbot-targeting-menu.webp',
-	'esp-hack': '/images/warframe-esp-wallhack-overlay.webp',
-	'unlock-all': '/images/warframe-loot-pickup-esp.webp',
-	privacy: '/images/warframe-mission.webp',
-	refund: '/images/warframe-mission.webp',
-	terms: '/images/warframe-mission.webp',
-};
+import { HERO_IMAGES, PAGE_IMAGE_ALTS } from './gameplay-images.mjs';
+
+export { HERO_IMAGES, PAGE_IMAGE_ALTS };
 
 export const TS_HEADER = `import type { LocaleCode } from './locales';
 
@@ -60,7 +33,7 @@ export type PageContent = {
 \tctaSecondaryHref?: string;
 };
 export type LocaleUi = {
-\tnav: { home: string; aimbot: string; esp: string; features: string; pricing: string; setup: string; updates: string; faq: string; buyNow: string };
+\tnav: { home: string; aimbot: string; esp: string; features: string; pricing: string; setup: string; updates: string; faq: string; blog?: string; buyNow: string };
 \thero: { accent: string; accentShort: string; subtitle: string; subtitleShort: string; buyNow: string; seeFeatures: string };
 \ttrust: { status: string; statusNote: string; statusShort: string; delivery: string; platform: string; antiCheat: string; antiCheatShort: string };
 \tproduct: { title: string; addToCart: string; monthly: string; lifetime: string; available: string; gameBadge: string; platformBadge: string; statusBadge: string };
@@ -72,7 +45,7 @@ export type LocaleUi = {
 \t\theaderArt: string; cheatsPackage: string; rebootFight: string; battleRoyale: string; battleRoyaleIsland: string;
 \t};
 };
-export type PageId = 'home' | 'warframe-esp' | 'warframe-aimbot' | 'features' | 'pricing' | 'setup' | 'updates' | 'faq' | 'support' | 'undetected' | 'wallhack' | 'radar' | 'eac-bypass' | 'cheats-2026' | 'hacks' | 'cheat-download' | 'mod-menu' | 'soft-aim' | 'best-cheats' | 'aimbot-hack' | 'esp-hack' | 'unlock-all' | 'privacy' | 'refund' | 'terms';
+export type PageId = 'home' | 'project-zomboid-esp' | 'project-zomboid-aimbot' | 'features' | 'pricing' | 'setup' | 'updates' | 'faq' | 'support' | 'undetected' | 'wallhack' | 'radar' | 'eac-bypass' | 'cheats-2026' | 'hacks' | 'cheat-download' | 'mod-menu' | 'soft-aim' | 'best-cheats' | 'aimbot-hack' | 'esp-hack' | 'unlock-all' | 'privacy' | 'refund' | 'terms';
 `;
 
 /** Clamp meta strings to SEO limits without ugly ellipsis. */
@@ -103,7 +76,7 @@ export function stripZadeyoFromMeta(text) {
 		.replace(/\s*Zadeyo delivery\.?/gi, ' instant digital delivery.')
 		.replace(/\s*and Zadeyo delivery\.?/gi, ' and instant digital delivery.')
 		.replace(/\|\s*Instant Zadeyo Delivery/g, '| Instant Digital Delivery')
-		.replace(/Buy Warframe Cheats/g, 'Buy Warframe Cheats')
+		.replace(/Buy Project Zomboid Cheats/g, 'Buy Project Zomboid Cheats')
 		.replace(/\s{2,}/g, ' ')
 		.trim();
 }
@@ -125,8 +98,8 @@ export function section(h2, ...args) {
 
 /** Authoritative external citation helpers (open in new tab). */
 export const EXT = {
-	epic: '<a href="https://www.digitalextremes.com/" target="_blank" rel="noopener noreferrer">Digital Extremes</a>',
-	rust: '<a href="https://www.warframe.com/" target="_blank" rel="noopener noreferrer">official Warframe patch notes</a>',
-	status: '<a href="https://forums.warframe.com/forum/3-pc-update-notes/" target="_blank" rel="noopener noreferrer">Warframe PC update notes</a>',
-	eac: '<a href="https://www.warframe.com/" target="_blank" rel="noopener noreferrer">Warframe anti-cheat</a>',
+	epic: '<a href="https://projectzomboid.com/" target="_blank" rel="noopener noreferrer">The Indie Stone</a>',
+	rust: '<a href="https://projectzomboid.com/" target="_blank" rel="noopener noreferrer">official Project Zomboid patch notes</a>',
+	status: '<a href="https://projectzomboid.com/blog/" target="_blank" rel="noopener noreferrer">Project Zomboid patch notes</a>',
+	eac: '<a href="https://projectzomboid.com/" target="_blank" rel="noopener noreferrer">Project Zomboid anti-cheat</a>',
 };

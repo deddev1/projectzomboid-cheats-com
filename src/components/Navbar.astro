@@ -1,5 +1,6 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import RippleButton from './inspira/RippleButton.astro';
 import { getUi } from '../data/i18n';
 import { getLocalizedPath, getNavForLocale, type PageId } from '../data/i18n/routing';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
@@ -23,11 +24,14 @@ const isActive = (href: string, linkPageId?: PageId) => {
 	if (href === '/reviews/') {
 		return current === '/reviews/' || current.startsWith('/reviews/');
 	}
+	if (href.includes('/blog/')) {
+		return current.includes('/blog/');
+	}
 	if (linkPageId === 'hacks') {
 		return (
 			current === href ||
 			current.startsWith(href) ||
-			current.startsWith('/warframe-cheats')
+			current.startsWith('/project-zomboid-cheats')
 		);
 	}
 	return current === href || current.startsWith(href);
@@ -49,19 +53,20 @@ const isActive = (href: string, linkPageId?: PageId) => {
 					</a>
 				))
 			}
-			<a href={siteConfig.checkoutUrl} class="nav__cta nav__cta--mobile btn-buy" rel="noopener noreferrer">
-				{ctaLabel}
-			</a>
-		</nav>
-
-		<div class="nav__actions">
-			<a
+			<RippleButton
 				href={siteConfig.checkoutUrl}
-				class="nav__cta btn-buy"
+				variant="buy"
+				class="nav__cta nav__cta--mobile"
 				rel="noopener noreferrer"
 			>
 				{ctaLabel}
-			</a>
+			</RippleButton>
+		</nav>
+
+		<div class="nav__actions">
+			<RippleButton href={siteConfig.checkoutUrl} variant="buy" class="nav__cta" rel="noopener noreferrer">
+				{ctaLabel}
+			</RippleButton>
 			<LanguageSwitcher pageId={pageId} currentLocale={locale} />
 			<button
 				type="button"
@@ -177,7 +182,7 @@ const isActive = (href: string, linkPageId?: PageId) => {
 		padding: 0.42rem 0.72rem;
 		border-radius: 0.5rem;
 		border: 1px solid transparent;
-		color: rgba(255, 255, 255, 0.58);
+		color: rgba(255, 255, 255, 0.88);
 		font-size: 0.8rem;
 		font-weight: 500;
 		letter-spacing: 0.02em;
@@ -200,16 +205,16 @@ const isActive = (href: string, linkPageId?: PageId) => {
 	}
 
 	.nav__link:hover {
-		color: rgba(255, 255, 255, 0.88);
+		color: #ffffff;
 		background: rgba(255, 255, 255, 0.04);
 		border-color: rgba(255, 255, 255, 0.06);
 	}
 
 	.nav__link.is-active {
-		color: var(--color-ink);
+		color: #ffffff;
 		font-weight: 600;
-		background: rgba(32, 191, 192, 0.06);
-		border-color: rgba(32, 191, 192, 0.12);
+		background: rgba(104, 112, 82, 0.06);
+		border-color: rgba(104, 112, 82, 0.12);
 	}
 
 	.nav__link.is-active .nav__link-glow {
@@ -259,8 +264,8 @@ const isActive = (href: string, linkPageId?: PageId) => {
 	}
 
 	.nav__toggle:hover {
-		background: rgba(32, 191, 192, 0.1);
-		border-color: rgba(32, 191, 192, 0.2);
+		background: rgba(104, 112, 82, 0.1);
+		border-color: rgba(104, 112, 82, 0.2);
 	}
 
 	.nav__toggle-icon,
@@ -329,7 +334,7 @@ const isActive = (href: string, linkPageId?: PageId) => {
 			border: 0;
 			padding: 0;
 			margin: 0;
-			background: rgba(6, 17, 18, 0.55);
+			background: rgba(9, 11, 11, 0.55);
 			backdrop-filter: blur(6px);
 			cursor: pointer;
 		}

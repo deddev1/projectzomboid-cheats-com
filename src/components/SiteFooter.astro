@@ -3,6 +3,7 @@ import { getUi } from '../data/i18n';
 import { getLocalizedPath } from '../data/i18n/routing';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
 import { siteConfig } from '../data/site';
+import RippleButton from './inspira/RippleButton.astro';
 
 interface Props {
 	locale?: LocaleCode;
@@ -11,14 +12,23 @@ interface Props {
 const locale = Astro.props.locale ?? defaultLocale;
 const ui = getUi(locale);
 
-const mainLinks = [
-	{ label: ui.nav.esp, href: getLocalizedPath('warframe-esp', locale) },
-	{ label: ui.nav.aimbot, href: getLocalizedPath('warframe-aimbot', locale) },
+const exploreLinks = [
+	{ label: ui.nav.features, href: getLocalizedPath('features', locale) },
+	{ label: ui.nav.pricing, href: getLocalizedPath('pricing', locale) },
+	{ label: ui.nav.esp, href: getLocalizedPath('project-zomboid-esp', locale) },
+	{ label: ui.nav.aimbot, href: getLocalizedPath('project-zomboid-aimbot', locale) },
 	{ label: 'Wallhack', href: getLocalizedPath('wallhack', locale) },
 	{ label: 'Radar', href: getLocalizedPath('radar', locale) },
+	{ label: ui.nav.cheats, href: getLocalizedPath('hacks', locale) },
+];
+
+const resourceLinks = [
 	{ label: ui.nav.setup, href: getLocalizedPath('setup', locale) },
+	{ label: ui.nav.updates, href: getLocalizedPath('updates', locale) },
+	{ label: ui.nav.faq, href: getLocalizedPath('faq', locale) },
 	{ label: 'Guides', href: '/guides/' },
-		{ label: 'Blog posts', href: '/blog/' },
+	{ label: 'Blog', href: '/blog/' },
+	{ label: ui.nav.reviews, href: '/reviews/' },
 ];
 
 const legalLinks = [
@@ -33,79 +43,143 @@ const year = new Date().getUTCFullYear();
 
 <footer class="footer" id="support-footer">
 	<div class="shell footer__inner">
-		<div class="footer__top">
+		<div class="footer__brand">
 			<p class="footer__name">{ui.product.title}</p>
 			<p class="footer__tagline">{ui.footer.tagline}</p>
+			<RippleButton
+				href={siteConfig.checkoutUrl}
+				variant="buy"
+				class="footer__cta"
+				rel="noopener noreferrer"
+			>
+				{ui.common.buyNow}
+			</RippleButton>
 		</div>
 
-		<nav class="footer__links" aria-label="Footer">
-			{
-				mainLinks.map((link) => (
-					<a href={link.href}>{link.label}</a>
-				))
-			}
-		</nav>
+		<div class="footer__columns">
+			<nav class="footer__col" aria-label={ui.footer.explore}>
+				<p class="footer__col-title">{ui.footer.explore}</p>
+				<ul class="footer__list">
+					{
+						exploreLinks.map((link) => (
+							<li>
+								<a href={link.href}>{link.label}</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+
+			<nav class="footer__col" aria-label="Resources">
+				<p class="footer__col-title">Resources</p>
+				<ul class="footer__list">
+					{
+						resourceLinks.map((link) => (
+							<li>
+								<a href={link.href}>{link.label}</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+
+			<nav class="footer__col" aria-label={ui.footer.help}>
+				<p class="footer__col-title">{ui.footer.help}</p>
+				<ul class="footer__list">
+					{
+						legalLinks.map((link) => (
+							<li>
+								<a href={link.href}>{link.label}</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+		</div>
 
 		<div class="footer__bottom">
-			<nav class="footer__legal" aria-label="Legal">
-				{
-					legalLinks.map((link) => (
-						<a href={link.href}>{link.label}</a>
-					))
-				}
-			</nav>
-			<p class="footer__copy">© {year} {siteConfig.name}</p>
+			<p class="footer__copy">© {year} {siteConfig.name}. All rights reserved.</p>
+			<a class="footer__email" href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a>
 		</div>
 	</div>
 </footer>
 
 <style>
 	.footer {
-		border-top: 1px solid rgba(255, 255, 255, 0.06);
-		padding-block: 1.75rem;
-		padding-bottom: calc(1.75rem + env(safe-area-inset-bottom, 0px));
+		margin-top: 1rem;
+		border-top: 1px solid rgba(104, 112, 82, 0.16);
+		background: linear-gradient(180deg, rgba(17, 21, 20, 0.55) 0%, rgba(9, 11, 11, 0.92) 100%);
+		padding-block: 2rem;
+		padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
 	}
 
 	.footer__inner {
 		display: grid;
-		gap: 1.1rem;
+		gap: 1.75rem;
 	}
 
-	.footer__top {
+	.footer__brand {
 		display: grid;
-		gap: 0.35rem;
+		gap: 0.65rem;
+		max-width: 22rem;
 	}
 
 	.footer__name {
 		margin: 0;
 		font-family: var(--font-display);
-		font-size: 0.95rem;
+		font-size: 1.05rem;
 		font-weight: 800;
 		letter-spacing: -0.02em;
+		color: var(--color-ink);
 	}
 
 	.footer__tagline {
 		margin: 0;
-		color: var(--color-faint);
-		font-size: 0.84rem;
-		line-height: 1.5;
-		max-width: 32rem;
+		color: rgba(255, 255, 255, 0.72);
+		font-size: 0.86rem;
+		line-height: 1.55;
 	}
 
-	.footer__links {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.45rem 0.85rem;
+	.footer__inner :global(.footer__cta) {
+		justify-self: start;
+		margin-top: 0.25rem;
+		min-height: 2.35rem;
+		padding: 0.5rem 1rem;
+		font-size: 0.82rem;
 	}
 
-	.footer__links a {
-		color: var(--color-muted);
+	.footer__columns {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.25rem 1.5rem;
+	}
+
+	.footer__col-title {
+		margin: 0 0 0.65rem;
+		font-size: 0.68rem;
+		font-weight: 800;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--color-orchid);
+	}
+
+	.footer__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 0.45rem;
+	}
+
+	.footer__list a {
+		color: rgba(255, 255, 255, 0.78);
 		font-size: 0.84rem;
 		font-weight: 600;
+		text-decoration: none;
 		transition: color 0.2s ease;
 	}
 
-	.footer__links a:hover {
+	.footer__list a:hover {
 		color: var(--color-ink);
 	}
 
@@ -115,25 +189,8 @@ const year = new Date().getUTCFullYear();
 		align-items: center;
 		justify-content: space-between;
 		gap: 0.65rem 1rem;
-		padding-top: 0.85rem;
-		border-top: 1px solid rgba(255, 255, 255, 0.05);
-	}
-
-	.footer__legal {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.55rem 0.9rem;
-	}
-
-	.footer__legal a {
-		color: var(--color-faint);
-		font-size: 0.78rem;
-		font-weight: 500;
-		transition: color 0.2s ease;
-	}
-
-	.footer__legal a:hover {
-		color: var(--color-muted);
+		padding-top: 1.1rem;
+		border-top: 1px solid rgba(104, 112, 82, 0.12);
 	}
 
 	.footer__copy {
@@ -142,7 +199,36 @@ const year = new Date().getUTCFullYear();
 		font-size: 0.78rem;
 	}
 
-	@media (max-width: 560px) {
+	.footer__email {
+		color: var(--color-muted);
+		font-size: 0.78rem;
+		font-weight: 600;
+		transition: color 0.2s ease;
+	}
+
+	.footer__email:hover {
+		color: var(--color-orchid);
+	}
+
+	@media (max-width: 760px) {
+		.footer__columns {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.footer__col:last-child {
+			grid-column: 1 / -1;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.footer__columns {
+			grid-template-columns: 1fr;
+		}
+
+		.footer__col:last-child {
+			grid-column: auto;
+		}
+
 		.footer__bottom {
 			flex-direction: column;
 			align-items: flex-start;

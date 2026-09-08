@@ -1,5 +1,5 @@
 import { siteConfig } from '../site';
-import { warframeImages } from '../warframe';
+import { zomboidImages } from '../zomboid';
 import {
 	defaultLocale,
 	localeCodes,
@@ -10,16 +10,16 @@ import type { BlogImageKey, BlogPostDefinition, BlogTranslation, ResolvedBlogPos
 import { blogPosts as rawBlogPosts } from './posts.generated';
 
 const imageMap: Record<BlogImageKey, string> = {
-	hero: warframeImages.hero,
-	espWallhack: warframeImages.espWallhack,
-	aimbotCombat: warframeImages.aimbotCombat,
-	squadFight: warframeImages.squadFight,
-	headerArt: warframeImages.headerArt,
-	cheatsPackage: warframeImages.cheatsPackage,
-	playerEsp: warframeImages.playerEsp,
-	rebootFight: warframeImages.rebootFight,
-	battleRoyaleCombat: warframeImages.battleRoyaleCombat,
-	battleRoyaleIslandMap: warframeImages.battleRoyaleIsland,
+	hero: zomboidImages.hero,
+	espWallhack: zomboidImages.espWallhack,
+	aimbotCombat: zomboidImages.aimbotCombat,
+	squadFight: zomboidImages.squadFight,
+	headerArt: zomboidImages.headerArt,
+	cheatsPackage: zomboidImages.cheatsPackage,
+	playerEsp: zomboidImages.playerEsp,
+	rebootFight: zomboidImages.rebootFight,
+	battleRoyaleCombat: zomboidImages.battleRoyaleCombat,
+	battleRoyaleIslandMap: zomboidImages.battleRoyaleIsland,
 };
 
 function expandTranslations(
@@ -167,8 +167,8 @@ export function getBlogSitemapEntries() {
 			images: [
 				{
 					url: new URL(siteConfig.defaultOgImage, siteConfig.url).href,
-					title: 'Warframe Cheats Intel blog',
-					caption: 'Warframe Intel blog covering meta guides, ESP, Aimbot, and EAC notes',
+					title: 'Project Zomboid Cheats Intel blog',
+					caption: 'Project Zomboid Intel blog covering meta guides, ESP, Aimbot, and EAC notes',
 				},
 			],
 		},

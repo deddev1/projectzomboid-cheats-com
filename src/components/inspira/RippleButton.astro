@@ -1,0 +1,68 @@
+---
+/** Inspira UI Ripple Button — ported from https://inspira-ui.com/docs/en/components/buttons/ripple-button */
+interface Props {
+	href?: string;
+	type?: 'button' | 'submit' | 'reset';
+	variant?: 'buy' | 'primary' | 'ghost';
+	class?: string;
+	rippleColor?: string;
+	duration?: number;
+	rel?: string;
+	target?: string;
+	ariaLabel?: string;
+	[key: string]: unknown;
+}
+
+const {
+	href,
+	type = 'button',
+	variant = 'buy',
+	class: className,
+	rippleColor = '#d2ae76',
+	duration = 600,
+	rel,
+	target,
+	ariaLabel,
+	...rest
+} = Astro.props;
+
+const variantClass =
+	variant === 'buy' ? 'btn-buy' : variant === 'primary' ? 'btn btn--primary' : 'btn btn--ghost';
+
+const classes = ['inspira-ripple-btn', variantClass, className].filter(Boolean).join(' ');
+const isLink = Boolean(href);
+---
+
+{
+	isLink ? (
+		<a
+			class={classes}
+			href={href}
+			data-inspira-ripple-button
+			data-ripple-color={rippleColor}
+			data-ripple-duration={duration}
+			rel={rel}
+			target={target}
+			aria-label={ariaLabel}
+			{...rest}
+		>
+			<span class="inspira-ripple-btn__label">
+				<slot />
+			</span>
+		</a>
+	) : (
+		<button
+			class={classes}
+			type={type}
+			data-inspira-ripple-button
+			data-ripple-color={rippleColor}
+			data-ripple-duration={duration}
+			aria-label={ariaLabel}
+			{...rest}
+		>
+			<span class="inspira-ripple-btn__label">
+				<slot />
+			</span>
+		</button>
+	)
+}

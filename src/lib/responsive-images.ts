@@ -1,4 +1,4 @@
-import { warframeImages } from '../data/warframe';
+import { zomboidImages } from '../data/zomboid';
 
 export interface ResponsiveWidth {
 	src: string;
@@ -27,8 +27,15 @@ function parseWebpBase(baseSrc: string): { dir: string; name: string } | undefin
 	return { dir, name };
 }
 
+/** True for absolute CDN URLs — skip local webp variant logic. */
+export function isExternalImage(src: string): boolean {
+	return src.startsWith('http://') || src.startsWith('https://');
+}
+
 /** Build srcset for content images that have -480w / -960w variants. */
 export function contentSrcSet(baseSrc: string): string | undefined {
+	if (isExternalImage(baseSrc)) return undefined;
+
 	const parsed = parseWebpBase(baseSrc);
 	if (!parsed) return undefined;
 
@@ -46,23 +53,25 @@ export function contentSrcSet(baseSrc: string): string | undefined {
  * (often 280–520KB) so slow networks never pull the huge file as a fallback.
  */
 export function contentSrc(baseSrc: string): string {
+	if (isExternalImage(baseSrc)) return baseSrc;
+
 	const parsed = parseWebpBase(baseSrc);
 	if (!parsed) return baseSrc;
 	return `${parsed.dir}${parsed.name}-960w.webp`;
 }
 
 export const heroResponsive: ResponsiveWidth[] = [
-	{ src: '/images/warframe-cheats-hero-480w.webp', width: 480 },
-	{ src: '/images/warframe-cheats-hero-640w.webp', width: 640 },
-	{ src: '/images/warframe-cheats-hero-960w.webp', width: 960 },
-	{ src: '/images/warframe-cheats-hero-1400w.webp', width: 1400 },
+	{ src: '/images/zomboid-cheats-hero-480w.webp', width: 480 },
+	{ src: '/images/zomboid-cheats-hero-640w.webp', width: 640 },
+	{ src: '/images/zomboid-cheats-hero-960w.webp', width: 960 },
+	{ src: '/images/zomboid-cheats-hero-1400w.webp', width: 1400 },
 ];
 
 /** Desktop srcset (mobile uses a dedicated `<picture>` source — see Hero.astro). */
 export const heroDesktopResponsive: ResponsiveWidth[] = heroResponsive.filter((v) => v.width >= 640);
 
 /** Mobile-first fallback `src` — forced via `<picture>` so DPR cannot pull 960/1400. */
-export const heroImageSrc = warframeImages.hero;
+export const heroImageSrc = zomboidImages.hero;
 export const heroIsExternal = heroImageSrc.startsWith('http');
 export const heroSrc = heroIsExternal ? heroImageSrc : heroResponsive[0].src;
 export const heroSrcSet = heroIsExternal ? undefined : buildSrcSet(heroDesktopResponsive);
@@ -76,5 +85,7 @@ export const contentWidths = [480, 640, 960] as const;
 
 export const galleryFeaturedSizes = '(max-width: 560px) 100vw, (max-width: 900px) 90vw, 640px';
 export const galleryTileSizes = '(max-width: 560px) 100vw, (max-width: 900px) 45vw, 320px';
+export const featureDetailSizes = '(max-width: 767px) 100vw, 240px';
+export const featureGallerySizes = '(max-width: 560px) 50vw, (max-width: 900px) 33vw, 180px';
 export const productMainSizes = '(max-width: 900px) 100vw, 640px';
 export const productThumbSizes = '160px';

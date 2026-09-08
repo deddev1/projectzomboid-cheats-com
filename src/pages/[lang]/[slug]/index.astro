@@ -1,14 +1,14 @@
 ---
 import LocalizedPage from '../../../components/LocalizedPage.astro';
 import { localeCodes, defaultLocale, isLocaleCode } from '../../../data/i18n/locales';
-import { localizedSlugs, pageIds, type PageId } from '../../../data/i18n/routing';
+import { localizedSlugs, localeSitemapPageIds, type PageId } from '../../../data/i18n/routing';
 
 export function getStaticPaths() {
 	const paths: { params: { lang: string; slug: string }; props: { locale: typeof localeCodes[number]; pageId: PageId } }[] = [];
 
 	for (const lang of localeCodes) {
 		if (lang === defaultLocale) continue;
-		for (const pageId of pageIds) {
+		for (const pageId of localeSitemapPageIds) {
 			if (pageId === 'home') continue;
 			const slug = localizedSlugs[pageId][lang];
 			if (!slug) continue;

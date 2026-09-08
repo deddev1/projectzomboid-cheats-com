@@ -7,7 +7,7 @@ import { join } from 'node:path';
 
 const ACCOUNT_ID = '002527a31814aabc946cce93095ec7a5';
 const PROJECT = 'rusthacks';
-const DOMAINS = ['warframecheats.net', 'www.warframecheats.net'];
+const DOMAINS = ['projectzomboidcheats.com', 'www.projectzomboidcheats.com'];
 
 function getToken() {
   const configPath = join(

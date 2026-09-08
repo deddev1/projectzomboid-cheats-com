@@ -18,7 +18,7 @@ for (const id of REMOVE) {
 	content = content.replace(re, '');
 }
 // Fix eac-bypass slugs that got double-replaced
-content = content.replace(/eac-bypass-bypass/g, 'eac-bypass-warframe');
-content = content.replace(/eac-bypass-warframe-trucos-warframe/g, 'eac-bypass-warframe-trucos-warframe');
+content = content.replace(/eac-bypass-bypass/g, 'eac-bypass-project-zomboid');
+content = content.replace(/eac-bypass-project-zomboid-trucos-zomboid/g, 'eac-bypass-project-zomboid-trucos-zomboid');
 await writeFile(file, content);
 console.log('Cleaned routing.ts localizedSlugs');

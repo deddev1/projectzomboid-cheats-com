@@ -20,8 +20,8 @@ type NavLabels = {
 /** Core product funnel links reused across pricing, reviews, and blog CTAs. */
 export function getProductRelatedLinks(locale: LocaleCode, labels: NavLabels): InternalLink[] {
 	return [
-		{ label: labels.esp, href: getLocalizedPath('warframe-esp', locale) },
-		{ label: labels.aimbot, href: getLocalizedPath('warframe-aimbot', locale) },
+		{ label: labels.esp, href: getLocalizedPath('project-zomboid-esp', locale) },
+		{ label: labels.aimbot, href: getLocalizedPath('project-zomboid-aimbot', locale) },
 		{ label: labels.features, href: getLocalizedPath('features', locale) },
 		{ label: labels.setup, href: getLocalizedPath('setup', locale) },
 		{ label: labels.pricing, href: getLocalizedPath('pricing', locale) },
@@ -31,21 +31,21 @@ export function getProductRelatedLinks(locale: LocaleCode, labels: NavLabels): I
 /** Homepage explore hub — deep links not duplicated in the primary navbar. */
 export function getHomeExploreLinks(locale: LocaleCode): InternalLink[] {
 	return [
-		{ label: 'Warframe Cheats guide', href: getLocalizedPath('hacks', locale) },
-		{ label: 'Warframe ESP', href: getLocalizedPath('warframe-esp', locale) },
-		{ label: 'Warframe Aimbot', href: getLocalizedPath('warframe-aimbot', locale) },
-		{ label: 'Warframe wallhack', href: getLocalizedPath('wallhack', locale) },
-		{ label: 'Warframe radar', href: getLocalizedPath('radar', locale) },
+		{ label: 'Project Zomboid Cheats guide', href: getLocalizedPath('hacks', locale) },
+		{ label: 'Project Zomboid ESP', href: getLocalizedPath('project-zomboid-esp', locale) },
+		{ label: 'Project Zomboid Aimbot', href: getLocalizedPath('project-zomboid-aimbot', locale) },
+		{ label: 'Project Zomboid wallhack', href: getLocalizedPath('wallhack', locale) },
+		{ label: 'Project Zomboid radar', href: getLocalizedPath('radar', locale) },
 		{ label: 'Setup guide', href: getLocalizedPath('setup', locale) },
 		{ label: 'Guides hub', href: '/guides/' },
-		{ label: 'Warframe blog', href: '/blog/' },
+		{ label: 'Project Zomboid blog', href: '/blog/' },
 	];
 }
 
 /** Blog and review footer product shortcuts. */
 export function getBlogProductLinks(locale: LocaleCode, labels: NavLabels): InternalLink[] {
 	return [
-		{ label: 'Warframe Cheats', href: getLocalizedPath('hacks', locale) },
+		{ label: 'Project Zomboid Cheats', href: getLocalizedPath('hacks', locale) },
 		{ label: labels.features, href: getLocalizedPath('features', locale) },
 		{ label: labels.pricing, href: getLocalizedPath('pricing', locale) },
 		{ label: 'Reviews', href: '/reviews/' },
@@ -56,15 +56,15 @@ export function getBlogProductLinks(locale: LocaleCode, labels: NavLabels): Inte
 
 /** Map review tags to the most relevant product or support page. */
 export const reviewTagLinks: Record<string, string> = {
-	'Soft aim': '/warframe-aimbot/',
-	Extraction: '/warframe-esp/',
-	'Open World': '/warframe-esp/',
-	'Steel Path': '/warframe-aimbot/',
-	'Cloud DMA': '/warframe-cheats/',
-	Controller: '/warframe-aimbot/',
+	'Soft aim': '/project-zomboid-aimbot/',
+	Extraction: '/project-zomboid-esp/',
+	'Open World': '/project-zomboid-esp/',
+	'loot runs': '/project-zomboid-aimbot/',
+	'Cloud DMA': '/project-zomboid-cheats/',
+	Controller: '/project-zomboid-aimbot/',
 	Setup: '/setup/',
-	Ranked: '/warframe-aimbot/',
-	Squads: '/warframe-radar/',
+	Ranked: '/project-zomboid-aimbot/',
+	Squads: '/project-zomboid-radar/',
 	Updates: '/updates/',
 };
 
@@ -86,22 +86,22 @@ export function getPageRelatedLinks(
 			{ label: 'Radar', href: getLocalizedPath('radar', locale) },
 			{ label: 'Reviews', href: '/reviews/' },
 		],
-		'warframe-esp': [
+		'project-zomboid-esp': [
 			{ label: 'Wallhack', href: getLocalizedPath('wallhack', locale) },
 			{ label: 'Radar', href: getLocalizedPath('radar', locale) },
 			{ label: 'Reviews', href: '/reviews/' },
 		],
-		'warframe-aimbot': [
+		'project-zomboid-aimbot': [
 			{ label: 'Soft aim', href: getLocalizedPath('soft-aim', locale) },
-			{ label: 'ESP', href: getLocalizedPath('warframe-esp', locale) },
+			{ label: 'ESP', href: getLocalizedPath('project-zomboid-esp', locale) },
 			{ label: 'Reviews', href: '/reviews/' },
 		],
 		wallhack: [
-			{ label: 'ESP', href: getLocalizedPath('warframe-esp', locale) },
+			{ label: 'ESP', href: getLocalizedPath('project-zomboid-esp', locale) },
 			{ label: 'Radar', href: getLocalizedPath('radar', locale) },
 		],
 		radar: [
-			{ label: 'ESP', href: getLocalizedPath('warframe-esp', locale) },
+			{ label: 'ESP', href: getLocalizedPath('project-zomboid-esp', locale) },
 			{ label: 'Wallhack', href: getLocalizedPath('wallhack', locale) },
 		],
 		features: [{ label: 'Reviews', href: '/reviews/' }, { label: 'Blog', href: '/blog/' }],
@@ -118,7 +118,7 @@ export function getPageRelatedLinks(
 			{ label: 'Support', href: getLocalizedPath('support', locale) },
 		],
 		faq: [
-			{ label: 'Warframe guides', href: '/blog/' },
+			{ label: 'Project Zomboid guides', href: '/blog/' },
 			{ label: 'Support', href: getLocalizedPath('support', locale) },
 			{ label: 'Reviews', href: '/reviews/' },
 		],

@@ -2,7 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import Navbar from '../../../components/Navbar.astro';
 import SiteFooter from '../../../components/SiteFooter.astro';
-import { customerReviewStats, customerReviews, productInfo, siteConfig } from '../../../data/site';
+import { customerReviews, productInfo, siteConfig } from '../../../data/site';
 import { getReviewPath, reviewsBasePath } from '../../../data/reviews';
 import RelatedPages from '../../../components/RelatedPages.astro';
 import type { CustomerReview } from '../../../data/site';
@@ -49,21 +49,7 @@ const extraGraph: Record<string, unknown>[] = [
 			worstRating: '1',
 		},
 		reviewBody: review.text,
-		itemReviewed: {
-			'@type': 'Product',
-			'@id': `${siteConfig.url}/#product`,
-			name: productInfo.name,
-			description: productInfo.summary,
-			brand: { '@type': 'Brand', name: productInfo.brand },
-			url: `${siteConfig.url}/`,
-			aggregateRating: {
-				'@type': 'AggregateRating',
-				ratingValue: customerReviewStats.averageRating.toFixed(1),
-				reviewCount: customerReviewStats.totalCount,
-				bestRating: '5',
-				worstRating: '1',
-			},
-		},
+		itemReviewed: { '@id': `${siteConfig.url}/#product` },
 		publisher: { '@id': `${siteConfig.url}/#organization` },
 	},
 ];
@@ -74,13 +60,13 @@ const extraGraph: Record<string, unknown>[] = [
 	description={review.seoDescription}
 	canonicalPath={canonicalPath}
 	ogImage={siteConfig.defaultOgImage}
-	ogImageAlt={`Warframe Cheats review by @${review.handle}`}
+	ogImageAlt={`Project Zomboid Cheats review by @${review.handle}`}
 	type="article"
 	locale="en"
 	breadcrumbs={[
 		{ label: 'Home', href: '/' },
 		{ label: 'Reviews', href: reviewsBasePath },
-		{ label: `@${review.handle}` },
+		{ label: review.title },
 	]}
 	extraGraph={extraGraph}
 >
@@ -92,14 +78,15 @@ const extraGraph: Record<string, unknown>[] = [
 				<span aria-hidden="true">/</span>
 				<a href={reviewsBasePath}>Reviews</a>
 				<span aria-hidden="true">/</span>
-				<span aria-current="page">@{review.handle}</span>
+				<span aria-current="page">{review.title}</span>
 			</nav>
 
 			<article class="review-detail">
 				<header class="review-detail__head">
 					<span class="review-detail__avatar" aria-hidden="true">{review.handle.charAt(0).toUpperCase()}</span>
 					<div class="review-detail__meta">
-						<h1 class="review-detail__title">@{review.handle}</h1>
+						<h1 class="review-detail__title">{review.title}</h1>
+						<p class="review-detail__author">@{review.handle}</p>
 						<p class="review-detail__stars" aria-label={`${review.rating} out of 5 stars`}>
 							<span aria-hidden="true">{stars(review.rating)}</span>
 						</p>
@@ -115,18 +102,18 @@ const extraGraph: Record<string, unknown>[] = [
 
 				<div class="review-detail__ctas">
 					<a href={siteConfig.checkoutUrl} class="review-detail__buy" rel="noopener noreferrer">
-						Buy Warframe Cheats — ${productInfo.plans[0].price}
+						Buy Project Zomboid Cheats — ${productInfo.plans[0].price}
 					</a>
 					<a href="/pricing/" class="review-detail__link-btn">Compare pricing</a>
 					<a href="/features/" class="review-detail__link-btn">See features</a>
-					<a href="/warframe-esp/" class="review-detail__link-btn">ESP guide</a>
-					<a href="/warframe-aimbot/" class="review-detail__link-btn">Aimbot guide</a>
-					<a href="/" class="review-detail__link-btn">Warframe Cheats home</a>
+					<a href="/project-zomboid-esp/" class="review-detail__link-btn">ESP guide</a>
+					<a href="/project-zomboid-aimbot/" class="review-detail__link-btn">Aimbot guide</a>
+					<a href="/" class="review-detail__link-btn">Project Zomboid Cheats home</a>
 				</div>
 			</article>
 
 			<section class="review-detail__more" aria-labelledby="more-reviews-title">
-				<h2 id="more-reviews-title">More Warframe Cheats reviews</h2>
+				<h2 id="more-reviews-title">More Project Zomboid Cheats reviews</h2>
 				<div class="review-detail__more-grid">
 					{
 						moreReviews.map((other) => (
@@ -189,8 +176,8 @@ const extraGraph: Record<string, unknown>[] = [
 		gap: 1.25rem;
 		padding: clamp(1.25rem, 3vw, 1.85rem);
 		border-radius: var(--radius-card, 1.1rem);
-		border: 1px solid rgba(32, 191, 192, 0.18);
-		background: rgba(26, 22, 38, 0.72);
+		border: 1px solid rgba(104, 112, 82, 0.18);
+		background: linear-gradient(145deg, rgba(23, 27, 26, 0.92) 0%, rgba(17, 21, 20, 0.88) 100%);
 	}
 
 	.review-detail__head {
@@ -207,8 +194,8 @@ const extraGraph: Record<string, unknown>[] = [
 		width: 3.25rem;
 		height: 3.25rem;
 		border-radius: 999px;
-		border: 1px solid rgba(32, 191, 192, 0.35);
-		background: rgba(13, 35, 36, 0.75);
+		border: 1px solid rgba(104, 112, 82, 0.35);
+		background: rgba(17, 21, 20, 0.75);
 		color: var(--color-orchid);
 		font-family: var(--font-display);
 		font-size: 1.35rem;
@@ -228,6 +215,13 @@ const extraGraph: Record<string, unknown>[] = [
 		font-weight: 800;
 		letter-spacing: -0.02em;
 		line-height: 1.2;
+	}
+
+	.review-detail__author {
+		margin: 0;
+		font-size: 0.88rem;
+		font-weight: 700;
+		color: var(--color-muted);
 		overflow-wrap: anywhere;
 	}
 
@@ -270,21 +264,21 @@ const extraGraph: Record<string, unknown>[] = [
 	}
 
 	.review-detail__tag {
-		border: 1px solid rgba(32, 191, 192, 0.25);
-		background: rgba(6, 17, 18, 0.45);
+		border: 1px solid rgba(104, 112, 82, 0.25);
+		background: rgba(9, 11, 11, 0.45);
 		color: var(--color-orchid);
 		text-decoration: none;
 	}
 
 	a.review-detail__tag:hover {
-		border-color: rgba(32, 191, 192, 0.45);
+		border-color: rgba(104, 112, 82, 0.45);
 		color: var(--color-ink);
 	}
 
 	.review-detail__verified {
-		border: 1px solid rgba(32, 191, 192, 0.3);
-		background: rgba(6, 17, 18, 0.45);
-		color: var(--color-mint, #20BFC0);
+		border: 1px solid rgba(104, 112, 82, 0.3);
+		background: rgba(9, 11, 11, 0.45);
+		color: var(--color-mint, #D2AE76);
 	}
 
 	.review-detail__body {
@@ -292,7 +286,7 @@ const extraGraph: Record<string, unknown>[] = [
 		padding: 1.15rem 1.25rem;
 		border-left: 3px solid var(--color-orchid);
 		border-radius: 0.65rem;
-		background: rgba(6, 17, 18, 0.4);
+		background: rgba(9, 11, 11, 0.4);
 	}
 
 	.review-detail__body p {
@@ -336,8 +330,8 @@ const extraGraph: Record<string, unknown>[] = [
 		justify-content: center;
 		padding: 0.8rem 1.1rem;
 		border-radius: 0.85rem;
-		border: 1px solid rgba(32, 191, 192, 0.28);
-		background: rgba(13, 35, 36, 0.55);
+		border: 1px solid rgba(104, 112, 82, 0.28);
+		background: rgba(17, 21, 20, 0.55);
 		color: var(--color-ink);
 		font-size: 0.9rem;
 		font-weight: 700;
@@ -347,8 +341,8 @@ const extraGraph: Record<string, unknown>[] = [
 	}
 
 	.review-detail__link-btn:hover {
-		border-color: rgba(32, 191, 192, 0.5);
-		background: rgba(13, 35, 36, 0.85);
+		border-color: rgba(104, 112, 82, 0.5);
+		background: rgba(17, 21, 20, 0.85);
 		color: var(--color-ink);
 	}
 
@@ -375,8 +369,8 @@ const extraGraph: Record<string, unknown>[] = [
 		gap: 0.45rem;
 		padding: 0.9rem 0.95rem;
 		border-radius: 0.85rem;
-		border: 1px solid rgba(32, 191, 192, 0.14);
-		background: rgba(26, 22, 38, 0.72);
+		border: 1px solid rgba(104, 112, 82, 0.14);
+		background: linear-gradient(145deg, rgba(23, 27, 26, 0.92) 0%, rgba(17, 21, 20, 0.88) 100%);
 		color: inherit;
 		transition:
 			border-color 0.2s ease,
@@ -384,7 +378,7 @@ const extraGraph: Record<string, unknown>[] = [
 	}
 
 	.review-detail__more-card:hover {
-		border-color: rgba(32, 191, 192, 0.4);
+		border-color: rgba(104, 112, 82, 0.4);
 		transform: translateY(-2px);
 	}
 

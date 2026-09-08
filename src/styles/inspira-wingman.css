@@ -1,0 +1,144 @@
+/* Wingman — enters from left with simple tagline */
+
+.wingman {
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: 90;
+	overflow: hidden;
+}
+
+.wingman__stage {
+	position: absolute;
+	left: 0;
+	bottom: 0.5rem;
+	opacity: 0;
+	transform: translate3d(-115%, 0, 0);
+	will-change: transform, opacity;
+}
+
+.wingman--enter .wingman__stage {
+	animation: wingman-enter-left 0.95s cubic-bezier(0.22, 1.08, 0.36, 1) forwards;
+	pointer-events: auto;
+}
+
+.wingman--exit .wingman__stage {
+	animation: wingman-exit-left 0.72s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+
+.wingman__character-wrap {
+	position: relative;
+	display: block;
+	flex-shrink: 0;
+	line-height: 0;
+	background: none;
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+	transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.wingman__character-wrap:hover {
+	filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.55));
+	transform: translateY(-2px);
+}
+
+.wingman__character-wrap:focus-visible {
+	outline: 2px solid #d2ae76;
+	outline-offset: 4px;
+	border-radius: 0.35rem;
+}
+
+.wingman__character {
+	display: block;
+	width: clamp(5rem, 12vw, 7.5rem);
+	height: auto;
+	background: transparent;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+.wingman__tagline {
+	position: absolute;
+	left: 50%;
+	bottom: calc(100% + 0.35rem);
+	margin: 0;
+	padding: 0;
+	color: #d2ae76;
+	font-size: clamp(0.8rem, 1.6vw, 1rem);
+	font-weight: 800;
+	letter-spacing: 0.06em;
+	text-transform: lowercase;
+	line-height: 1;
+	white-space: nowrap;
+	text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85);
+	opacity: 0;
+	transform: translate(-50%, 8px);
+	pointer-events: none;
+}
+
+.wingman--enter .wingman__tagline {
+	animation: wingman-tagline-in 0.6s ease 0.35s forwards;
+}
+
+@keyframes wingman-enter-left {
+	from {
+		opacity: 0;
+		transform: translate3d(-115%, 8%, 0) scale(0.96);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0) scale(1);
+	}
+}
+
+@keyframes wingman-exit-left {
+	from {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+	to {
+		opacity: 0;
+		transform: translate3d(-120%, 4%, 0);
+	}
+}
+
+@keyframes wingman-tagline-in {
+	to {
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+}
+
+@media (max-width: 720px) {
+	.wingman__stage {
+		left: -0.25rem;
+	}
+
+	.wingman__character {
+		width: clamp(4.25rem, 22vw, 6rem);
+	}
+
+	.wingman__tagline {
+		bottom: calc(100% + 0.25rem);
+		font-size: 0.75rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wingman__stage,
+	.wingman__tagline {
+		animation: none !important;
+	}
+
+	.wingman--enter .wingman__stage {
+		opacity: 1;
+		transform: none;
+	}
+
+	.wingman--enter .wingman__tagline {
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+}

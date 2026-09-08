@@ -198,10 +198,10 @@ export const guideIgnImages: Record<string, { src: string; alt: string; ignSourc
 		alt: 'Path of Exile dark fantasy action RPG combat',
 		ignSource: 'https://assets-prd.ignimgs.com/2013/10/23/path-of-exile-button.jpg',
 	},
-	'warframe': {
-		src: '/images/guides/warframe.webp',
-		alt: 'Warframe sci-fi ninja action looter shooter mission',
-		ignSource: 'https://assets-prd.ignimgs.com/2013/03/25/warframe-button.jpg',
+	'project-zomboid': {
+		src: '/images/guides/project-zomboid.webp',
+		alt: 'Project Zomboid sci-fi ninja action looter shooter mission',
+		ignSource: 'https://assets-prd.ignimgs.com/2013/03/25/project-zomboid-button.jpg',
 	},
 	'raft': {
 		src: '/images/guides/raft.webp',

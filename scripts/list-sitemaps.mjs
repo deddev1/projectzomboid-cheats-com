@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const SITE = 'https://warframecheats.net';
+const SITE = 'https://projectzomboidcheats.com';
 const LIVE = process.argv.includes('--live');
 
 async function resolveDistRoot() {
