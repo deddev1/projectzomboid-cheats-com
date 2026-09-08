@@ -1,4 +1,4 @@
-/** Survivor wingman — slides in from the left with a short tagline. */
+/** Spiffo wingman — slides in from the right with a short tagline. */
 import { wingmanConfig } from '../data/wingman';
 
 let hideTimer: ReturnType<typeof setTimeout> | undefined;
