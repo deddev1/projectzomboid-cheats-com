@@ -1,13 +1,17 @@
-import { zomboidImages } from '../data/zomboid';
-import { isExternalImage } from './responsive-images';
+import { isExternalImage, isSiteHeroImage } from './responsive-images';
 
 export const SUPABASE_CDN_ORIGIN = 'https://boqgsoiwnpbisvrxulbe.supabase.co';
 
 /**
- * Inner pages default to heavy Supabase JPG/PNG heroes — swap to the local
- * responsive WebP stack so banner/LCP stays on-origin and cacheable.
+ * Resolve inner-page banner art — never the homepage LCP hero.
+ * Returns undefined when only the site hero is available (text-only banner).
  */
-export function bannerHeroSrc(pageHero: string | undefined): string {
-	if (!pageHero || isExternalImage(pageHero)) return zomboidImages.hero;
+export function bannerHeroSrc(pageHero: string | undefined): string | undefined {
+	if (!pageHero || isSiteHeroImage(pageHero)) return undefined;
 	return pageHero;
+}
+
+export function isBannerHeroExternal(pageHero: string | undefined): boolean {
+	const src = bannerHeroSrc(pageHero);
+	return Boolean(src && isExternalImage(src));
 }

@@ -6,7 +6,7 @@ import RippleButton from '../components/inspira/RippleButton.astro';
 import { getUi } from '../data/i18n';
 import { getBreadcrumbLabelForPage, getLocalizedPath } from '../data/i18n/routing';
 import { zomboidImages } from '../data/zomboid';
-import { heroPreloadSrc, heroSizes, heroSrcSet, heroIsExternal, contentSrc, contentSrcSet, galleryTileSizes, isExternalImage } from '../lib/responsive-images';
+import { contentSrc, contentSrcSet, galleryTileSizes, isExternalImage, isSiteHeroImage } from '../lib/responsive-images';
 import { englishPaths, pageIds, type PageId } from '../data/i18n/routing';
 import { defaultLocale } from '../data/i18n/locales';
 
@@ -17,7 +17,7 @@ interface Props {
 	description: string;
 	canonicalPath?: string;
 	heading: string;
-	intro: string;
+	intro?: string;
 	eyebrow?: string;
 	heroImage?: string;
 	heroAlt?: string;
@@ -38,9 +38,8 @@ const {
 	description,
 	canonicalPath = '/',
 	heading,
-	intro,
 	eyebrow,
-	heroImage = zomboidImages.hero,
+	heroImage,
 	heroAlt = 'Project Zomboid cheats product preview',
 	gallery = zomboidImages.product.slice(0, 3),
 	galleryTitle = 'Project Zomboid cheats UI reference',
@@ -65,7 +64,11 @@ const pageId = pageIdProp ?? resolvePageId(canonicalPath);
 
 const ui = getUi(locale);
 const homeHref = getLocalizedPath('home', locale);
-const isHomeLcp = pageId === 'home';
+
+const bannerImage =
+	heroImage && !isSiteHeroImage(heroImage) ? heroImage : undefined;
+const bannerIsExternal = bannerImage ? isExternalImage(bannerImage) : false;
+const ogImageForMeta = bannerImage ?? zomboidImages.headerArt;
 
 const normalizedGallery = gallery
 	.map((item) => {
@@ -89,7 +92,7 @@ const normalizedGallery = gallery
 			alt: heroAlt || `${keywordAlt} - ${ui.product.title}`,
 		};
 	})
-	.filter((item) => Boolean(item.src));
+	.filter((item) => Boolean(item.src) && !isSiteHeroImage(item.src));
 
 const breadcrumbLabel = getBreadcrumbLabelForPage(pageId, ui.nav, heading);
 
@@ -98,68 +101,31 @@ const breadcrumbs = [
 	{ label: breadcrumbLabel },
 ];
 
-const isHeroLcp = isHomeLcp && heroImage === zomboidImages.hero;
-const bannerIsExternal = isExternalImage(heroImage);
-const lcpImage = isHeroLcp ? heroPreloadSrc : undefined;
-const lcpImageSrcSet = isHeroLcp ? heroSrcSet : undefined;
-const lcpImageSizes = isHeroLcp ? heroSizes : undefined;
 ---
 
 <Layout
 	title={title}
 	description={description}
 	canonicalPath={canonicalPath}
-	ogImage={heroImage}
+	ogImage={ogImageForMeta}
 	ogImageAlt={heroAlt}
 	breadcrumbs={breadcrumbs}
 	locale={locale}
 	pageId={pageId}
 	extraGraph={extraGraph}
-	lcpImage={lcpImage}
-	lcpImageSrcSet={lcpImageSrcSet}
-	lcpImageSizes={lcpImageSizes}
 >
 	<Navbar locale={locale} pageId={pageId} />
 	<main class:list={['page', hideBanner && 'page--compact']}>
 		{
 			!hideBanner && (
-		<section class="banner">
+		<section class:list={['banner', !bannerImage && 'banner--text']}>
+			{
+				bannerImage && (
 			<div class="banner__media">
 				{
-					isHeroLcp ? (
-						heroIsExternal ? (
-							<img
-								src={heroPreloadSrc}
-								alt={heroAlt}
-								width="1600"
-								height="900"
-								class="banner__img"
-								fetchpriority="high"
-								decoding="sync"
-							/>
-						) : (
-						<picture>
-							<source media="(max-width: 760px)" srcset={heroPreloadSrc} type="image/webp" />
-							<source
-								media="(min-width: 761px)"
-								srcset={heroSrcSet}
-								sizes={heroSizes}
-								type="image/webp"
-							/>
-							<img
-								src={heroPreloadSrc}
-								alt={heroAlt}
-								width="1600"
-								height="900"
-								class="banner__img"
-								fetchpriority="high"
-								decoding="sync"
-							/>
-						</picture>
-						)
-					) : bannerIsExternal ? (
+					bannerIsExternal ? (
 						<img
-							src={heroImage}
+							src={bannerImage}
 							alt={heroAlt}
 							width="1600"
 							height="900"
@@ -171,18 +137,18 @@ const lcpImageSizes = isHeroLcp ? heroSizes : undefined;
 						<picture>
 							<source
 								media="(max-width: 760px)"
-								srcset={contentSrc(heroImage)}
+								srcset={contentSrc(bannerImage)}
 								type="image/webp"
 							/>
 							<source
 								media="(min-width: 761px)"
-								srcset={contentSrcSet(heroImage) ?? contentSrc(heroImage)}
+								srcset={contentSrcSet(bannerImage) ?? contentSrc(bannerImage)}
 								sizes="100vw"
 								type="image/webp"
 							/>
 							<img
-								src={contentSrc(heroImage)}
-								srcset={contentSrcSet(heroImage)}
+								src={contentSrc(bannerImage)}
+								srcset={contentSrcSet(bannerImage)}
 								sizes="100vw"
 								alt={heroAlt}
 								width="1600"
@@ -197,6 +163,8 @@ const lcpImageSizes = isHeroLcp ? heroSizes : undefined;
 				}
 				<div class="banner__scrim" aria-hidden="true"></div>
 			</div>
+				)
+			}
 			<div class="shell banner__content">
 				<nav class="banner__crumbs" aria-label="Breadcrumb">
 					<a href={homeHref}>{ui.nav.home}</a>
@@ -204,7 +172,6 @@ const lcpImageSizes = isHeroLcp ? heroSizes : undefined;
 					<span aria-current="page">{breadcrumbLabel}</span>
 				</nav>
 				<h1 class="banner__title">{heading}</h1>
-				<p class="banner__intro">{intro}</p>
 				{
 					(ctaPrimary || ctaSecondary) && (
 						<div class="banner__actions">
@@ -293,6 +260,20 @@ const lcpImageSizes = isHeroLcp ? heroSizes : undefined;
 		margin-bottom: 1.35rem;
 	}
 
+	.banner--text {
+		min-height: auto;
+		background:
+			linear-gradient(180deg, rgba(18, 22, 20, 0.98) 0%, rgba(12, 14, 13, 1) 100%);
+	}
+
+	.banner--text .banner__title {
+		color: var(--color-text);
+	}
+
+	.banner--text .banner__crumbs {
+		color: var(--color-faint);
+	}
+
 	.banner__media {
 		position: absolute;
 		inset: 0;
@@ -319,7 +300,7 @@ const lcpImageSizes = isHeroLcp ? heroSizes : undefined;
 		z-index: 1;
 		max-width: 640px;
 		margin-inline: auto;
-		padding: 1.35rem 0 1.2rem;
+		padding: 1.15rem 0 1rem;
 		text-align: center;
 	}
 
@@ -362,20 +343,12 @@ const lcpImageSizes = isHeroLcp ? heroSizes : undefined;
 		color: #ffffff;
 	}
 
-	.banner__intro {
-		margin: 0.55rem auto 0;
-		max-width: 34rem;
-		color: rgba(255, 255, 255, 0.88);
-		font-size: 0.82rem;
-		line-height: 1.55;
-	}
-
 	.banner__actions {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 0.45rem;
-		margin-top: 0.75rem;
+		margin-top: 0.65rem;
 	}
 
 	.banner__actions :global(.inspira-ripple-btn),
@@ -775,12 +748,6 @@ const lcpImageSizes = isHeroLcp ? heroSizes : undefined;
 			font-size: clamp(1.05rem, 4.8vw, 1.35rem);
 			line-height: 1.2;
 			overflow-wrap: anywhere;
-		}
-
-		.banner__intro {
-			font-size: 0.78rem;
-			line-height: 1.5;
-			max-width: none;
 		}
 
 		.banner__actions {

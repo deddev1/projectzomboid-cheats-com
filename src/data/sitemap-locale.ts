@@ -7,8 +7,10 @@ import {
 	type LocaleCode,
 } from './i18n/locales';
 import { siteConfig } from './site';
+import { zomboidImages } from './zomboid';
 import { pageSitemapMeta } from './sitemap-meta';
 import { escapeXml } from './sitemap-xml';
+import { bannerHeroSrc } from '../lib/performance';
 
 export type LocaleSitemapEntry = {
 	path: string;
@@ -45,6 +47,7 @@ export function buildLocaleSitemapEntries(locale: LocaleCode): LocaleSitemapEntr
 	return localeSitemapPageIds.map((pageId) => {
 		const meta = pageSitemapMeta[pageId];
 		const page = pageId === 'home' ? null : getPageContent(locale, pageId);
+		const bannerImage = page ? bannerHeroSrc(page.heroImage) : undefined;
 
 		return {
 			path: getLocalizedPath(pageId, locale),
@@ -53,13 +56,13 @@ export function buildLocaleSitemapEntries(locale: LocaleCode): LocaleSitemapEntr
 			priority: meta.i18nPriority,
 			changefreq: meta.changefreq,
 			image:
-				pageId === 'home'
-					? undefined
-					: {
-							url: new URL(page!.heroImage, siteConfig.url).href,
+				bannerImage
+					? {
+							url: new URL(bannerImage, siteConfig.url).href,
 							title: page!.title,
 							caption: page!.imageAlt,
-						},
+						}
+					: undefined,
 		};
 	});
 }

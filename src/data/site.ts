@@ -12,7 +12,7 @@ export const siteConfig = {
 	logoRasterHeight: 192,
 	logoAlt: 'Project Zomboid Cheats logo',
 	checkoutUrl: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fproject-zomboid',
-	defaultOgImage: gameplayImages.hero.src,
+	defaultOgImage: gameplayImages.cheatMenuUi.src,
 } as const;
 
 export const productInfo = {

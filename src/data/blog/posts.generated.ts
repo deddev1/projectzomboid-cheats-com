@@ -98,7 +98,7 @@ export const blogPosts: BlogPostDefinition[] = [
 	},
 	{
 		id: "project-zomboid-cheats-2026-whats-new",
-		imageKey: "hero",
+		imageKey: "headerArt",
 		published: "2026-07-28",
 		updated: "2026-08-01",
 		category: "Project Zomboid Cheats",

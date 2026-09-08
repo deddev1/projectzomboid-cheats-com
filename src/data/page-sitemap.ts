@@ -53,8 +53,8 @@ const sitemapImagesByPageId: Partial<Record<PageId, SitemapImage[]>> = {
 		img(zomboidImages.rebootFight, 'Project Zomboid Radar Hack overlay', 'Project Zomboid 2D radar for flank detection'),
 	],
 	features: [
-		img(zomboidImages.hero, 'Project Zomboid Cheats Features', 'Project Zomboid Cheats feature overview'),
-		img(zomboidImages.loadoutBuilder, 'Project Zomboid Cheats menu', 'Project Zomboid Cheats in-client controls'),
+		img(zomboidImages.loadoutBuilder, 'Project Zomboid Cheats Features', 'Project Zomboid Cheats feature overview'),
+		img(zomboidImages.cheatsPackage, 'Project Zomboid Cheats menu', 'Project Zomboid Cheats in-client controls'),
 	],
 	pricing: [
 		img(zomboidImages.cover, 'Project Zomboid Cheats Pricing', 'Project Zomboid Cheats license plans'),
@@ -64,7 +64,7 @@ const sitemapImagesByPageId: Partial<Record<PageId, SitemapImage[]>> = {
 		img(zomboidImages.squadFight, 'Project Zomboid Cheats Setup', 'Project Zomboid Cheats installation guide'),
 	],
 	updates: [
-		img(zomboidImages.hero, 'Project Zomboid Cheats Updates', 'Project Zomboid Cheats patch status'),
+		img(zomboidImages.headerArt, 'Project Zomboid Cheats Updates', 'Project Zomboid Cheats patch status'),
 	],
 	faq: [
 		img(zomboidImages.loadoutBuilder, 'Project Zomboid Cheats FAQ', 'Project Zomboid Cheats frequently asked questions'),

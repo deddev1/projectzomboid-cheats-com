@@ -57,7 +57,12 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 	<div class="pricing-features__grid">
 		{
 			productFeatureCategories.map((category) => (
-				<article class="pricing-features__card">
+				<article
+					class:list={[
+						'pricing-features__card',
+						category.columns === 2 && 'pricing-features__card--wide',
+					]}
+				>
 					<h3 class="pricing-features__card-title">{category.title}</h3>
 					<ul
 						class:list={[
@@ -180,10 +185,12 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 	}
 
 	.pricing-features__card {
-		padding: 1.15rem 1.2rem 1.25rem;
+		padding: 1.2rem 1.25rem 1.35rem;
 		border-radius: 0.85rem;
 		border: 1px solid rgba(104, 112, 82, 0.22);
 		background: rgba(28, 24, 38, 0.98);
+		display: flex;
+		flex-direction: column;
 		transition:
 			transform 0.22s ease,
 			border-color 0.22s ease,
@@ -215,20 +222,39 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 		padding: 0;
 		list-style: none;
 		display: grid;
-		gap: 0.55rem;
+		gap: 0.65rem;
+		flex: 1;
 	}
 
 	.pricing-features__list--two-col {
-		display: block;
-		columns: 2;
-		column-gap: 1.35rem;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		column-gap: 1.15rem;
+		row-gap: 0.7rem;
+	}
+
+	@media (min-width: 1101px) {
+		.pricing-features__card--wide {
+			grid-column: 1 / -1;
+		}
+
+		.pricing-features__card--wide .pricing-features__list--two-col {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			column-gap: 1.5rem;
+			row-gap: 0.75rem;
+		}
+	}
+
+	@media (min-width: 1400px) {
+		.pricing-features__card--wide .pricing-features__list--two-col {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
 	}
 
 	.pricing-features__list li {
 		display: grid;
 		grid-template-columns: 0.45rem minmax(0, 1fr);
 		align-items: start;
-		column-gap: 0.6rem;
+		column-gap: 0.65rem;
 		color: rgba(255, 255, 255, 0.92);
 		font-size: 0.88rem;
 		font-weight: 500;
@@ -236,12 +262,7 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 	}
 
 	.pricing-features__list--two-col li {
-		break-inside: avoid;
-		margin-bottom: 0.55rem;
-	}
-
-	.pricing-features__list--two-col li:last-child {
-		margin-bottom: 0;
+		padding-right: 0.15rem;
 	}
 
 	.pricing-features__bullet {
@@ -292,11 +313,12 @@ const sectionTitle = compactHeading ? 'Included in every license' : ui.nav.featu
 		}
 
 		.pricing-features__list--two-col {
-			columns: 1;
+			grid-template-columns: 1fr;
+			row-gap: 0.65rem;
 		}
 
 		.pricing-features__list--two-col li {
-			margin-bottom: 0;
+			padding-right: 0;
 		}
 	}
 </style>

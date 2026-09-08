@@ -51,7 +51,7 @@ const seoPageId = getCanonicalPageId(pageId);
 const canonicalPath = getCanonicalPath(seoPageId, locale);
 const canonicalURL = new URL(canonicalPath, siteConfig.url).href;
 const bannerHero = bannerHeroSrc(page.heroImage);
-const heroImageUrl = new URL(bannerHero, siteConfig.url).href;
+const heroImageUrl = new URL(bannerHero ?? zomboidImages.headerArt, siteConfig.url).href;
 
 const extraGraph = buildPageExtraGraph(seoPageId, canonicalURL, heroImageUrl, seoFaqs);
 
@@ -69,7 +69,6 @@ const contentSections = getRenderableSections(pageId, page.sections);
 	description={page.description}
 	canonicalPath={canonicalPath}
 	heading={page.h1}
-	intro={page.intro}
 	heroImage={bannerHero}
 	heroAlt={page.imageAlt}
 	gallery={galleryPool.map((img) => ({

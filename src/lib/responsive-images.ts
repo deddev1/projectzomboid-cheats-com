@@ -32,6 +32,13 @@ export function isExternalImage(src: string): boolean {
 	return src.startsWith('http://') || src.startsWith('https://');
 }
 
+/** Homepage LCP hero — must not appear on inner banners, galleries, or product strips. */
+export function isSiteHeroImage(src: string | undefined): boolean {
+	if (!src) return false;
+	const path = src.split('?')[0].split('#')[0];
+	return /\/zomboid-cheats-hero(?:-\d+w)?\.webp$/i.test(path);
+}
+
 /** Build srcset for content images that have -480w / -960w variants. */
 export function contentSrcSet(baseSrc: string): string | undefined {
 	if (isExternalImage(baseSrc)) return undefined;
