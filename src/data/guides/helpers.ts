@@ -80,6 +80,9 @@ export function getNativeWarframeGuides() {
 	});
 }
 
+/** @deprecated Use getNativeWarframeGuides — kept for build compatibility. */
+export const getNativeZomboidGuides = getNativeWarframeGuides;
+
 /** External guides interleaved by game so same-game articles are not grouped together. */
 export function getMixedExternalGuides(): ResolvedExternalGuide[] {
 	const byGame = new Map<string, ResolvedExternalGuide[]>();

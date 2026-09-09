@@ -1,0 +1,12 @@
+---
+/** @deprecated Use WarframeAuthorityLinks.astro — kept for build compatibility. */
+import WarframeAuthorityLinks from './WarframeAuthorityLinks.astro';
+
+interface Props {
+	headingLevel?: 'h2' | 'h3';
+}
+
+const props = Astro.props;
+---
+
+<WarframeAuthorityLinks {...props} />
