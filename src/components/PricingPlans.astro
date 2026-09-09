@@ -121,7 +121,9 @@ const featurePills = [
 			>
 				<span class="pricing-showcase__plan-main">
 					<span class="pricing-showcase__plan-name">{ui.product.monthly}</span>
-					<span class="pricing-showcase__plan-price">${monthlyPlan.price}</span>
+					<span class="pricing-showcase__plan-price">
+						$<span class="pricing-showcase__plan-amount">{monthlyPlan.price}</span>
+					</span>
 				</span>
 			</button>
 
@@ -144,7 +146,9 @@ const featurePills = [
 						</span>
 						<span class="pricing-showcase__plan-main">
 							<span class="pricing-showcase__plan-name">{ui.product.lifetime}</span>
-							<span class="pricing-showcase__plan-price">${lifetimePlan.price}</span>
+							<span class="pricing-showcase__plan-price">
+								$<span class="pricing-showcase__plan-amount">{lifetimePlan.price}</span>
+							</span>
 						</span>
 						<span class="pricing-showcase__plan-sub">One-time payment</span>
 					</button>
@@ -457,12 +461,18 @@ const featurePills = [
 	}
 
 	.pricing-showcase__plan-price {
-		font-family: var(--font-display);
+		font-family: var(--font-sans);
 		font-size: 1.05rem;
-		font-weight: 800;
-		letter-spacing: -0.02em;
+		font-weight: 600;
 		color: var(--color-ink);
 		white-space: nowrap;
+	}
+
+	.pricing-showcase__plan-amount {
+		font-family: var(--font-display);
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		font-variant-numeric: tabular-nums;
 	}
 
 	.pricing-showcase__plan-sub {

@@ -608,22 +608,79 @@ const GAME_PROFILES = {
 };
 
 const CLOSING_TEMPLATES = [
-	'For more game updates, guides, and related resources, you can also explore {link}.',
-	'If you want deeper game updates, walkthroughs, and related resources, you can also explore {link}.',
-	'When you are ready for more game information and community guides, you can also explore {link}.',
-	'For additional perspectives on updates, builds, and related resources, you can also explore {link}.',
+	'For more cheat updates, feature breakdowns, and related resources, you can also explore {link}.',
+	'If you want deeper cheat configuration notes and related resources, you can also explore {link}.',
+	'When you are ready for more game cheat information and setup guides, you can also explore {link}.',
+	'For additional perspectives on cheat features, patches, and related resources, you can also explore {link}.',
 ];
 
 const FOCUS_ANGLES = [
-	'early-game fundamentals',
-	'mid-game optimization',
-	'endgame efficiency',
-	'PvP awareness',
-	'co-op coordination',
-	'economy and crafting',
-	'map knowledge',
-	'loadout planning',
+	'ESP and wallhack setup',
+	'aimbot tuning',
+	'radar and overlay config',
+	'anti-cheat awareness',
+	'loot and player ESP',
+	'PvP cheat profiles',
+	'stealth and toggle keys',
+	'patch-day cheat checks',
 ];
+
+/** @param {string} genre */
+function getCheatFeatureSet(genre) {
+	const g = genre.toLowerCase();
+	if (g.includes('battle royale') || g.includes('hero shooter') || g.includes('tactical') && g.includes('shooter')) {
+		return {
+			features: 'player ESP, loot highlights, aim assist with FOV limits, recoil control, and a 2D radar for rotations',
+			beginner: 'Start with ESP and radar only — learn map flow before enabling aggressive aim features in ranked modes.',
+			midgame: 'Tune FOV arcs, smoothing, and target bones per weapon class so locks look natural in close fights.',
+			advanced: 'Build hotkey profiles that disable overlays during clips or streams, and swap configs when anti-cheat updates ship.',
+			anticheat: 'Battle royale and tactical shooters patch detection often — verify build status before every session.',
+		};
+	}
+	if (g.includes('extraction') || g.includes('hardcore') && g.includes('fps')) {
+		return {
+			features: 'loot and container ESP, player proximity alerts, extraction timers on radar, silent aim options, and gear value filters',
+			beginner: 'Prioritize loot ESP and distance filters so you can route safely before enabling combat assists.',
+			midgame: 'Pair container ESP with extraction radar — knowing player traffic matters more than raw aim in raid zones.',
+			advanced: 'Rotate cheat profiles between scav and PMC loadouts; heavy overlays on every raid increase report risk.',
+			anticheat: 'Extraction shooters run kernel or hybrid anti-cheat — never assume last week\'s build is still clean.',
+		};
+	}
+	if (g.includes('survival') || g.includes('sandbox') || g.includes('zombie')) {
+		return {
+			features: 'resource and crate ESP, player base radar, threat markers, item pickup filters, and optional aim assist for PvP',
+			beginner: 'Enable loot and resource ESP first — survival economies reward information more than instant aim.',
+			midgame: 'Use player ESP with distance caps so you can scout raids without flooding the screen on large maps.',
+			advanced: 'Save separate profiles for farming, base defense, and PvP outings; toggle combat features only when needed.',
+			anticheat: 'Survival servers mix official and community anti-cheat — check patch notes after every game update.',
+		};
+	}
+	if (g.includes('moba') || g.includes('mmorpg') || g.includes('action rpg')) {
+		return {
+			features: 'map awareness overlays, objective timers, last-hit assist options, cooldown HUD panels, and farm route ESP',
+			beginner: 'Stick to information overlays and timers before enabling any combat automation in ranked queues.',
+			midgame: 'Align ESP filters with your role — supports need vision tools, carries benefit from farm and objective alerts.',
+			advanced: 'Disable high-visibility features during replays or spectator modes; subtle overlays draw fewer reports.',
+			anticheat: 'Online RPGs and MOBAs ban in waves — confirm loader status after seasonal patches and ban announcements.',
+		};
+	}
+	if (g.includes('vehicular') || g.includes('combined arms') || g.includes('military')) {
+		return {
+			features: 'vehicle and infantry ESP, weak-spot markers, shell drop assist, capture point radar, and threat direction cues',
+			beginner: 'Run ESP and radar first — armor fights are won with positioning data before aim correction.',
+			midgame: 'Filter ESP by vehicle class so ground and air targets stay readable in large battles.',
+			advanced: 'Swap profiles between tank, aircraft, and infantry roles; each needs different overlay density.',
+			anticheat: 'Combined-arms titles update fair-fight systems often — treat every patch day as a config reset.',
+		};
+	}
+	return {
+		features: 'player ESP, loot markers, configurable aim assist, 2D radar, hotkey toggles, and patch-status indicators',
+		beginner: 'Enable ESP and radar before aim features — information tools carry less risk while you learn each map.',
+		midgame: 'Tune overlay opacity, distance filters, and aim smoothing so features stay readable under pressure.',
+		advanced: 'Maintain separate legit and full profiles with hotkey swaps for clutch moments or streaming.',
+		anticheat: 'Most online games ship silent anti-cheat updates — verify compatibility after every major patch.',
+	};
+}
 
 /**
  * @param {string} str
@@ -644,8 +701,10 @@ function buildArticle(entry, index) {
 	const profile = GAME_PROFILES[entry.gameId];
 	if (!profile) throw new Error(`Missing game profile: ${entry.gameId}`);
 
+	const cheat = getCheatFeatureSet(profile.genre);
 	const seed = hashString(entry.url);
 	const angle = FOCUS_ANGLES[seed % FOCUS_ANGLES.length];
+	const angleTitle = angle.replace(/\b\w/g, (c) => c.toUpperCase());
 	const closingTemplate = CLOSING_TEMPLATES[seed % CLOSING_TEMPLATES.length];
 	const externalLink = `<a href="${entry.url}" target="_blank" rel="noopener noreferrer">${entry.anchorText}</a>`;
 	const closing = closingTemplate.replace('{link}', externalLink);
@@ -653,49 +712,50 @@ function buildArticle(entry, index) {
 	const published = `2026-${String((index % 12) + 1).padStart(2, '0')}-${String((index % 27) + 1).padStart(2, '0')}`;
 	const updated = published;
 
-	const title = `${entry.gameName} Guide: ${angle.replace(/\b\w/g, (c) => c.toUpperCase())} & Core Gameplay`;
-	const h1 = `${entry.gameName} gameplay guide`;
-	const metaDescription = `A practical ${entry.gameName} guide covering ${profile.hook}, with tips for ${angle}, progression, and smarter in-game decisions.`;
-	const intro = `${entry.gameName} is a ${profile.genre} built around ${profile.hook}. Whether you are learning the basics or refining your ${angle}, this guide breaks down how the core loop works and where most players lose momentum.`;
+	const title = `${entry.gameName} Cheats Guide: ${angleTitle}`;
+	const h1 = `${entry.gameName} cheats guide`;
+	const metaDescription = `A practical ${entry.gameName} cheats guide covering ESP, aimbot, wallhack, and radar setup, with tips for ${angle}, anti-cheat checks, and safer configuration.`;
+	const intro = `${entry.gameName} is a ${profile.genre} where ${profile.hook}. This cheats guide explains which features matter most — ${cheat.features} — and how to configure them without turning every match into a report magnet.`;
 
 	const sections = [
 		{
-			h2: `Understanding the ${entry.gameName} core loop`,
+			h2: `Core cheat features for ${entry.gameName}`,
 			paragraphs: [
-				`At its heart, ${entry.gameName} rewards players who respect the core loop: ${profile.coreLoop}. Matches unfold quickly when you understand these rhythms, and painfully when you treat every engagement the same.`,
-				`New players often chase highlight plays before they understand ${angle}. Slow down, learn one reliable strategy, and let muscle memory build around map flow and resource timing.`,
-				profile.communityAngle,
+				`Most ${entry.gameName} cheat packages focus on information first: ${cheat.features}. Used together, these tools shorten the gap between spotting a threat and acting on it — especially in modes built around ${profile.hook}.`,
+				`Treat ${angle} as your starting preset, not a permanent loadout. The best configs expose just enough data to make decisions without cluttering the screen during hectic fights.`,
+				`Because ${entry.gameName} revolves around ${profile.coreLoop}, cheat value comes from timing — knowing when to toggle overlays on, when to lean on aim assist, and when to play clean to avoid spectator reports.`,
 			],
 		},
 		{
-			h2: 'Beginner foundations that actually stick',
+			h2: 'First-time setup and safe defaults',
 			paragraphs: [
-				profile.beginnerTip,
-				`Focus on ${angle} during your first sessions instead of copying streamer builds. ${entry.gameName} punishes rushed decisions — especially when you have not learned safe rotations, healing windows, or extraction timing.`,
-				`Keep notes after each session: what killed you, what loot you skipped, and where traffic felt heavy. Patterns emerge fast once you review mistakes instead of queueing instantly.`,
+				cheat.beginner,
+				`Before enabling everything, map your toggle keys for ESP, radar, and aim assist. ${entry.gameName} sessions move fast; fumbling hotkeys mid-fight is worse than running no cheats at all.`,
+				`Run a private or low-stakes match to validate overlay positions, FOV circles, and distance filters. Adjust opacity until you can read names, loot tiers, and threat markers at a glance.`,
 			],
 		},
 		{
-			h2: 'Mid-game habits that separate average from consistent',
+			h2: 'Tuning ESP, aimbot, and radar together',
 			paragraphs: [
-				profile.midgameTip,
-				`Mid-game is where ${entry.gameName} players either stabilize or stall. Invest in repeatable habits: check your inventory before pushing, communicate intent with teammates, and rotate before you are forced to.`,
-				profile.metaNote,
+				cheat.midgame,
+				`Align ${angle} with your role. Aggressive players need tighter aim FOV and faster target switching; loot-focused players should widen ESP range and shrink combat overlays.`,
+				`${profile.metaNote} The same idea applies to cheats — filter noise, highlight high-value targets, and let radar handle off-screen pressure so ESP stays readable.`,
 			],
 		},
 		{
-			h2: 'Advanced decisions under pressure',
+			h2: 'Advanced profiles and report avoidance',
 			paragraphs: [
-				profile.advancedTip,
-				`High-skill play in ${entry.gameName} is mostly decision-making. The best players win fights they choose, disengage fights they did not initiate, and extract before greed flips a winning run.`,
-				`Review ${angle} after tough losses. Was the mistake positioning, timing, or resource management? Fixing one layer per week compounds faster than chasing new gear alone.`,
+				cheat.advanced,
+				`High-stakes ${entry.gameName} lobbies punish obvious configs. Lower aim smoothing spikes, avoid tracking through hard cover, and disable snaplines when streaming or recording.`,
+				`${profile.advancedTip} Pair that in-game discipline with cheat discipline: if a feature feels too visible, turn it off for a week and rely on radar plus ESP until patches settle.`,
 			],
 		},
 		{
-			h2: 'Staying current with updates and meta shifts',
+			h2: 'Anti-cheat updates and patch-day checks',
 			paragraphs: [
-				`${entry.gameName} evolves with balance patches, seasonal events, and community discoveries. Re-test your loadouts after major updates instead of assuming last month’s strategies still dominate.`,
-				`Follow official patch notes and trusted community breakdowns, then validate changes in low-stakes matches before taking new builds into ranked or high-loot zones.`,
+				cheat.anticheat,
+				`${entry.gameName} ships balance patches, seasonal content, and silent anti-cheat updates. Re-test every feature after patch day — especially wallhack, player ESP, and memory-dependent aim options.`,
+				`Keep a checklist: loader status, build version, overlay compatibility, and whether ranked or anti-cheat-heavy modes are supported. Never queue ranked with untested settings.`,
 				closing,
 			],
 		},
@@ -714,7 +774,7 @@ function buildArticle(entry, index) {
 		metaDescription,
 		h1,
 		intro,
-		keywords: [entry.gameName, `${entry.gameName} guide`, angle, profile.genre, 'gameplay tips'],
+		keywords: [entry.gameName, `${entry.gameName} cheats`, `${entry.gameName} hacks`, angle, 'ESP', 'aimbot', 'wallhack'],
 		sections,
 	};
 }
