@@ -62,6 +62,32 @@ if (projectRoot !== startDir) {
 }
 
 console.log(`[cloudflare-build] Project root: ${projectRoot}`);
+
+let buildCommit = 'unknown';
+try {
+	buildCommit = execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim();
+} catch {
+	// Non-git environments (local tarballs) skip commit logging.
+}
+
+const packageName = JSON.parse(readFileSync('package.json', 'utf8')).name;
+console.log(`[cloudflare-build] Git commit: ${buildCommit}`);
+console.log(`[cloudflare-build] Package name: ${packageName}`);
+
+if (packageName === 'warframe-cheats') {
+	console.error(
+		'[cloudflare-build] Stale Warframe package detected. Deploy latest main (228547e+) instead of retrying an old failed build.',
+	);
+	process.exit(1);
+}
+
+if (!existsSync('src/components/ZomboidAuthorityLinks.astro')) {
+	console.error(
+		'[cloudflare-build] Missing src/components/ZomboidAuthorityLinks.astro — checkout latest main before building.',
+	);
+	process.exit(1);
+}
+
 console.log('[cloudflare-build] Installing dependencies...');
 execSync('npm install', { stdio: 'inherit' });
 

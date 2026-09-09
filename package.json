@@ -9,6 +9,7 @@
 		"dev": "astro dev --host 0.0.0.0 --port 4321",
 		"start": "astro dev --host 0.0.0.0 --port 4321",
 		"dev:ip": "node scripts/dev-with-ip.mjs",
+		"prebuild": "node scripts/verify-build-source.mjs",
 		"build": "astro build",
 		"build:cf": "node scripts/cloudflare-build.mjs",
 		"seo:audit": "node scripts/seo-audit.mjs",
