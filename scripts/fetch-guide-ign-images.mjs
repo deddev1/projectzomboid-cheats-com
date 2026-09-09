@@ -56,6 +56,22 @@ const IGN_GAME_SLUGS = {
 	'raft': 'raft',
 	'sea-of-thieves': 'sea-of-thieves',
 	'delta-force': 'delta-force',
+	'ark-survival-ascended': 'ark-survival-ascended',
+	'warframe': 'warframe',
+	'dune-awakening': 'dune-awakening',
+	'wuthering-waves': 'wuthering-waves',
+	'combat-master': 'combat-master',
+	'foxhole': 'foxhole',
+	'exoborne': 'exoborne',
+	'nba-2k26': 'nba-2k26',
+	'team-fortress-2': 'team-fortress-2',
+	'enlisted': 'enlisted',
+	'scum': 'scum',
+	'grounded': 'grounded',
+	'dota-2': 'dota-2',
+	'civilization-vi': 'sid-meiers-civilization-vi',
+	'enshrouded': 'enshrouded',
+	'fragpunk': 'fragpunk',
 };
 
 mkdirSync(OUT_DIR, { recursive: true });

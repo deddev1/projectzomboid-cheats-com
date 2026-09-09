@@ -198,10 +198,10 @@ export const guideIgnImages: Record<string, { src: string; alt: string; ignSourc
 		alt: 'Path of Exile dark fantasy action RPG combat',
 		ignSource: 'https://assets-prd.ignimgs.com/2013/10/23/path-of-exile-button.jpg',
 	},
-	'warframe': {
-		src: '/images/guides/warframe.webp',
-		alt: 'Warframe sci-fi ninja action looter shooter mission',
-		ignSource: 'https://assets-prd.ignimgs.com/2013/03/25/warframe-button.jpg',
+	'project-zomboid': {
+		src: '/images/guides/project-zomboid.webp',
+		alt: 'Project Zomboid isometric zombie survival Knox County',
+		ignSource: 'https://assets-prd.ignimgs.com/2013/03/25/project-zomboid-button.jpg',
 	},
 	'raft': {
 		src: '/images/guides/raft.webp',
@@ -217,6 +217,86 @@ export const guideIgnImages: Record<string, { src: string; alt: string; ignSourc
 		src: '/images/guides/delta-force.webp',
 		alt: 'Delta Force modern military tactical operations',
 		ignSource: 'https://assets-prd.ignimgs.com/2024/08/20/delta-force-button.jpg',
+	},
+	'ark-survival-ascended': {
+		src: '/images/guides/ark-survival-ascended.webp',
+		alt: 'ARK Survival Ascended dinosaur taming open-world adventure',
+		ignSource: 'https://assets-prd.ignimgs.com/2023/10/25/ark-survival-ascended-button.jpg',
+	},
+	'warframe': {
+		src: '/images/guides/warframe.webp',
+		alt: 'Warframe sci-fi ninja action looter shooter combat',
+		ignSource: 'https://assets-prd.ignimgs.com/2013/03/25/warframe-button.jpg',
+	},
+	'dune-awakening': {
+		src: '/images/guides/dune-awakening.webp',
+		alt: 'Dune Awakening survival on the desert planet Arrakis',
+		ignSource: 'https://assets-prd.ignimgs.com/2024/08/22/dune-awakening-button.jpg',
+	},
+	'wuthering-waves': {
+		src: '/images/guides/wuthering-waves.webp',
+		alt: 'Wuthering Waves open-world action RPG resonator combat',
+		ignSource: 'https://assets-prd.ignimgs.com/2024/05/22/wuthering-waves-button.jpg',
+	},
+	'combat-master': {
+		src: '/images/guides/combat-master.webp',
+		alt: 'Combat Master fast-paced competitive FPS firefight',
+		ignSource: 'https://assets-prd.ignimgs.com/2023/06/15/combat-master-button.jpg',
+	},
+	'foxhole': {
+		src: '/images/guides/foxhole.webp',
+		alt: 'Foxhole persistent online faction warfare battlefield',
+		ignSource: 'https://assets-prd.ignimgs.com/2017/11/07/foxhole-button.jpg',
+	},
+	'exoborne': {
+		src: '/images/guides/exoborne.webp',
+		alt: 'Exoborne extraction shooter catastrophic future Earth',
+		ignSource: 'https://assets-prd.ignimgs.com/2024/12/05/exoborne-button.jpg',
+	},
+	'nba-2k26': {
+		src: '/images/guides/nba-2k26.webp',
+		alt: 'NBA 2K26 basketball simulation MyTeam court action',
+		ignSource: 'https://assets-prd.ignimgs.com/2025/09/05/nba-2k26-button.jpg',
+	},
+	'team-fortress-2': {
+		src: '/images/guides/team-fortress-2.webp',
+		alt: 'Team Fortress 2 class-based team shooter payload push',
+		ignSource: 'https://assets-prd.ignimgs.com/2007/10/10/team-fortress-2-button.jpg',
+	},
+	'enlisted': {
+		src: '/images/guides/enlisted.webp',
+		alt: 'Enlisted WWII combined arms squad battle',
+		ignSource: 'https://assets-prd.ignimgs.com/2021/06/10/enlisted-button.jpg',
+	},
+	'scum': {
+		src: '/images/guides/scum.webp',
+		alt: 'SCUM hardcore open-world survival military looting',
+		ignSource: 'https://assets-prd.ignimgs.com/2018/08/29/scum-button.jpg',
+	},
+	'grounded': {
+		src: '/images/guides/grounded.webp',
+		alt: 'Grounded backyard survival adventure against giant insects',
+		ignSource: 'https://assets-prd.ignimgs.com/2020/07/28/grounded-button.jpg',
+	},
+	'dota-2': {
+		src: '/images/guides/dota-2.webp',
+		alt: 'Dota 2 MOBA team fight on Summoners Rift style map',
+		ignSource: 'https://assets-prd.ignimgs.com/2013/07/09/dota-2-button.jpg',
+	},
+	'civilization-vi': {
+		src: '/images/guides/civilization-vi.webp',
+		alt: 'Sid Meiers Civilization VI turn-based strategy empire building',
+		ignSource: 'https://assets-prd.ignimgs.com/2021/12/14/civ6-1639520169673.jpg',
+	},
+	'enshrouded': {
+		src: '/images/guides/enshrouded.webp',
+		alt: 'Enshrouded survival action RPG shroud exploration',
+		ignSource: 'https://assets-prd.ignimgs.com/2024/01/24/enshrouded-button.jpg',
+	},
+	'fragpunk': {
+		src: '/images/guides/fragpunk.webp',
+		alt: 'FragPunk hero tactical shooter shard modifier combat',
+		ignSource: 'https://assets-prd.ignimgs.com/2024/11/14/fragpunk-button.jpg',
 	},
 };
 
