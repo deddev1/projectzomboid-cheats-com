@@ -52,7 +52,7 @@ const IGN_GAME_SLUGS = {
 	'naraka-bladepoint': 'naraka-bladepoint',
 	'minecraft': 'minecraft',
 	'path-of-exile': 'path-of-exile',
-	'warframe': 'warframe',
+	'project-zomboid': 'project-zomboid',
 	'raft': 'raft',
 	'sea-of-thieves': 'sea-of-thieves',
 	'delta-force': 'delta-force',
@@ -82,7 +82,7 @@ mkdirSync(OUT_DIR, { recursive: true });
 async function fetchIgnImageUrl(ignSlug) {
 	const pageUrl = `https://www.ign.com/games/${ignSlug}`;
 	const res = await fetch(pageUrl, {
-		headers: { 'User-Agent': 'Mozilla/5.0 (compatible; WarframeCheatsGuideBot/1.0)' },
+		headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Project ZomboidCheatsGuideBot/1.0)' },
 	});
 	if (!res.ok) throw new Error(`Page HTTP ${res.status} for ${pageUrl}`);
 	const html = await res.text();
@@ -115,7 +115,7 @@ for (const [gameId, ignSlug] of Object.entries(IGN_GAME_SLUGS)) {
 		const imageUrl = await fetchIgnImageUrl(ignSlug);
 		resolvedSources[gameId] = imageUrl;
 		const imgRes = await fetch(`${imageUrl}?width=1200&format=jpg&auto=webp&quality=85`, {
-			headers: { 'User-Agent': 'Mozilla/5.0 (compatible; WarframeCheatsGuideBot/1.0)' },
+			headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Project ZomboidCheatsGuideBot/1.0)' },
 		});
 		if (!imgRes.ok) throw new Error(`Image HTTP ${imgRes.status}`);
 		const buf = Buffer.from(await imgRes.arrayBuffer());

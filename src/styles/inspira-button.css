@@ -1,0 +1,40 @@
+/* Inspira UI Ripple Button — https://inspira-ui.com/docs/en/components/buttons/ripple-button */
+
+.inspira-ripple-btn__label {
+	position: relative;
+	z-index: 1;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: inherit;
+	color: inherit;
+}
+
+.inspira-ripple-btn__ripple {
+	position: absolute;
+	border-radius: 50%;
+	opacity: 0.35;
+	pointer-events: none;
+	transform: scale(0);
+	animation: inspira-rippling var(--ripple-duration, 600ms) ease-out forwards;
+	z-index: 0;
+}
+
+@keyframes inspira-rippling {
+	0% {
+		opacity: 1;
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.inspira-ripple-btn__ripple {
+		animation: none;
+		display: none;
+	}
+}

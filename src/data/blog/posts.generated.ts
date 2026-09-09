@@ -3,49 +3,49 @@ import type { BlogPostDefinition } from './types';
 
 export const blogPosts: BlogPostDefinition[] = [
 	{
-		id: "warframe-cheats-complete-guide",
+		id: "project-zomboid-cheats-complete-guide",
 		imageKey: "battleRoyaleCombat",
 		published: "2026-07-31",
 		updated: "2026-08-01",
-		category: "Warframe Cheats",
+		category: "Project Zomboid Cheats",
 		featured: true,
 		translations: {
 		en: {
-		slug: "warframe-cheats-complete-guide-2026",
-		title: "Warframe Cheats 2026: Complete Undetected Guide",
-		metaDescription: "Complete Warframe Cheats guide for PC and controllers — ESP boxes, soft aim, cloud DMA, and anti-cheat maintenance in 2026. Compare the full package and buy.",
-		h1: "Warframe Cheats 2026: The Complete Undetected Guide",
-		intro: "Searching for Warframe Cheats in 2026? This guide covers ESP wallhack, Aimbot, radar, undetected maintenance, and how Warframe cheats searchers map to the same Windows PC package.",
-		keywords: ["Warframe Cheats","undetected Warframe Cheats","Warframe cheats","esp","aimbot","eac"],
-		imageAlt: "Warframe Cheats complete guide showing ESP wallhack and Aimbot for 2026",
+		slug: "project-zomboid-cheats-complete-guide-2026",
+		title: "Project Zomboid Cheats 2026: Complete Undetected Guide",
+		metaDescription: "Complete Project Zomboid Cheats guide for PC and controllers — ESP boxes, soft aim, cloud DMA, and anti-cheat maintenance in 2026. Compare the full package and buy.",
+		h1: "Project Zomboid Cheats 2026: The Complete Undetected Guide",
+		intro: "Searching for Project Zomboid Cheats in 2026? This guide covers ESP wallhack, Aimbot, radar, undetected maintenance, and how Project Zomboid cheats searchers map to the same Windows PC package.",
+		keywords: ["Project Zomboid Cheats","undetected Project Zomboid Cheats","Project Zomboid cheats","esp","aimbot","eac"],
+		imageAlt: "Project Zomboid Cheats complete guide showing ESP wallhack and Aimbot for 2026",
 		sections: [
 			{
-				h2: "What Warframe Cheats actually include",
+				h2: "What Project Zomboid Cheats actually include",
 				paragraphs: [
-					"Warframe Cheats usually mean visibility plus combat assist: enemy ESP wallhack, health pickup markers, 2D radar threat cues, and configurable Aimbot. Buyers who type Warframe cheats are looking for the same stack — different wording, same mission loop.",
-					"Official seasons and client updates publish through <a href=\"https://www.digitalextremes.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Digital Extremes</a> and <a href=\"https://www.warframe.com/\" target=\"_blank\" rel=\"noopener noreferrer\">official Warframe patch notes</a>. Anti-cheat context lives on Digital Extremes anti-cheat. Our <a href=\"/warframe-cheats/\">Warframe Cheats pillar</a> is the commercial landing; this post is the long-form explainer.",
+					"Project Zomboid Cheats usually mean visibility plus combat assist: zombie ESP wallhack, medical supply markers, 2D radar threat cues, and configurable Aimbot. Buyers who type Project Zomboid cheats are looking for the same stack — different wording, same mission loop.",
+					"Official seasons and client updates publish through <a href=\"https://projectzomboid.com/\" target=\"_blank\" rel=\"noopener noreferrer\">The Indie Stone</a> and <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">official Project Zomboid patch notes</a>. Anti-cheat context lives on Project Zomboid anti-cheat. Our <a href=\"/project-zomboid-cheats/\">Project Zomboid Cheats pillar</a> is the commercial landing; this post is the long-form explainer.",
 					"Pro Tip — One license, full loop: Prefer a maintained package over stacking single-feature downloads that break on every patch.",
 				],
 			},
 			{
 				h2: "ESP, wallhack, Aimbot, and radar roles",
 				paragraphs: [
-					"ESP/wallhack answers where squads and loot sit. Radar covers flanks outside FOV. Aimbot covers firefight consistency once you commit. Soft aim profiles help when you want smoother tracking — see <a href=\"/warframe-aimbot/\">soft aim</a> and <a href=\"/warframe-aimbot/\">Aimbot controls</a>.",
-					"Deep pages: <a href=\"/warframe-esp/\">Warframe ESP</a>, <a href=\"/warframe-wallhack/\">wallhack</a>, <a href=\"/warframe-radar/\">radar hack</a>, <a href=\"/warframe-aimbot/\">aimbot hack</a>, and <a href=\"/warframe-esp/\">ESP hack</a>.",
+					"ESP/wallhack answers where squads and loot sit. Radar covers flanks outside FOV. Aimbot covers firefight consistency once you commit. Soft aim profiles help when you want smoother tracking — see <a href=\"/project-zomboid-aimbot/\">soft aim</a> and <a href=\"/project-zomboid-aimbot/\">Aimbot controls</a>.",
+					"Deep pages: <a href=\"/project-zomboid-esp/\">Project Zomboid ESP</a>, <a href=\"/project-zomboid-wallhack/\">wallhack</a>, <a href=\"/project-zomboid-radar/\">radar hack</a>, <a href=\"/project-zomboid-aimbot/\">aimbot hack</a>, and <a href=\"/project-zomboid-esp/\">ESP hack</a>.",
 				],
 			},
 			{
-				h2: "Undetected Warframe Cheats and anti-cheat patches",
+				h2: "Undetected Project Zomboid Cheats and anti-cheat patches",
 				paragraphs: [
-					"Undetected Warframe Cheats require rebuilds after Digital Extremes anti-cheat and major Warframe updates. No vendor can promise permanent undetected status — check <a href=\"/updates/\">Updates</a> before you queue.",
-					"On patch mornings confirm <a href=\"https://forums.warframe.com/forum/3-pc-update-notes/\" target=\"_blank\" rel=\"noopener noreferrer\">Warframe PC update notes</a>, then read our <a href=\"/warframe-cheats/\">anti-cheat bypass guide</a> and <a href=\"/blog/undetected-warframe-cheats-eac/\">undetected anti-cheat notes</a>.",
-					"Try This Today: Open the hacks pillar, skim Features, compare Pricing ($35 monthly / $150 lifetime), and bookmark Updates for the next Warframe patch.",
+					"Undetected Project Zomboid Cheats require rebuilds after Project Zomboid anti-cheat and major Project Zomboid updates. No vendor can promise permanent undetected status — check <a href=\"/updates/\">Updates</a> before you queue.",
+					"On patch mornings confirm <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">Project Zomboid patch notes</a>, then read our <a href=\"/project-zomboid-cheats/\">anti-cheat bypass guide</a> and <a href=\"/blog/undetected-project-zomboid-cheats-eac/\">undetected anti-cheat notes</a>.",
+					"Try This Today: Open the hacks pillar, skim Features, compare Pricing ($35 monthly / $150 lifetime), and bookmark Updates for the next Project Zomboid patch.",
 				],
 			},
 			{
 				h2: "Next steps — pricing, setup, and cheats pages",
 				paragraphs: [
-					"Ready to buy? Start at the <a href=\"/warframe-cheats/\">Warframe Cheats pillar page</a>, then <a href=\"/pricing/\">Pricing</a> and <a href=\"/setup/\">Setup</a>. Prefer cheats wording? Read <a href=\"/warframe-cheats/\">Warframe cheats 2026</a> and <a href=\"/blog/warframe-cheats-buyers-guide/\">cheats buyers guide</a>.",
+					"Ready to buy? Start at the <a href=\"/project-zomboid-cheats/\">Project Zomboid Cheats pillar page</a>, then <a href=\"/pricing/\">Pricing</a> and <a href=\"/setup/\">Setup</a>. Prefer cheats wording? Read <a href=\"/project-zomboid-cheats/\">Project Zomboid cheats 2026</a> and <a href=\"/blog/project-zomboid-cheats-buyers-guide/\">cheats buyers guide</a>.",
 					"Support: include your order ID on the <a href=\"/support/\">Support</a> page after checkout.",
 				],
 			}
@@ -54,41 +54,41 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-cheats-buyers-guide",
+		id: "project-zomboid-cheats-buyers-guide",
 		imageKey: "cheatsPackage",
 		published: "2026-07-30",
 		updated: "2026-08-01",
-		category: "Warframe Cheats",
+		category: "Project Zomboid Cheats",
 		featured: true,
 		translations: {
 		en: {
-		slug: "warframe-cheats-buyers-guide",
-		title: "Warframe Cheats Buyers Guide: What to Check",
-		metaDescription: "Warframe cheats buyers guide for PC and controllers — ESP boxes, soft aim, cloud DMA, pricing, and anti-cheat status. Compare before checkout.",
-		h1: "Warframe Cheats Buyers Guide: What Matters in 2026",
-		intro: "Shopping for Warframe cheats? Use this checklist for ESP wallhack, Aimbot, radar, anti-cheat maintenance, and license length — then cross-check the Warframe Cheats pillar before checkout.",
-		keywords: ["Warframe cheats","best Warframe cheats","Warframe Cheats","buyers guide","undetected"],
-		imageAlt: "Warframe cheats buyers guide checklist for ESP Aimbot and pricing",
+		slug: "project-zomboid-cheats-buyers-guide",
+		title: "Project Zomboid Cheats Buyers Guide: What to Check",
+		metaDescription: "Project Zomboid cheats buyers guide for PC and controllers — ESP boxes, soft aim, cloud DMA, pricing, and anti-cheat status. Compare before checkout.",
+		h1: "Project Zomboid Cheats Buyers Guide: What Matters in 2026",
+		intro: "Shopping for Project Zomboid cheats? Use this checklist for ESP wallhack, Aimbot, radar, anti-cheat maintenance, and license length — then cross-check the Project Zomboid Cheats pillar before checkout.",
+		keywords: ["Project Zomboid cheats","best Project Zomboid cheats","Project Zomboid Cheats","buyers guide","undetected"],
+		imageAlt: "Project Zomboid cheats buyers guide checklist for ESP Aimbot and pricing",
 		sections: [
 			{
 				h2: "Buyer checklist before you pay",
 				paragraphs: [
 					"Confirm Windows PC support, anti-cheat maintenance cadence, ESP + Aimbot + radar in one license, clear pricing, and a live Updates log. Skip tools that only ship a wallhack with no rebuild notes.",
-					"Primary commercial pages: <a href=\"/warframe-cheats/\">best Warframe cheats</a>, <a href=\"/warframe-cheats/\">cheats 2026</a>, and <a href=\"/warframe-cheats/\">Warframe Cheats</a> (hacks is the main brand keyword).",
+					"Primary commercial pages: <a href=\"/project-zomboid-cheats/\">best Project Zomboid cheats</a>, <a href=\"/project-zomboid-cheats/\">cheats 2026</a>, and <a href=\"/project-zomboid-cheats/\">Project Zomboid Cheats</a> (hacks is the main brand keyword).",
 				],
 			},
 			{
 				h2: "Hacks vs cheats wording",
 				paragraphs: [
-					"Warframe Cheats and Warframe cheats describe the same product category for most searchers. We lead with hacks on warframecheats.net while keeping cheats pages for buyers who use that query.",
-					"Balance and anti-cheat reality still come from <a href=\"https://www.digitalextremes.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Digital Extremes</a>. Product rebuild timing is on our <a href=\"/updates/\">Updates</a> page.",
+					"Project Zomboid Cheats and Project Zomboid cheats describe the same product category for most searchers. We lead with hacks on projectzomboidcheats.com while keeping cheats pages for buyers who use that query.",
+					"Balance and anti-cheat reality still come from <a href=\"https://projectzomboid.com/\" target=\"_blank\" rel=\"noopener noreferrer\">The Indie Stone</a>. Product rebuild timing is on our <a href=\"/updates/\">Updates</a> page.",
 				],
 			},
 			{
 				h2: "Feature pages worth opening",
 				paragraphs: [
-					"Open <a href=\"/warframe-esp/\">ESP</a>, <a href=\"/warframe-aimbot/\">Aimbot</a>, <a href=\"/features/\">Features</a>, and <a href=\"/pricing/\">Pricing</a> before you buy. Delivery and activation steps live on <a href=\"/setup/\">Setup</a>.",
-					"Related reading: <a href=\"/blog/warframe-cheats-complete-guide-2026/\">hacks complete guide</a> and <a href=\"/blog/warframe-cheats-2026-whats-new/\">cheats 2026 what's new</a>.",
+					"Open <a href=\"/project-zomboid-esp/\">ESP</a>, <a href=\"/project-zomboid-aimbot/\">Aimbot</a>, <a href=\"/features/\">Features</a>, and <a href=\"/pricing/\">Pricing</a> before you buy. Delivery and activation steps live on <a href=\"/setup/\">Setup</a>.",
+					"Related reading: <a href=\"/blog/project-zomboid-cheats-complete-guide-2026/\">hacks complete guide</a> and <a href=\"/blog/project-zomboid-cheats-2026-whats-new/\">cheats 2026 what's new</a>.",
 					"Try This Today: Write your must-have list (ESP categories, Aimbot smoothness, lifetime vs monthly), then compare against Features once.",
 				],
 			}
@@ -97,41 +97,41 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-cheats-2026-whats-new",
-		imageKey: "hero",
+		id: "project-zomboid-cheats-2026-whats-new",
+		imageKey: "headerArt",
 		published: "2026-07-28",
 		updated: "2026-08-01",
-		category: "Warframe Cheats",
+		category: "Project Zomboid Cheats",
 		featured: false,
 		translations: {
 		en: {
-		slug: "warframe-cheats-2026-whats-new",
-		title: "Warframe Cheats 2026: What Changed This Year",
-		metaDescription: "Warframe cheats 2026 overview — ESP boxes, soft aim, and cloud DMA for PC and controllers with anti-cheat maintenance. Pair with the hacks pillar before buying.",
-		h1: "Warframe Cheats 2026: What Buyers Need Now",
-		intro: "Warframe cheats 2026 searches spike every season. Here is what still matters: maintained ESP wallhack, Aimbot profiles, radar awareness, and rebuilds after Digital Extremes anti-cheat patches.",
-		keywords: ["Warframe cheats 2026","Warframe Cheats","eac","esp","aimbot"],
-		imageAlt: "Warframe cheats 2026 overview for undetected ESP and Aimbot buyers",
+		slug: "project-zomboid-cheats-2026-whats-new",
+		title: "Project Zomboid Cheats 2026: What Changed This Year",
+		metaDescription: "Project Zomboid cheats 2026 overview — ESP boxes, soft aim, and cloud DMA for PC and controllers with anti-cheat maintenance. Pair with the hacks pillar before buying.",
+		h1: "Project Zomboid Cheats 2026: What Buyers Need Now",
+		intro: "Project Zomboid cheats 2026 searches spike every season. Here is what still matters: maintained ESP wallhack, Aimbot profiles, radar awareness, and rebuilds after Project Zomboid anti-cheat patches.",
+		keywords: ["Project Zomboid cheats 2026","Project Zomboid Cheats","eac","esp","aimbot"],
+		imageAlt: "Project Zomboid cheats 2026 overview for undetected ESP and Aimbot buyers",
 		sections: [
 			{
 				h2: "Why 2026 buyers still need maintenance",
 				paragraphs: [
-					"tileset updates, weapons, and anti-cheat updates still break stale tools. A 2026-ready package publishes rebuild notes — not a frozen prior-year build.",
-					"Track official messaging on <a href=\"https://www.warframe.com/\" target=\"_blank\" rel=\"noopener noreferrer\">official Warframe patch notes</a>, then confirm product status on <a href=\"/updates/\">Updates</a> and <a href=\"/warframe-cheats/\">the cheats 2026 landing</a>.",
+					"map zone updates, weapons, and anti-cheat updates still break stale tools. A 2026-ready package publishes rebuild notes — not a frozen prior-year build.",
+					"Track official messaging on <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">official Project Zomboid patch notes</a>, then confirm product status on <a href=\"/updates/\">Updates</a> and <a href=\"/project-zomboid-cheats/\">the cheats 2026 landing</a>.",
 				],
 			},
 			{
 				h2: "Keyword map: cheats 2026 ↔ hacks",
 				paragraphs: [
-					"Use the <a href=\"/warframe-cheats/\">Warframe cheats 2026 guide</a> for cheats-year intent and the <a href=\"/warframe-cheats/\">Warframe Cheats pillar page</a> for the primary hacks intent. Both point to the same ESP + Aimbot + radar stack.",
-					"Also see <a href=\"/blog/warframe-cheats-complete-guide-2026/\">hacks guide</a> and <a href=\"/warframe-cheats/\">undetected status</a>.",
+					"Use the <a href=\"/project-zomboid-cheats/\">Project Zomboid cheats 2026 guide</a> for cheats-year intent and the <a href=\"/project-zomboid-cheats/\">Project Zomboid Cheats pillar page</a> for the primary hacks intent. Both point to the same ESP + Aimbot + radar stack.",
+					"Also see <a href=\"/blog/project-zomboid-cheats-complete-guide-2026/\">hacks guide</a> and <a href=\"/project-zomboid-cheats/\">undetected status</a>.",
 				],
 			},
 			{
 				h2: "Pricing and setup for new buyers",
 				paragraphs: [
 					"Monthly ($35) and lifetime ($150) plans share features. After checkout, follow <a href=\"/setup/\">Setup</a>. Questions go to <a href=\"/support/\">Support</a> with your order ID.",
-					"Try This Today: Skim Features, open Pricing, and bookmark Updates before the next Warframe patch window.",
+					"Try This Today: Skim Features, open Pricing, and bookmark Updates before the next Project Zomboid patch window.",
 				],
 			}
 		],
@@ -139,7 +139,7 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-aimbot-settings-guide",
+		id: "project-zomboid-aimbot-settings-guide",
 		imageKey: "aimbotCombat",
 		published: "2026-07-26",
 		updated: "2026-08-01",
@@ -147,33 +147,33 @@ export const blogPosts: BlogPostDefinition[] = [
 		featured: false,
 		translations: {
 		en: {
-		slug: "warframe-aimbot-settings-guide",
-		title: "Warframe Aimbot Settings: Smooth FOV Guide",
-		metaDescription: "Warframe aimbot settings for PC and controllers — soft aim, FOV, bone priority, and per-weapon profiles. Tune assist, then review the hacks pages.",
-		h1: "Warframe Aimbot Settings: Smoothness, FOV & Soft Aim",
-		intro: "Configure Warframe Aimbot without snapping every fight. This guide covers smoothness, FOV, bone priority, per-weapon profiles, and how Aimbot fits into Warframe Cheats packages.",
-		keywords: ["warframe aimbot","aimbot settings","soft aim","Warframe Cheats","fov"],
-		imageAlt: "Warframe Aimbot settings guide for smoothness FOV and bone priority",
+		slug: "project-zomboid-aimbot-settings-guide",
+		title: "Project Zomboid Aimbot Settings: Smooth FOV Guide",
+		metaDescription: "Project Zomboid aimbot settings for PC and controllers — soft aim, FOV, head priority, and per-weapon profiles. Tune assist, then review the hacks pages.",
+		h1: "Project Zomboid Aimbot Settings: Smoothness, FOV & Soft Aim",
+		intro: "Configure Project Zomboid Aimbot without snapping every fight. This guide covers smoothness, FOV, head priority, per-weapon profiles, and how Aimbot fits into Project Zomboid Cheats packages.",
+		keywords: ["project zomboid aimbot","aimbot settings","soft aim","Project Zomboid Cheats","fov"],
+		imageAlt: "Project Zomboid Aimbot settings guide for smoothness FOV and head priority",
 		sections: [
 			{
 				h2: "Start conservative, then tune",
 				paragraphs: [
-					"Begin with moderate FOV and higher smoothness. Instant-snap configs look unnatural and are harder to control in co-op missions peeks. Hotkeys let you disable Aimbot mid-mission.",
-					"Full control list: <a href=\"/warframe-aimbot/\">Warframe Aimbot</a>, <a href=\"/warframe-aimbot/\">aimbot hack</a>, and <a href=\"/warframe-aimbot/\">soft aim</a>.",
+					"Begin with moderate FOV and higher smoothness. Instant-snap configs look unnatural and are harder to control in multiplayer servers peeks. Hotkeys let you disable Aimbot mid-session.",
+					"Full control list: <a href=\"/project-zomboid-aimbot/\">Project Zomboid Aimbot</a>, <a href=\"/project-zomboid-aimbot/\">aimbot hack</a>, and <a href=\"/project-zomboid-aimbot/\">soft aim</a>.",
 				],
 			},
 			{
 				h2: "Pair Aimbot with ESP and radar",
 				paragraphs: [
-					"Aimbot alone does not solve rotations. Pair with <a href=\"/warframe-esp/\">ESP</a> and <a href=\"/warframe-radar/\">radar</a> inside the <a href=\"/warframe-cheats/\">Warframe Cheats</a> package.",
-					"Weapon balance shifts on <a href=\"https://www.warframe.com/\" target=\"_blank\" rel=\"noopener noreferrer\">official Warframe patch notes</a> — revisit FOV after combat patches.",
+					"Aimbot alone does not solve rotations. Pair with <a href=\"/project-zomboid-esp/\">ESP</a> and <a href=\"/project-zomboid-radar/\">radar</a> inside the <a href=\"/project-zomboid-cheats/\">Project Zomboid Cheats</a> package.",
+					"Weapon balance shifts on <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">official Project Zomboid patch notes</a> — revisit FOV after combat patches.",
 				],
 			},
 			{
 				h2: "anti-cheat notes and next steps",
 				paragraphs: [
-					"After Digital Extremes anti-cheat patches, confirm Aimbot modules on <a href=\"/updates/\">Updates</a>. Background: <a href=\"/warframe-cheats/\">anti-cheat guide</a>.",
-					"Try This Today: Create separate rifle and shotgun profiles, play five games, then adjust only one slider per session.",
+					"After Project Zomboid anti-cheat patches, confirm Aimbot modules on <a href=\"/updates/\">Updates</a>. Background: <a href=\"/project-zomboid-cheats/\">anti-cheat guide</a>.",
+					"Try This Today: Create separate pistol and shotgun profiles, play five games, then adjust only one slider per session.",
 				],
 			}
 		],
@@ -181,7 +181,7 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-esp-wallhack-explained",
+		id: "project-zomboid-esp-wallhack-explained",
 		imageKey: "espWallhack",
 		published: "2026-07-24",
 		updated: "2026-08-01",
@@ -189,33 +189,33 @@ export const blogPosts: BlogPostDefinition[] = [
 		featured: false,
 		translations: {
 		en: {
-		slug: "warframe-esp-wallhack-explained",
-		title: "Warframe ESP & Wallhack Explained Clearly",
-		metaDescription: "Warframe ESP and wallhack explained — enemy boxes, health pickup markers, and distance readouts for PC and controllers. Learn overlays on the hacks pages.",
-		h1: "Warframe ESP and Wallhack Explained",
-		intro: "Warframe ESP (wallhack) shows enemies, loot, and threats through terrain. Here is how overlays work, what to toggle, and how ESP fits into Warframe Cheats and Warframe cheats packages.",
-		keywords: ["warframe esp","warframe wallhack","esp hack","Warframe Cheats","resource esp"],
-		imageAlt: "Warframe ESP wallhack explained with player and loot overlays",
+		slug: "project-zomboid-esp-wallhack-explained",
+		title: "Project Zomboid ESP & Wallhack Explained Clearly",
+		metaDescription: "Project Zomboid ESP and wallhack explained — enemy boxes, medical supply markers, and distance readouts for PC and controllers. Learn overlays on the hacks pages.",
+		h1: "Project Zomboid ESP and Wallhack Explained",
+		intro: "Project Zomboid ESP (wallhack) shows enemies, loot, and threats through terrain. Here is how overlays work, what to toggle, and how ESP fits into Project Zomboid Cheats and Project Zomboid cheats packages.",
+		keywords: ["project zomboid esp","project zomboid wallhack","esp hack","Project Zomboid Cheats","resource esp"],
+		imageAlt: "Project Zomboid ESP wallhack explained with player and loot overlays",
 		sections: [
 			{
 				h2: "ESP categories that matter in missions",
 				paragraphs: [
-					"Toggle enemy outlines, loot/chest pins, heavy unit cues, and distance readouts. Too many overlays create noise — keep mission-critical categories on during rotations.",
-					"Landings: <a href=\"/warframe-esp/\">Warframe ESP</a>, <a href=\"/warframe-wallhack/\">wallhack</a>, <a href=\"/warframe-esp/\">ESP hack</a>.",
+					"Toggle enemy outlines, loot/chest pins, special infected cues, and distance readouts. Too many overlays create noise — keep session-critical categories on during rotations.",
+					"Landings: <a href=\"/project-zomboid-esp/\">Project Zomboid ESP</a>, <a href=\"/project-zomboid-wallhack/\">wallhack</a>, <a href=\"/project-zomboid-esp/\">ESP hack</a>.",
 				],
 			},
 			{
 				h2: "Wallhack vs radar vs Aimbot",
 				paragraphs: [
-					"Wallhack/ESP is line-of-sight information through walls. Radar covers off-screen flanks. Aimbot is combat assist. The <a href=\"/warframe-cheats/\">hacks pillar</a> bundles all three.",
-					"Map and loot systems evolve with <a href=\"https://www.digitalextremes.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Digital Extremes</a> seasons — toggleable categories stay useful when tileset areas rotate.",
+					"Wallhack/ESP is line-of-sight information through walls. Radar covers off-screen flanks. Aimbot is combat assist. The <a href=\"/project-zomboid-cheats/\">hacks pillar</a> bundles all three.",
+					"Map and loot systems evolve with <a href=\"https://projectzomboid.com/\" target=\"_blank\" rel=\"noopener noreferrer\">The Indie Stone</a> seasons — toggleable categories stay useful when map zones rotate.",
 				],
 			},
 			{
 				h2: "Undetected ESP maintenance",
 				paragraphs: [
-					"ESP modules rebuild with the package after anti-cheat patches. Check <a href=\"/updates/\">Updates</a> and <a href=\"/warframe-cheats/\">undetected status</a> before mission sessions.",
-					"Try This Today: Enable player + ability ESP only for ten games, then add radar range once your eyes adjust.",
+					"ESP modules rebuild with the package after anti-cheat patches. Check <a href=\"/updates/\">Updates</a> and <a href=\"/project-zomboid-cheats/\">undetected status</a> before game sessions.",
+					"Try This Today: Enable player + player ESP only for ten games, then add radar range once your eyes adjust.",
 				],
 			}
 		],
@@ -223,7 +223,7 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "undetected-warframe-cheats-eac",
+		id: "undetected-project-zomboid-cheats-eac",
 		imageKey: "rebootFight",
 		published: "2026-07-22",
 		updated: "2026-08-01",
@@ -231,33 +231,33 @@ export const blogPosts: BlogPostDefinition[] = [
 		featured: true,
 		translations: {
 		en: {
-		slug: "undetected-warframe-cheats-eac",
-		title: "Undetected Warframe Cheats & anti-cheat Reality",
-		metaDescription: "Undetected Warframe Cheats and anti-cheat reality — ESP boxes, soft aim, and cloud DMA rebuilds for PC and controllers. Check Updates before queueing post-patch.",
-		h1: "Undetected Warframe Cheats and Digital Extremes anti-cheat Reality",
-		intro: "Undetected Warframe Cheats mean active anti-cheat maintenance — not a forever guarantee. Learn the patch-day workflow, where to check status, and how hacks/cheats pages fit together.",
-		keywords: ["undetected Warframe Cheats","eac","Warframe Cheats","Warframe cheats","maintenance"],
-		imageAlt: "Undetected Warframe Cheats and Digital Extremes anti-cheat maintenance workflow",
+		slug: "undetected-project-zomboid-cheats-eac",
+		title: "Undetected Project Zomboid Cheats & anti-cheat Reality",
+		metaDescription: "Undetected Project Zomboid Cheats and anti-cheat reality — ESP boxes, soft aim, and cloud DMA rebuilds for PC and controllers. Check Updates before queueing post-patch.",
+		h1: "Undetected Project Zomboid Cheats and Project Zomboid anti-cheat Reality",
+		intro: "Undetected Project Zomboid Cheats mean active anti-cheat maintenance — not a forever guarantee. Learn the patch-day workflow, where to check status, and how hacks/cheats pages fit together.",
+		keywords: ["undetected Project Zomboid Cheats","eac","Project Zomboid Cheats","Project Zomboid cheats","maintenance"],
+		imageAlt: "Undetected Project Zomboid Cheats and Project Zomboid anti-cheat maintenance workflow",
 		sections: [
 			{
 				h2: "What undetected really means",
 				paragraphs: [
-					"Undetected Warframe Cheats are rebuilt when Digital Extremes anti-cheat or Warframe client patches change detection surface. Permanent undetected claims are marketing fiction.",
-					"Status pages: <a href=\"/updates/\">Updates</a>, <a href=\"/warframe-cheats/\">undetected guide</a>, <a href=\"/warframe-cheats/\">anti-cheat bypass</a>.",
+					"Undetected Project Zomboid Cheats are rebuilt when Project Zomboid anti-cheat or Project Zomboid client patches change detection surface. Permanent undetected claims are marketing fiction.",
+					"Status pages: <a href=\"/updates/\">Updates</a>, <a href=\"/project-zomboid-cheats/\">undetected guide</a>, <a href=\"/project-zomboid-cheats/\">anti-cheat bypass</a>.",
 				],
 			},
 			{
 				h2: "Patch-day workflow",
 				paragraphs: [
-					"Check <a href=\"https://forums.warframe.com/forum/3-pc-update-notes/\" target=\"_blank\" rel=\"noopener noreferrer\">Warframe PC update notes</a> for server status, wait for our Updates note, then launch. If services are degraded, do not assume the hack failed.",
-					"Commercial entry points: <a href=\"/warframe-cheats/\">Warframe Cheats</a> and <a href=\"/warframe-cheats/\">Warframe cheats 2026</a>.",
+					"Check <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">Project Zomboid patch notes</a> for server status, wait for our Updates note, then launch. If services are degraded, do not assume the hack failed.",
+					"Commercial entry points: <a href=\"/project-zomboid-cheats/\">Project Zomboid Cheats</a> and <a href=\"/project-zomboid-cheats/\">Project Zomboid cheats 2026</a>.",
 				],
 			},
 			{
 				h2: "Responsible use and support",
 				paragraphs: [
-					"Using hacks/cheats can violate Digital Extremes terms — you assume ban risk. For license or delivery issues, contact <a href=\"/support/\">Support</a> with your order ID.",
-					"Try This Today: Bookmark Updates and the hacks pillar. Before your next Steel Path session after a patch, verify build status first.",
+					"Using hacks/cheats can violate The Indie Stone terms — you assume ban risk. For license or delivery issues, contact <a href=\"/support/\">Support</a> with your order ID.",
+					"Try This Today: Bookmark Updates and the hacks pillar. Before your next session after a patch, verify build status first.",
 				],
 			}
 		],
@@ -265,7 +265,7 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-cheats-vs-cheatvault",
+		id: "project-zomboid-cheats-vs-cheatvault",
 		imageKey: "cheatsPackage",
 		published: "2026-07-15",
 		updated: "2026-08-01",
@@ -273,36 +273,36 @@ export const blogPosts: BlogPostDefinition[] = [
 		featured: true,
 		translations: {
 		en: {
-		slug: "warframe-cheats-vs-cheatvault-comparison",
-		title: "Warframe Cheats vs CheatVault: Honest 2026 Comparison",
-		metaDescription: "Warframe Cheats vs CheatVault compared — pricing, ESP boxes, soft aim, cloud DMA, anti-cheat detection history, and which package fits Steel Path players in 2026.",
-		h1: "Warframe Cheats vs CheatVault: Honest Comparison",
-		intro: "I ran both CheatVault and Warframe Cheats through the same mission session last season. Here is the straight comparison — price, features, patch-day behavior, and where each one actually wins.",
-		keywords: ["Warframe Cheats vs cheatvault","cheatvault comparison","Warframe cheats","esp","eac","pricing"],
-		imageAlt: "Warframe Cheats vs CheatVault feature and pricing comparison for 2026",
+		slug: "project-zomboid-cheats-vs-cheatvault-comparison",
+		title: "Project Zomboid Cheats vs CheatVault: Honest 2026 Comparison",
+		metaDescription: "Project Zomboid Cheats vs CheatVault compared — pricing, ESP boxes, soft aim, cloud DMA, anti-cheat detection history, and which package fits serious survival players in 2026.",
+		h1: "Project Zomboid Cheats vs CheatVault: Honest Comparison",
+		intro: "I ran both CheatVault and Project Zomboid Cheats through the same game session last season. Here is the straight comparison — price, features, patch-day behavior, and where each one actually wins.",
+		keywords: ["Project Zomboid Cheats vs cheatvault","cheatvault comparison","Project Zomboid cheats","esp","eac","pricing"],
+		imageAlt: "Project Zomboid Cheats vs CheatVault feature and pricing comparison for 2026",
 		sections: [
 			{
 				h2: "Why I compared these two in the first place",
 				paragraphs: [
-					"CheatVault shows up in almost every Warframe cheat thread alongside Warframe Cheats. Both promise ESP, aim assist, and undetected status. Both list monthly and lifetime tiers. On paper they look identical — which is exactly why buyers get burned picking the wrong one.",
-					"I kept CheatVault for about six weeks in major update Season 2, then switched to Warframe Cheats for the back half of the season. Same PC, same sens, mostly co-op missions and some Steel Path squads. This is not a sponsored post — just what I noticed when I stopped reading feature bullets and started tracking patch days.",
-					"Fair warning: neither tool makes you invincible. Digital Extremes anti-cheat still updates. Your account still carries ban risk. This comparison is about which package maintained better and which features I actually used in co-op — not which one guarantees wins.",
+					"CheatVault shows up in almost every Project Zomboid cheat thread alongside Project Zomboid Cheats. Both promise ESP, aim assist, and undetected status. Both list monthly and lifetime tiers. On paper they look identical — which is exactly why buyers get burned picking the wrong one.",
+					"I kept CheatVault for about six weeks in Build 41, then switched to Project Zomboid Cheats for the back half of the year. Same PC, same sens, mostly multiplayer servers and co-op squads. This is not a sponsored post — just what I noticed when I stopped reading feature bullets and started tracking patch days.",
+					"Fair warning: neither tool makes you invincible. Project Zomboid anti-cheat still updates. Your account still carries ban risk. This comparison is about which package maintained better and which features I actually used in co-op — not which one guarantees wins.",
 				],
 			},
 			{
 				h2: "Price breakdown — monthly, lifetime, and hidden costs",
 				paragraphs: [
-					"Warframe Cheats lists $35/month and $150 lifetime on the <a href=\"/pricing/\">pricing page</a>. CheatVault was $42/month and $189 lifetime when I subscribed — prices shift, but CheatVault has consistently sat 15–20% higher in the tiers I saw.",
-					"CheatVault's lifetime looks cheaper than three years of monthly until you factor downtime. I lost nine days total waiting on CheatVault rebuilds after two anti-cheat patches. Warframe Cheats had two patch windows where I waited roughly 24–36 hours each. If you play daily, downtime has a real cost even if the sub fee is lower.",
-					"Both deliver digitally. Neither includes hardware. If you want cloud DMA on Warframe Cheats, you already own or plan to buy compatible hardware — same story for CheatVault's DMA tier, which is a separate upsell above their standard sub.",
+					"Project Zomboid Cheats lists $35/month and $150 lifetime on the <a href=\"/pricing/\">pricing page</a>. CheatVault was $42/month and $189 lifetime when I subscribed — prices shift, but CheatVault has consistently sat 15–20% higher in the tiers I saw.",
+					"CheatVault's lifetime looks cheaper than three years of monthly until you factor downtime. I lost nine days total waiting on CheatVault rebuilds after two anti-cheat patches. Project Zomboid Cheats had two patch windows where I waited roughly 24–36 hours each. If you play daily, downtime has a real cost even if the sub fee is lower.",
+					"Both deliver digitally. Neither includes hardware. If you want cloud DMA on Project Zomboid Cheats, you already own or plan to buy compatible hardware — same story for CheatVault's DMA tier, which is a separate upsell above their standard sub.",
 				],
 			},
 			{
 				h2: "Feature table — ESP, soft aim, radar, and cloud DMA",
 				paragraphs: [
-					"<table><thead><tr><th>Feature</th><th>Warframe Cheats</th><th>CheatVault</th></tr></thead><tbody><tr><td>Enemy ESP boxes</td><td>Yes, toggleable categories</td><td>Yes, fewer colour options</td></tr><tr><td>Loot / chest markers</td><td>Yes + distance readouts</td><td>Yes, no distance on loot</td></tr><tr><td>2D radar</td><td>Yes, configurable range</td><td>Yes, fixed size</td></tr><tr><td>Soft aim / Aimbot profiles</td><td>Per-weapon slots</td><td>Global + one profile</td></tr><tr><td>Controller support</td><td>Supported</td><td>Listed, awkward menu UX</td></tr><tr><td>Cloud DMA option</td><td>Included path in package</td><td>Premium tier add-on</td></tr><tr><td>In-client mod menu</td><td>Yes</td><td>Yes, heavier overlay</td></tr></tbody></table>",
-					"Warframe Cheats wins on toggles and profile flexibility. I run ESP boxes + health pickup markers in early game, then drop loot categories after first rifle. CheatVault's overlay felt busier — fine if you want everything on, noisy if you play Steel Path and need clean screen space.",
-					"Soft aim mattered more than I expected in co-op missions. Warframe Cheats let me run a low-FOV Soma Prime profile and a separate shotgun profile for close-quarters fights. CheatVault's single-profile setup worked, but I was constantly retuning mid-session.",
+					"<table><thead><tr><th>Feature</th><th>Project Zomboid Cheats</th><th>CheatVault</th></tr></thead><tbody><tr><td>Zombie ESP boxes</td><td>Yes, toggleable categories</td><td>Yes, fewer colour options</td></tr><tr><td>Loot / chest markers</td><td>Yes + distance readouts</td><td>Yes, no distance on loot</td></tr><tr><td>2D radar</td><td>Yes, configurable range</td><td>Yes, fixed size</td></tr><tr><td>Soft aim / Aimbot profiles</td><td>Per-weapon slots</td><td>Global + one profile</td></tr><tr><td>Controller support</td><td>Supported</td><td>Listed, awkward menu UX</td></tr><tr><td>Cloud DMA option</td><td>Included path in package</td><td>Premium tier add-on</td></tr><tr><td>In-client mod menu</td><td>Yes</td><td>Yes, heavier overlay</td></tr></tbody></table>",
+					"Project Zomboid Cheats wins on toggles and profile flexibility. I run ESP boxes + medical supply markers in early game, then drop loot categories after first rifle. CheatVault's overlay felt busier — fine if you want everything on, noisy if you play long survival sessions and need clean screen space.",
+					"Soft aim mattered more than I expected in multiplayer servers. Project Zomboid Cheats let me run a low-FOV M16 rifle profile and a separate shotgun profile for close-quarters fights. CheatVault's single-profile setup worked, but I was constantly retuning mid-session.",
 				],
 			},
 			{
@@ -310,13 +310,13 @@ export const blogPosts: BlogPostDefinition[] = [
 				paragraphs: [
 					"Both brands had public downtime after major anti-cheat updates in 2026 — anyone claiming zero detection events is lying. The difference is communication and rebuild speed.",
 					"CheatVault's Discord would go quiet for 48–72 hours after big patches. No ETA, just \"working on it.\" I know two players in my stack who got flagged during a CheatVault lag window between patch and rebuild — could've been coincidence, but it shook my confidence.",
-					"Warframe Cheats posts on the <a href=\"/updates/\">Updates page</a> within hours on patch mornings. Last major anti-cheat update I tracked: status note same day, rebuild live roughly 30 hours later. Still annoying, but predictable. See also our <a href=\"/blog/undetected-warframe-cheats-eac/\">anti-cheat reality guide</a> for the workflow I use before queueing.",
+					"Project Zomboid Cheats posts on the <a href=\"/updates/\">Updates page</a> within hours on patch mornings. Last major anti-cheat update I tracked: status note same day, rebuild live roughly 30 hours later. Still annoying, but predictable. See also our <a href=\"/blog/undetected-project-zomboid-cheats-eac/\">anti-cheat reality guide</a> for the workflow I use before queueing.",
 				],
 			},
 			{
 				h2: "Where CheatVault still wins",
 				paragraphs: [
-					"Credit where it's due: CheatVault's Discord community is larger. More clip sharing, more config screenshots. If you learn best from crowd-sourced settings, that social layer helps — Warframe Cheats support answered faster for me, but the community volume is smaller.",
+					"Credit where it's due: CheatVault's Discord community is larger. More clip sharing, more config screenshots. If you learn best from crowd-sourced settings, that social layer helps — Project Zomboid Cheats support answered faster for me, but the community volume is smaller.",
 					"CheatVault also bundles a standalone replay-style overlay tool in their premium tier. I did not use it much, but content creators might value the extra capture layer.",
 					"If you only play once or twice a week and just want basic ESP without caring about patch ETAs, CheatVault's feature floor is fine. Casual cadence hides downtime pain.",
 				],
@@ -324,9 +324,9 @@ export const blogPosts: BlogPostDefinition[] = [
 			{
 				h2: "Verdict — who should pick which",
 				paragraphs: [
-					"Pick Warframe Cheats if you play Steel Path or co-op missions multiple times a week, want per-weapon soft aim profiles, care about cloud DMA without a second upsell, and want a public Updates log before you launch after patches.",
+					"Pick Project Zomboid Cheats if you play multiplayer servers multiple times a week, want per-weapon soft aim profiles, care about cloud DMA without a second upsell, and want a public Updates log before you launch after patches.",
 					"Pick CheatVault if community size matters more than rebuild transparency, you want the premium capture extras, and you do not mind paying slightly more for a similar core stack.",
-					"Try This Today: Write down your must-haves (ESP categories, radar size, controller, DMA). Open <a href=\"/features/\">Features</a> and CheatVault's list side by side, then check both Updates channels before the next Warframe patch. For the full Warframe Cheats stack overview, start at <a href=\"/warframe-cheats/\">Warframe Cheats</a>.",
+					"Try This Today: Write down your must-haves (ESP categories, radar size, controller, DMA). Open <a href=\"/features/\">Features</a> and CheatVault's list side by side, then check both Updates channels before the next Project Zomboid patch. For the full Project Zomboid Cheats stack overview, start at <a href=\"/project-zomboid-cheats/\">Project Zomboid Cheats</a>.",
 				],
 			}
 		],
@@ -342,60 +342,60 @@ export const blogPosts: BlogPostDefinition[] = [
 		featured: false,
 		translations: {
 		en: {
-		slug: "voidcheats-vs-warframe-cheats-two-week-test",
+		slug: "voidcheats-vs-project-zomboid-cheats-two-week-test",
 		title: "I Tried VoidCheats for 2 Weeks Before Switching",
-		metaDescription: "VoidCheats vs Warframe Cheats — a two-week test of ESP, soft aim, controller support, anti-cheat downtime, and pricing before switching packages in 2026.",
-		h1: "I Tried VoidCheats for 2 Weeks Before Switching to Warframe Cheats",
-		intro: "VoidCheats was the popular pick in my squad's Discord. I gave it fourteen days — same hardware, same mission types — then moved to Warframe Cheats. This is what actually differed.",
-		keywords: ["voidcheats vs Warframe Cheats","voidcheats review","Warframe cheats comparison","soft aim","esp boxes"],
-		imageAlt: "VoidCheats vs Warframe Cheats two week comparison test for Warframe cheats",
+		metaDescription: "VoidCheats vs Project Zomboid Cheats — a two-week test of ESP, soft aim, controller support, anti-cheat downtime, and pricing before switching packages in 2026.",
+		h1: "I Tried VoidCheats for 2 Weeks Before Switching to Project Zomboid Cheats",
+		intro: "VoidCheats was the popular pick in my squad's Discord. I gave it fourteen days — same hardware, same gameplay modes — then moved to Project Zomboid Cheats. This is what actually differed.",
+		keywords: ["voidcheats vs Project Zomboid Cheats","voidcheats review","Project Zomboid cheats comparison","soft aim","esp boxes"],
+		imageAlt: "VoidCheats vs Project Zomboid Cheats two week comparison test for Project Zomboid cheats",
 		sections: [
 			{
 				h2: "Week one — setup, first impressions, and the menu learning curve",
 				paragraphs: [
-					"VoidCheats delivery was fast — key in email within twenty minutes. Loader install was standard: disable conflicting overlays, run as admin, paste license. Took about twenty-five minutes my first time, same ballpark as Warframe Cheats later.",
+					"VoidCheats delivery was fast — key in email within twenty minutes. Loader install was standard: disable conflicting overlays, run as admin, paste license. Took about twenty-five minutes my first time, same ballpark as Project Zomboid Cheats later.",
 					"VoidCheats's menu looked cleaner on screenshots. In game, I spent two evenings just mapping toggles. ESP categories are nested one level deeper than I liked. Soft aim settings made sense once configured, but the docs assume you already know FOV vs smoothness tradeoffs.",
-					"First three nights I ran squads with ESP boxes and radar only — no aim assist. VoidCheats visibility was good. Enemy outlines readable at mid range. Ability ESP existed but felt an afterthought compared to enemy ESP. I died plenty; the tool did its info job fine.",
+					"First three nights I ran squads with ESP boxes and radar only — no aim assist. VoidCheats visibility was good. Enemy outlines readable at mid range. Player ESP existed but felt an afterthought compared to zombie ESP. I died plenty; the tool did its info job fine.",
 				],
 			},
 			{
 				h2: "Soft aim, weapons, and controller testing",
 				paragraphs: [
-					"Week one weekend I enabled soft aim with a conservative FOV. Worked on rifle and shotgun in co-op missions. Sniping felt off — VoidCheats uses one bone-priority stack unless you manually swap configs between matches. Doable, not great for my play style.",
-					"I play controller two nights a week. VoidCheats lists controller support; menu navigation with a pad was clunky. Warframe Cheats later felt similar on pad menus honestly — neither is perfect — but VoidCheats had no suggested controller baseline in docs. I wasted time guessing.",
-					"Soma Prime tracking at 40–50m was the benchmark test. VoidCheats smooth aim was slightly snappier out of box. Snappier sounds good until you watch replay clips and notice the robotic corrections. I tuned smoothness up; kills stabilized but so did obviousness in Simulacrum testing with friends.",
+					"Week one weekend I enabled soft aim with a conservative FOV. Worked on pistol and shotgun in multiplayer servers. Sniping felt off — VoidCheats uses one bone-priority stack unless you manually swap configs between matches. Doable, not great for my play style.",
+					"I play controller two nights a week. VoidCheats lists controller support; menu navigation with a pad was clunky. Project Zomboid Cheats later felt similar on pad menus honestly — neither is perfect — but VoidCheats had no suggested controller baseline in docs. I wasted time guessing.",
+					"M16 rifle tracking at 40–50m was the benchmark test. VoidCheats smooth aim was slightly snappier out of box. Snappier sounds good until you watch replay clips and notice the robotic corrections. I tuned smoothness up; kills stabilized but so did obviousness in sandbox practice testing with friends.",
 				],
 			},
 			{
 				h2: "The patch that ended my VoidCheats trial",
 				paragraphs: [
-					"Day eleven hit a Warframe + anti-cheat patch. Standard for any cheat user. VoidCheats status channel said \"investigating.\" No ETA. I skipped Steel Path for two days waiting — squad moved on without me.",
-					"Day thirteen a rebuild dropped. Loaded in, played two public missions, crashed once, relaunched fine. Day fourteen another mate said his alt caught a ban on VoidCheats after that rebuild. Unverified story, but combined with downtime it was my cue to bail.",
-					"I switched to Warframe Cheats lifetime partly because of the <a href=\"/updates/\">Updates</a> cadence — I wanted patch notes in writing, not Discord rumor. Not saying VoidCheats is a scam; plenty of players still run it. It just did not match my tolerance for silent patch windows.",
+					"Day eleven hit a Project Zomboid + anti-cheat patch. Standard for any cheat user. VoidCheats status channel said \"investigating.\" No ETA. I skipped multiplayer for two days waiting — squad moved on without me.",
+					"Day thirteen a rebuild dropped. Loaded in, played two public servers, crashed once, relaunched fine. Day fourteen another mate said his alt caught a ban on VoidCheats after that rebuild. Unverified story, but combined with downtime it was my cue to bail.",
+					"I switched to Project Zomboid Cheats lifetime partly because of the <a href=\"/updates/\">Updates</a> cadence — I wanted patch notes in writing, not Discord rumor. Not saying VoidCheats is a scam; plenty of players still run it. It just did not match my tolerance for silent patch windows.",
 				],
 			},
 			{
 				h2: "Side-by-side after switching — what improved",
 				paragraphs: [
-					"Warframe Cheats ESP let me toggle pickups and lockers markers independently — huge for off-spawn routes without cluttering endgame. Radar range slider fixed my \"radar too small on 1080p\" complaint from VoidCheats's fixed widget.",
-					"Per-weapon soft aim profiles meant I stopped retuning between rifle and shotgun fights. Cloud DMA path was optional for my setup; I stayed on standard loader, but having DMA documented in one package beat VoidCheats's \"ask sales\" flow.",
-					"Support reply time: VoidCheats ticket answered in ~5 hours once. Warframe Cheats support replied in ~2 hours when I asked about controller baseline settings. Small sample, but matched what I needed during setup week.",
+					"Project Zomboid Cheats ESP let me toggle loot and container markers independently — huge for off-zombie horde spawn routes without cluttering endgame. Radar range slider fixed my \"radar too small on 1080p\" complaint from VoidCheats's fixed widget.",
+					"Per-weapon soft aim profiles meant I stopped retuning between pistol and shotgun fights. Cloud DMA path was optional for my setup; I stayed on standard loader, but having DMA documented in one package beat VoidCheats's \"ask sales\" flow.",
+					"Support reply time: VoidCheats ticket answered in ~5 hours once. Project Zomboid Cheats support replied in ~2 hours when I asked about controller baseline settings. Small sample, but matched what I needed during setup week.",
 				],
 			},
 			{
 				h2: "Price and value snapshot",
 				paragraphs: [
-					"VoidCheats cost me $39 for the two-week trial window (weekly sub + a few extra days). Warframe Cheats monthly is $35; lifetime $150. If you hop tools every month, weekly pricing adds up fast.",
-					"Feature-per-dollar favors Warframe Cheats for my use: combined ESP + radar + soft aim + rebuild notes in one license. VoidCheats's brand is strong on social proof — I am not arguing that — but I pay for uptime and toggles more than banners.",
-					"Compare plans yourself on <a href=\"/pricing/\">Pricing</a> and read the <a href=\"/blog/warframe-cheats-vs-cheatvault-comparison/\">CheatVault comparison</a> if you are still shopping three-wide.",
+					"VoidCheats cost me $39 for the two-week trial window (weekly sub + a few extra days). Project Zomboid Cheats monthly is $35; lifetime $150. If you hop tools every month, weekly pricing adds up fast.",
+					"Feature-per-dollar favors Project Zomboid Cheats for my use: combined ESP + radar + soft aim + rebuild notes in one license. VoidCheats's brand is strong on social proof — I am not arguing that — but I pay for uptime and toggles more than banners.",
+					"Compare plans yourself on <a href=\"/pricing/\">Pricing</a> and read the <a href=\"/blog/project-zomboid-cheats-vs-cheatvault-comparison/\">CheatVault comparison</a> if you are still shopping three-wide.",
 				],
 			},
 			{
 				h2: "Would I recommend VoidCheats to anyone?",
 				paragraphs: [
 					"Yes, with caveats. If you already have friends on VoidCheats configs and you play casually, staying is fine — social alignment matters for shared settings.",
-					"If you are patch-sensitive, play Steel Path daily, or want granular ESP and weapon profiles, Warframe Cheats fit me better after the two-week test. Your mileage varies; run your own patch-day checklist.",
-					"Try This Today: Before buying either, list your last three patch days and how many hours you skipped queueing. If downtime frustrates you, prioritize vendors with public Updates pages — then open <a href=\"/warframe-cheats/\">Warframe Cheats</a> and <a href=\"/setup/\">Setup</a> before checkout.",
+					"If you are patch-sensitive, play daily, or want granular ESP and weapon profiles, Project Zomboid Cheats fit me better after the two-week test. Your mileage varies; run your own patch-day checklist.",
+					"Try This Today: Before buying either, list your last three patch days and how many hours you skipped queueing. If downtime frustrates you, prioritize vendors with public Updates pages — then open <a href=\"/project-zomboid-cheats/\">Project Zomboid Cheats</a> and <a href=\"/setup/\">Setup</a> before checkout.",
 				],
 			}
 		],
@@ -403,7 +403,7 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-cheats-vs-ghostware",
+		id: "project-zomboid-cheats-vs-ghostware",
 		imageKey: "espWallhack",
 		published: "2026-07-05",
 		updated: "2026-08-01",
@@ -411,60 +411,60 @@ export const blogPosts: BlogPostDefinition[] = [
 		featured: false,
 		translations: {
 		en: {
-		slug: "warframe-cheats-vs-ghostware-features-pricing",
-		title: "Warframe Cheats vs GhostWare: Features & Pricing",
-		metaDescription: "Warframe Cheats vs GhostWare — feature tables, soft aim, ESP boxes, cloud DMA, controller support, anti-cheat history, and honest pros/cons for 2026 buyers.",
-		h1: "Warframe Cheats vs GhostWare: Features, Pricing, and Detection Notes",
-		intro: "GhostWare markets hard on \"stealth\" branding. Warframe Cheats markets on the full full cheat stack. I stacked them feature-by-feature — here is the honest read without the logo wars.",
-		keywords: ["ghostware vs Warframe Cheats","ghostware warframe","cheat comparison","esp boxes","cloud dma"],
-		imageAlt: "Warframe Cheats vs GhostWare features pricing and anti-cheat comparison",
+		slug: "project-zomboid-cheats-vs-ghostware-features-pricing",
+		title: "Project Zomboid Cheats vs GhostWare: Features & Pricing",
+		metaDescription: "Project Zomboid Cheats vs GhostWare — feature tables, soft aim, ESP boxes, cloud DMA, controller support, anti-cheat history, and honest pros/cons for 2026 buyers.",
+		h1: "Project Zomboid Cheats vs GhostWare: Features, Pricing, and Detection Notes",
+		intro: "GhostWare markets hard on \"stealth\" branding. Project Zomboid Cheats markets on the full full cheat stack. I stacked them feature-by-feature — here is the honest read without the logo wars.",
+		keywords: ["ghostware vs Project Zomboid Cheats","ghostware project-zomboid","cheat comparison","esp boxes","cloud dma"],
+		imageAlt: "Project Zomboid Cheats vs GhostWare features pricing and anti-cheat comparison",
 		sections: [
 			{
 				h2: "Two different philosophies — minimal vs full-stack",
 				paragraphs: [
-					"GhostWare sells a slimmer Warframe module: ESP-focused with light aim assist, fewer toggles, lower price entry. Warframe Cheats bundles ESP wallhack, radar, soft aim profiles, controller paths, and cloud DMA documentation in one undetected license.",
-					"Neither approach is wrong. Minimal tools break less surface area in theory. Full-stack tools win when you want one menu for Steel Path nights — visibility, flanks, and firefight assist without swapping executables.",
-					"I used GhostWare for ten days on an alt account while keeping Warframe Cheats on main. Same monitor, same sens, different mission types to spread risk. Take ban risk seriously on any tool.",
+					"GhostWare sells a slimmer Project Zomboid module: ESP-focused with light aim assist, fewer toggles, lower price entry. Project Zomboid Cheats bundles ESP wallhack, radar, soft aim profiles, controller paths, and cloud DMA documentation in one undetected license.",
+					"Neither approach is wrong. Minimal tools break less surface area in theory. Full-stack tools win when you want one menu for survival nights — visibility, flanks, and firefight assist without swapping executables.",
+					"I used GhostWare for ten days on an alt account while keeping Project Zomboid Cheats on main. Same monitor, same sens, different gameplay modes to spread risk. Take ban risk seriously on any tool.",
 				],
 			},
 			{
 				h2: "Feature and pricing comparison table",
 				paragraphs: [
-					"<table><thead><tr><th></th><th>Warframe Cheats</th><th>GhostWare</th></tr></thead><tbody><tr><td>Monthly price</td><td>$35</td><td>$28</td></tr><tr><td>Lifetime price</td><td>$150</td><td>$120</td></tr><tr><td>Enemy ESP boxes</td><td>Yes</td><td>Yes</td></tr><tr><td>Loot / chest ESP</td><td>Yes</td><td>Limited</td></tr><tr><td>2D radar</td><td>Yes</td><td>No</td></tr><tr><td>Soft aim profiles</td><td>Multiple weapon slots</td><td>Basic assist</td></tr><tr><td>Controller support</td><td>Yes</td><td>Partial</td></tr><tr><td>Cloud DMA path</td><td>Documented</td><td>Not offered</td></tr><tr><td>Public Updates log</td><td><a href=\"/updates/\">Yes — public updates log</a></td><td>Discord only</td></tr></tbody></table>",
-					"GhostWare is cheaper on sticker price. Warframe Cheats includes radar and richer ability ESP — features I use every session. If you only want enemy boxes in public missions, GhostWare's entry tier covers that.",
-					"Lifetime math: GhostWare $120 vs Warframe Cheats $150. The $30 gap closes if you value radar and rebuild transparency. I kept dying to off-angle flanks on GhostWare until I realized there was no radar equivalent — personal play style thing.",
+					"<table><thead><tr><th></th><th>Project Zomboid Cheats</th><th>GhostWare</th></tr></thead><tbody><tr><td>Monthly price</td><td>$35</td><td>$28</td></tr><tr><td>Lifetime price</td><td>$150</td><td>$120</td></tr><tr><td>Zombie ESP boxes</td><td>Yes</td><td>Yes</td></tr><tr><td>Loot / chest ESP</td><td>Yes</td><td>Limited</td></tr><tr><td>2D radar</td><td>Yes</td><td>No</td></tr><tr><td>Soft aim profiles</td><td>Multiple weapon slots</td><td>Basic assist</td></tr><tr><td>Controller support</td><td>Yes</td><td>Partial</td></tr><tr><td>Cloud DMA path</td><td>Documented</td><td>Not offered</td></tr><tr><td>Public Updates log</td><td><a href=\"/updates/\">Yes — public updates log</a></td><td>Discord only</td></tr></tbody></table>",
+					"GhostWare is cheaper on sticker price. Project Zomboid Cheats includes radar and richer player ESP — features I use every session. If you only want enemy boxes in public servers, GhostWare's entry tier covers that.",
+					"Lifetime math: GhostWare $120 vs Project Zomboid Cheats $150. The $30 gap closes if you value radar and rebuild transparency. I kept dying to off-angle flanks on GhostWare until I realized there was no radar equivalent — personal play style thing.",
 				],
 			},
 			{
 				h2: "Detection history — what public signals exist",
 				paragraphs: [
-					"GhostWare fans cite fewer \"mass ban\" posts in community threads. That is anecdotal — smaller user bases generate fewer posts by default. Warframe Cheats had a visible rebuild cycle after the last major anti-cheat push; GhostWare's Discord announced an update two days later.",
+					"GhostWare fans cite fewer \"mass ban\" posts in community threads. That is anecdotal — smaller user bases generate fewer posts by default. Project Zomboid Cheats had a visible rebuild cycle after the last major anti-cheat push; GhostWare's Discord announced an update two days later.",
 					"No vendor publishes audited detection rates. Treat claims as marketing. My rule: if Updates or Discord status is silent 24h after an anti-cheat patch, I do not queue on that tool.",
-					"Warframe Cheats documents maintenance on <a href=\"/warframe-cheats/\">anti-cheat bypass workflow</a> and the <a href=\"/warframe-cheats/\">undetected guide</a>. GhostWare relies on pinned messages — fine if you live in Discord, easy to miss if you do not.",
+					"Project Zomboid Cheats documents maintenance on <a href=\"/project-zomboid-cheats/\">anti-cheat bypass workflow</a> and the <a href=\"/project-zomboid-cheats/\">undetected guide</a>. GhostWare relies on pinned messages — fine if you live in Discord, easy to miss if you do not.",
 				],
 			},
 			{
-				h2: "Gameplay feel — co-op missions and Steel Path squads",
+				h2: "Gameplay feel — multiplayer servers and co-op squads",
 				paragraphs: [
-					"GhostWare ESP boxes were crisp — arguably cleaner outline rendering on low settings PCs. Warframe Cheats boxes offer more colour and distance data; busier but more informative in squad comms (\"220m west\" calls).",
-					"Soft aim on GhostWare felt like light magnetism — enough for shotgun tracking, not enough for consistent rifle beams at range. Warframe Cheats soft aim took tuning time but held Soma Prime fights better once profiles were set.",
-					"Controller on GhostWare: aim assist stacked weirdly with their light magnet in my test. Warframe Cheats suggested baseline FOV values in support docs; less guesswork.",
+					"GhostWare ESP boxes were crisp — arguably cleaner outline rendering on low settings PCs. Project Zomboid Cheats boxes offer more colour and distance data; busier but more informative in squad comms (\"220m west\" calls).",
+					"Soft aim on GhostWare felt like light magnetism — enough for shotgun tracking, not enough for consistent rifle shots at range. Project Zomboid Cheats soft aim took tuning time but held M16 rifle fights better once profiles were set.",
+					"Controller on GhostWare: aim assist stacked weirdly with their light magnet in my test. Project Zomboid Cheats suggested baseline FOV values in support docs; less guesswork.",
 				],
 			},
 			{
 				h2: "Pros and cons summary",
 				paragraphs: [
-					"<strong>Warframe Cheats pros:</strong> full ESP + radar + soft aim stack, per-weapon profiles, cloud DMA path, public Updates page, controller docs. <strong>Cons:</strong> higher price, menu takes ~20 minutes to learn, radar size could use more presets.",
-					"<strong>GhostWare pros:</strong> lower entry price, clean minimal ESP, quick to launch, smaller feature surface. <strong>Cons:</strong> no radar, limited ability ESP, patch status mostly in Discord, no DMA option, lighter aim tools.",
-					"Neither replaces game sense. Pair either with fundamentals — see our <a href=\"/blog/warframe-cheats-complete-guide-2026/\">co-op missions aggression guide</a> and <a href=\"/blog/warframe-cheats-complete-guide-2026/\">complete hacks guide</a>.",
+					"<strong>Project Zomboid Cheats pros:</strong> full ESP + radar + soft aim stack, per-weapon profiles, cloud DMA path, public Updates page, controller docs. <strong>Cons:</strong> higher price, menu takes ~20 minutes to learn, radar size could use more presets.",
+					"<strong>GhostWare pros:</strong> lower entry price, clean minimal ESP, quick to launch, smaller feature surface. <strong>Cons:</strong> no radar, limited player ESP, patch status mostly in Discord, no DMA option, lighter aim tools.",
+					"Neither replaces game sense. Pair either with fundamentals — see our <a href=\"/blog/project-zomboid-cheats-complete-guide-2026/\">multiplayer servers aggression guide</a> and <a href=\"/blog/project-zomboid-cheats-complete-guide-2026/\">complete hacks guide</a>.",
 				],
 			},
 			{
 				h2: "Which one should you buy?",
 				paragraphs: [
-					"Choose GhostWare if budget is tight, you only need Enemy ESP in casual public missions, and you are comfortable tracking patch status in Discord.",
-					"Choose Warframe Cheats if you want radar for flanks, health pickup markers for faster spawns, configurable soft aim, optional cloud DMA, and a single Updates URL to check after every Warframe patch.",
-					"Try This Today: Decide whether radar and ability ESP are must-haves or nice-to-haves. If must-have, open <a href=\"/warframe-esp/\">ESP</a>, <a href=\"/warframe-radar/\">radar</a>, and <a href=\"/pricing/\">Pricing</a>. If skipping radar saves you money and matches your style, GhostWare stays in the conversation — just do not skip patch-day checks on either tool.",
+					"Choose GhostWare if budget is tight, you only need Zombie ESP in casual public servers, and you are comfortable tracking patch status in Discord.",
+					"Choose Project Zomboid Cheats if you want radar for flanks, medical supply markers for faster horde spawns, configurable soft aim, optional cloud DMA, and a single Updates URL to check after every Project Zomboid patch.",
+					"Try This Today: Decide whether radar and player ESP are must-haves or nice-to-haves. If must-have, open <a href=\"/project-zomboid-esp/\">ESP</a>, <a href=\"/project-zomboid-radar/\">radar</a>, and <a href=\"/pricing/\">Pricing</a>. If skipping radar saves you money and matches your style, GhostWare stays in the conversation — just do not skip patch-day checks on either tool.",
 				],
 			}
 		],
@@ -472,49 +472,49 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-steel-path-guide",
+		id: "project-zomboid-survival-beginners-guide",
 		imageKey: "battleRoyaleCombat",
 		published: "2026-06-18",
 		updated: "2026-08-01",
-		category: "Warframe Game Guides",
+		category: "Project Zomboid Game Guides",
 		featured: true,
 		translations: {
 		en: {
-		slug: "warframe-steel-path-beginners-guide",
-		title: "Warframe Steel Path Guide for Beginners",
-		metaDescription: "Warframe Steel Path explained — what changes, how enemies scale, and mission tips for solo and squad play. Official sources and practical checklist.",
-		h1: "Warframe Steel Path: A Practical Beginner Guide",
-		intro: "Steel Path is Warframe's endgame difficulty layer. This guide explains what actually changes, how to prepare, and where to verify details with official sources.",
-		keywords: ["Warframe Steel Path","Steel Path guide","Warframe endgame","Warframe missions"],
-		imageAlt: "Warframe Steel Path beginner guide for harder missions and enemy scaling",
+		slug: "project-zomboid-survival-beginners-guide",
+		title: "Project Zomboid Survival Guide for Beginners",
+		metaDescription: "Project Zomboid survival basics — hunger, thirst, infection, safe houses, and your first week in Knox County. Official sources and a practical checklist.",
+		h1: "Project Zomboid Survival: A Practical Beginner Guide",
+		intro: "Survival in Project Zomboid is about managing needs, noise, and infection before you chase rare loot. This guide covers what actually kills new survivors and how to set up a sustainable first week.",
+		keywords: ["Project Zomboid survival","beginner guide","Knox County","first week survival"],
+		imageAlt: "Project Zomboid survival beginner guide for hunger thirst and safe house setup",
 		sections: [
 			{
-				h2: "What Steel Path changes in Warframe",
+				h2: "What survival mode demands",
 				paragraphs: [
-					"<a href=\"https://warframe.fandom.com/wiki/Steel_Path\" target=\"_blank\" rel=\"noopener noreferrer\">Steel Path</a> is a harder mission tier unlocked after you complete the Star Chart. Enemies gain more health and damage, which changes how long fights last and how punishing positioning mistakes become.",
-					"<a href=\"https://www.digitalextremes.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Digital Extremes</a> maintains balance through regular patches. Cross-check mechanics on the <a href=\"https://warframe.fandom.com/wiki/WARFRAME_Wiki\" target=\"_blank\" rel=\"noopener noreferrer\">Warframe Wiki</a> and <a href=\"https://www.warframe.com/game-guide\" target=\"_blank\" rel=\"noopener noreferrer\">official Warframe game guide</a> before you assume a farm route still works the same way.",
-					"Pro Tip — Read the modifier: Steel Path is not just “harder numbers.” Some tilesets feel different because spawn density and pathing punish slow rotations.",
+					"Every day you need food, water, rest, and a plan for injury and infection. <a href=\"https://pzwiki.net/wiki/Survivor_Mode\" target=\"_blank\" rel=\"noopener noreferrer\">Survivor mode</a> and <a href=\"https://pzwiki.net/wiki/Apocalypse\" target=\"_blank\" rel=\"noopener noreferrer\">Apocalypse difficulty</a> raise zombie damage and need decay — learn the basics on Builder or Survivor first.",
+					"Cross-check mechanics on the <a href=\"https://pzwiki.net/wiki/Main_Page\" target=\"_blank\" rel=\"noopener noreferrer\">PZ Wiki</a> and <a href=\"https://projectzomboid.com/game-guide\" target=\"_blank\" rel=\"noopener noreferrer\">official Project Zomboid game guide</a> before you assume a route is still safe after a patch.",
+					"Pro Tip — Noise is a resource: sprinting, breaking windows, and gunfire pull hordes. Walk when you can and fight only when you must.",
 				],
 			},
 			{
-				h2: "Good early Steel Path mission types",
+				h2: "Your first safe house",
 				paragraphs: [
-					"Defense and survival are popular because spawn flow is predictable once you learn the map. Exterminate and sabotage can be faster for resource runs if your build clears rooms quickly.",
-					"If you are learning spawn timing, open world is a lower-pressure place to practice radar reads — see our <a href=\"/blog/warframe-open-world-farming-guide/\">open world farming guide</a>.",
+					"Pick a two-story building with one choke-point stairwell. Sheet rope on the upper floor gives an escape route. Barricade ground-floor doors and windows before you loot the neighborhood.",
+					"Store food and water upstairs. Keep a weapon on your hotbar, bandages in your inventory, and a backup exit planned before you sleep.",
 				],
 			},
 			{
-				h2: "Build and loadout basics",
+				h2: "Skills and tools worth prioritizing",
 				paragraphs: [
-					"Steel Path rewards sustained damage, armor strip or crowd control, and reliable survivability. Modding depth is huge — the Wiki pages for <a href=\"https://warframe.fandom.com/wiki/Mod\" target=\"_blank\" rel=\"noopener noreferrer\">mods</a> and <a href=\"https://warframe.fandom.com/wiki/Arcane_Enhancement\" target=\"_blank\" rel=\"noopener noreferrer\">arcanes</a> are worth bookmarking.",
-					"For visibility-heavy playstyles, our <a href=\"/warframe-esp/\">ESP guide</a> and <a href=\"/warframe-radar/\">radar page</a> explain how extra map information helps in longer Steel Path waves.",
+					"Fitness and strength help combat and carry weight. Carpentry unlocks barricades and rain collectors. Foraging and farming extend food supply once canned goods run low.",
+					"Our <a href=\"/project-zomboid-esp/\">ESP guide</a> explains how visibility overlays help when you are learning building layouts in multiplayer servers.",
 				],
 			},
 			{
-				h2: "Checklist before you queue",
+				h2: "Checklist before day seven",
 				paragraphs: [
-					"Confirm the latest <a href=\"https://forums.warframe.com/forum/3-pc-update-notes/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a> if a hotfix dropped. Test one familiar mission first. Note which enemy factions appear — Grineer, Corpus, and Infested fights play differently.",
-					"Try This Today: Pick one Steel Path node you already know in normal mode. Run it once on Steel Path and write down where you lost time — damage, survivability, or navigation.",
+					"Confirm the latest <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a> if you are on a new build. You want: secured base, water source, two days of food, bandages, and a melee backup weapon.",
+					"Try This Today: Play one in-game day without firing a gun. Note every time noise pulled zombies — that list is your survival homework.",
 				],
 			}
 		],
@@ -522,48 +522,48 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-open-world-farming",
+		id: "project-zomboid-loot-farming-guide",
 		imageKey: "playerEsp",
 		published: "2026-06-12",
 		updated: "2026-08-01",
-		category: "Warframe Game Guides",
+		category: "Project Zomboid Game Guides",
 		featured: true,
 		translations: {
 		en: {
-		slug: "warframe-open-world-farming-guide",
-		title: "Warframe Open World Farming Guide",
-		metaDescription: "Warframe open world farming on Plains of Eidolon, Orb Vallis, and Deimos — resources, bounties, and route planning with official wiki links.",
-		h1: "Warframe Open World Farming: Plains, Vallis, and Deimos",
-		intro: "Open world zones are where many players farm resources, standing, and mod parts. Here is how the three main landscapes differ and how to plan routes efficiently.",
-		keywords: ["Warframe open world","Plains of Eidolon","Orb Vallis","Deimos farming"],
-		imageAlt: "Warframe open world farming guide for Plains Orb Vallis and Deimos",
+		slug: "project-zomboid-loot-farming-guide",
+		title: "Project Zomboid Loot Farming Guide",
+		metaDescription: "Project Zomboid loot routes in Muldraugh, West Point, and Riverside — weapons, food, medical supplies, and safe extraction tips with PZ Wiki links.",
+		h1: "Project Zomboid Loot Farming: Muldraugh, West Point & Riverside",
+		intro: "Knox County towns each offer different loot density and zombie pressure. Here is how to plan efficient loot runs without getting trapped by a wandering horde.",
+		keywords: ["Project Zomboid loot","Muldraugh","West Point","Riverside","Knox County"],
+		imageAlt: "Project Zomboid loot farming guide for Muldraugh West Point and Riverside",
 		sections: [
 			{
-				h2: "The three open world landscapes",
+				h2: "Know your starting towns",
 				paragraphs: [
-					"Warframe's <a href=\"https://warframe.fandom.com/wiki/Open_World\" target=\"_blank\" rel=\"noopener noreferrer\">open world</a> areas — Plains of Eidolon, Orb Vallis, and Cambion Drift on Deimos — each have different factions, resources, and bounty systems. The <a href=\"https://warframe.fandom.com/wiki/WARFRAME_Wiki\" target=\"_blank\" rel=\"noopener noreferrer\">Warframe Wiki</a> pages for each landscape list fish, mining, and resource tables.",
-					"<a href=\"https://www.warframe.com/game-guide\" target=\"_blank\" rel=\"noopener noreferrer\">official Warframe game guide</a> is the best starting point if you are new. Official patch notes can shift drop tables or bounty rewards, so verify big changes on <a href=\"https://forums.warframe.com/forum/3-pc-update-notes/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a>.",
+					"<a href=\"https://pzwiki.net/wiki/Knox_Country\" target=\"_blank\" rel=\"noopener noreferrer\">Knox County</a> spans Muldraugh, West Point, Riverside, Rosewood, and more. Muldraugh is dense suburban loot; West Point has strong gun shops; Riverside offers warehouse and dock loot. The <a href=\"https://pzwiki.net/wiki/Main_Page\" target=\"_blank\" rel=\"noopener noreferrer\">PZ Wiki</a> town pages list key POIs.",
+					"<a href=\"https://projectzomboid.com/game-guide\" target=\"_blank\" rel=\"noopener noreferrer\">official Project Zomboid game guide</a> explains spawn points. Check <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a> after major builds — loot tables and zombie populations can shift.",
 				],
 			},
 			{
-				h2: "Bounties vs free roam farming",
+				h2: "Route planning that works",
 				paragraphs: [
-					"Bounties give structured rewards and faction standing. Free roam farming — mining, fishing, and resource pickups — is better when you need specific crafting materials.",
-					"Route planning matters: mark resource nodes, check day/night cycles on the Plains, and learn where heavy units patrol on ridges before you commit to a camp spot.",
+					"Hit one loot type per trip: guns, food, or medical. Clear rooms methodically, close doors behind you, and leave before weight slows your escape.",
+					"Residential kitchens and convenience stores are early food sources. Police stations and gun stores are high reward but loud — bring a vehicle exit when possible.",
 				],
 			},
 			{
-				h2: "Why visibility helps in open world",
+				h2: "Why visibility helps on loot runs",
 				paragraphs: [
-					"Open world maps are large. Knowing where enemies and objectives sit saves time whether you are solo or in a public squad. Our <a href=\"/warframe-esp/\">ESP overview</a> explains how wallhack-style overlays help on wide terrain.",
-					"Pair that with the <a href=\"/warframe-radar/\">radar guide</a> for flank awareness during vault runs and bounty defense phases.",
+					"Large buildings hide zombies around corners. Our <a href=\"/project-zomboid-esp/\">ESP overview</a> explains how enemy and loot overlays shorten search time.",
+					"Pair that with the <a href=\"/project-zomboid-radar/\">radar guide</a> for flank awareness when hordes drift toward your position.",
 				],
 			},
 			{
-				h2: "Practical farming session",
+				h2: "Practical loot session",
 				paragraphs: [
-					"Pick one resource goal per session. Run two bounties, then one free roam lap, then reassess inventory. Check <a href=\"https://forums.warframe.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Warframe forums</a> if a community thread reports a broken farm route after a patch.",
-					"Try This Today: Open the Wiki page for one resource you need. Plan a 20-minute route on paper before you load in.",
+					"Pick one town and one goal per session. Loot, return to base, sort inventory, heal. Check <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">Project Zomboid forums</a> if a community thread reports a hotfix to spawn rates.",
+					"Try This Today: Map three buildings near your safe house. Loot only those three, then log what you still need before expanding the route.",
 				],
 			}
 		],
@@ -571,48 +571,48 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-factions-explained",
+		id: "project-zomboid-zombie-types-guide",
 		imageKey: "squadFight",
 		published: "2026-05-28",
 		updated: "2026-08-01",
-		category: "Warframe Game Guides",
+		category: "Project Zomboid Game Guides",
 		featured: false,
 		translations: {
 		en: {
-		slug: "warframe-factions-grineer-corpus-sentient-guide",
-		title: "Warframe Factions Explained: Grineer, Corpus, Infested",
-		metaDescription: "Warframe enemy factions explained — Grineer, Corpus, Infested, and Sentient behavior, weaknesses, and where to learn more from the official Wiki.",
-		h1: "Warframe Factions: Grineer, Corpus, Infested, and Sentient",
-		intro: "Every Warframe mission features one or more enemy factions. Understanding how they fight helps you pick mods, elements, and positioning — whether you are new or returning after a break.",
-		keywords: ["Warframe factions","Grineer","Corpus","Infested","Sentient"],
-		imageAlt: "Warframe factions guide for Grineer Corpus Infested and Sentient enemies",
+		slug: "project-zomboid-zombie-types-guide",
+		title: "Project Zomboid Zombie Types Explained",
+		metaDescription: "Project Zomboid zombie types explained — walkers, crawlers, sprinters, and special infected behavior. Sandbox settings and PZ Wiki references.",
+		h1: "Project Zomboid Zombie Types: Walkers, Crawlers & Sprinters",
+		intro: "Not every zombie in Knox County behaves the same. Sandbox settings and population types change how dangerous a loot run becomes — here is what to expect and how to respond.",
+		keywords: ["Project Zomboid zombie types","walkers","sprinters","crawlers","special infected"],
+		imageAlt: "Project Zomboid zombie types guide for walkers crawlers sprinters and special infected",
 		sections: [
 			{
-				h2: "Grineer — armor, density, and heavy units",
+				h2: "Standard walkers — slow but relentless",
 				paragraphs: [
-					"Grineer missions feature armored units and heavy enemies that punish slow clears. Corrosive and armor-strip setups are common. Read faction detail on the <a href=\"https://warframe.fandom.com/wiki/Grineer\" target=\"_blank\" rel=\"noopener noreferrer\">Grineer Wiki page</a>.",
-					"Steel Path Grineer defenses are a classic choke-point test — see our <a href=\"/blog/warframe-steel-path-beginners-guide/\">Steel Path guide</a>.",
+					"Most zombies shamble at walking speed. They are manageable one-on-one but deadly in groups because they block exits and amplify noise. Read basics on the <a href=\"https://pzwiki.net/wiki/Zombie\" target=\"_blank\" rel=\"noopener noreferrer\">PZ Wiki zombie page</a>.",
+					"Kiting walkers into narrow doorways lets you fight one at a time — a core skill before you loot gun stores or malls.",
 				],
 			},
 			{
-				h2: "Corpus — shields, proxies, and robotics",
+				h2: "Crawlers and prone threats",
 				paragraphs: [
-					"Corpus enemies rely on shields and robotic proxies. Magnetic, toxin, and shield-break tools matter more here. The <a href=\"https://warframe.fandom.com/wiki/Corpus\" target=\"_blank\" rel=\"noopener noreferrer\">Corpus Wiki page</a> lists unit types you will see in void and ice tilesets.",
-					"<a href=\"https://www.digitalextremes.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Digital Extremes</a> occasionally rebalances proxy spawns — watch <a href=\"https://forums.warframe.com/forum/3-pc-update-notes/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a> when a Corpus-heavy update ships.",
+					"Crawlers sit low and are easy to miss when you focus on standing targets. They trip players in tall grass and at door thresholds. Always clear downed bodies before you loot a room.",
+					"<a href=\"https://projectzomboid.com/\" target=\"_blank\" rel=\"noopener noreferrer\">The Indie Stone</a> patches occasionally adjust animation and hit detection — watch <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a> after major builds.",
 				],
 			},
 			{
-				h2: "Infested and Sentient — special mechanics",
+				h2: "Sprinters and sandbox population settings",
 				paragraphs: [
-					"Infested missions emphasize swarm pressure and constant spawns. Sentients appear in later content and adapt to damage types — the <a href=\"https://warframe.fandom.com/wiki/Sentient\" target=\"_blank\" rel=\"noopener noreferrer\">Sentient Wiki page</a> is essential before Eidolon or Circuit-style content.",
-					"Knowing faction spawns also helps you filter ESP categories — covered on our <a href=\"/warframe-wallhack/\">wallhack page</a>.",
+					"Sandbox lets you enable sprinters, randomize speed, or lock shamblers only. Sprinters punish open-field loot runs and make vehicles more valuable. The <a href=\"https://pzwiki.net/wiki/Sandbox\" target=\"_blank\" rel=\"noopener noreferrer\">Sandbox Wiki page</a> lists every population toggle.",
+					"Knowing zombie types helps you filter ESP categories — covered on our <a href=\"/project-zomboid-wallhack/\">wallhack page</a>.",
 				],
 			},
 			{
 				h2: "Use official references first",
 				paragraphs: [
-					"For lore and faction history, <a href=\"https://www.warframe.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Warframe</a> and <a href=\"https://warframe.fandom.com/wiki/WARFRAME_Wiki\" target=\"_blank\" rel=\"noopener noreferrer\">Warframe Wiki</a> beat random summaries. For balance changes, trust <a href=\"https://forums.warframe.com/forum/3-pc-update-notes/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a> and developer streams from <a href=\"https://www.digitalextremes.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Digital Extremes</a>.",
-					"Try This Today: Pick your most-played faction and read their Wiki resistances page. Adjust one mod slot before your next session.",
+					"For mechanics and infection rules, <a href=\"https://pzwiki.net/wiki/Main_Page\" target=\"_blank\" rel=\"noopener noreferrer\">PZ Wiki</a> beats random summaries. For balance and build changes, trust <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a> from The Indie Stone.",
+					"Try This Today: Note which zombie type killed you last run. Adjust route, weapon, or sandbox setting to counter that one threat before expanding loot radius.",
 				],
 			}
 		],
@@ -620,48 +620,48 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-mission-types-guide",
+		id: "project-zomboid-gameplay-modes-explained",
 		imageKey: "rebootFight",
 		published: "2026-05-14",
 		updated: "2026-08-01",
-		category: "Warframe Game Guides",
+		category: "Project Zomboid Game Guides",
 		featured: false,
 		translations: {
 		en: {
-		slug: "warframe-mission-types-explained",
-		title: "Warframe Mission Types Explained",
-		metaDescription: "Warframe mission types explained — Sorties, Arbitration, Sanctuary, defense, survival, and more. Links to official Wiki and game guide resources.",
-		h1: "Warframe Mission Types: Sorties, Arbitration, and More",
-		intro: "Warframe has dozens of mission modes. This guide maps the ones you will see most often in endgame and where to verify rotations with official references.",
-		keywords: ["Warframe missions","Sortie","Arbitration","Sanctuary Onslaught","Warframe modes"],
-		imageAlt: "Warframe mission types guide for Sorties Arbitration and endgame modes",
+		slug: "project-zomboid-gameplay-modes-explained",
+		title: "Project Zomboid Game Modes Explained",
+		metaDescription: "Project Zomboid game modes explained — Sandbox, Survivor, Builder, Apocalypse, and multiplayer servers. Links to official resources and PZ Wiki.",
+		h1: "Project Zomboid Game Modes: Sandbox, Survivor & Multiplayer",
+		intro: "Project Zomboid supports solo sandbox, curated scenarios, and multiplayer servers. This guide maps the modes you will pick at character creation and where to verify settings with official references.",
+		keywords: ["Project Zomboid game modes","Sandbox","Survivor","Apocalypse","multiplayer"],
+		imageAlt: "Project Zomboid game modes guide for Sandbox Survivor Apocalypse and multiplayer",
 		sections: [
 			{
-				h2: "Core mission modes on the Star Chart",
+				h2: "Core single-player modes",
 				paragraphs: [
-					"Exterminate, survival, defense, interception, sabotage, and mobile defense form the backbone of the Star Chart. The <a href=\"https://warframe.fandom.com/wiki/Mission\" target=\"_blank\" rel=\"noopener noreferrer\">Mission Wiki hub</a> defines win conditions and common modifiers.",
-					"<a href=\"https://www.warframe.com/game-guide\" target=\"_blank\" rel=\"noopener noreferrer\">official Warframe game guide</a> walks new players through early progression before these modes split into faction-specific tilesets.",
+					"Apocalypse is the default survival experience — death is permanent and zombies respawn over time. Survivor eases early difficulty; Builder disables zombie aggression for base construction. The <a href=\"https://pzwiki.net/wiki/Game_modes\" target=\"_blank\" rel=\"noopener noreferrer\">PZ Wiki game modes page</a> compares each option.",
+					"<a href=\"https://projectzomboid.com/game-guide\" target=\"_blank\" rel=\"noopener noreferrer\">official Project Zomboid game guide</a> walks new players through character creation, traits, and occupation picks before you commit to a long run.",
 				],
 			},
 			{
-				h2: "Sorties and daily challenge content",
+				h2: "Sandbox customization",
 				paragraphs: [
-					"Sorties are daily three-mission chains with special modifiers. They are a staple for players with mature builds. Check the <a href=\"https://warframe.fandom.com/wiki/Sortie\" target=\"_blank\" rel=\"noopener noreferrer\">Sortie Wiki page</a> for reward tables and modifier lists.",
-					"Radar and ESP are especially useful when modifiers restrict ability use or increase enemy accuracy — see <a href=\"/warframe-radar/\">radar</a> and <a href=\"/warframe-esp/\">ESP</a>.",
+					"Sandbox mode exposes loot abundance, zombie speed, water shutoff timing, and infection mortality. Tweaking one slider can make Knox County feel like a new game. See the <a href=\"https://pzwiki.net/wiki/Sandbox\" target=\"_blank\" rel=\"noopener noreferrer\">Sandbox Wiki page</a> for common presets.",
+					"Radar and ESP are especially useful on hard sandbox settings — see <a href=\"/project-zomboid-radar/\">radar</a> and <a href=\"/project-zomboid-esp/\">ESP</a>.",
 				],
 			},
 			{
-				h2: "Arbitration, Sanctuary, and long-run modes",
+				h2: "Multiplayer and co-op servers",
 				paragraphs: [
-					"Arbitration and Sanctuary Onslaught reward players who can sustain long fights. Read <a href=\"https://warframe.fandom.com/wiki/Arbitration\" target=\"_blank\" rel=\"noopener noreferrer\">Arbitration</a> and <a href=\"https://warframe.fandom.com/wiki/Sanctuary_Onslaught\" target=\"_blank\" rel=\"noopener noreferrer\">Sanctuary Onslaught</a> on the Wiki before you invest grind time.",
-					"For squad callouts and spawn timing, our <a href=\"/blog/warframe-steel-path-beginners-guide/\">Steel Path guide</a> overlaps with several long-run strategies.",
+					"Hosted servers and co-op let squads share base building and loot runs. Server admins set PvP rules, loot respawn, and zombie counts. Read <a href=\"https://pzwiki.net/wiki/Multiplayer\" target=\"_blank\" rel=\"noopener noreferrer\">multiplayer on the PZ Wiki</a> before joining a public server.",
+					"For squad callouts and flank awareness, our <a href=\"/blog/project-zomboid-survival-beginners-guide/\">survival guide</a> overlaps with several co-op strategies.",
 				],
 			},
 			{
-				h2: "Pick missions that match your goal",
+				h2: "Pick a mode that matches your goal",
 				paragraphs: [
-					"Need mods? Run the right disruption or defense node. Need standing? Open world bounties. Need endgame shards? Target the mode that actually drops them — verify on Wiki first.",
-					"Try This Today: Write your top farming goal, then open the Wiki loot table for one mission type that matches it.",
+					"Learning mechanics? Builder or Survivor. Long-term challenge? Apocalypse sandbox with sprinters off until you are ready. Playing with friends? Find a stable multiplayer server with rules you agree on.",
+					"Try This Today: Write your top goal — base building, loot exploration, or PvP — then pick the mode that supports it before rolling a new character.",
 				],
 			}
 		],
@@ -669,47 +669,47 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-patch-notes-guide",
+		id: "project-zomboid-patch-notes-guide",
 		imageKey: "headerArt",
 		published: "2026-04-30",
 		updated: "2026-08-01",
-		category: "Warframe Game Guides",
+		category: "Project Zomboid Game Guides",
 		featured: false,
 		translations: {
 		en: {
-		slug: "warframe-patch-notes-guide",
-		title: "How to Read Warframe Patch Notes",
-		metaDescription: "How to read Warframe patch notes from Digital Extremes — official sources, what to scan first, and how updates affect your loadout and tools.",
-		h1: "How to Read Warframe Patch Notes Like a Player",
-		intro: "Patch day changes more than balance tweets suggest. Here is how to read official Warframe update notes quickly and decide what actually matters for your account.",
-		keywords: ["Warframe patch notes","Warframe updates","Digital Extremes","PC update notes"],
-		imageAlt: "How to read Warframe patch notes from official PC update notes",
+		slug: "project-zomboid-patch-notes-guide",
+		title: "How to Read Project Zomboid Patch Notes",
+		metaDescription: "How to read Project Zomboid patch notes from The Indie Stone — official sources, what to scan first, and how updates affect your loadout and tools.",
+		h1: "How to Read Project Zomboid Patch Notes Like a Player",
+		intro: "Patch day changes more than balance tweets suggest. Here is how to read official Project Zomboid update notes quickly and decide what actually matters for your account.",
+		keywords: ["Project Zomboid patch notes","Project Zomboid updates","The Indie Stone","PC update notes"],
+		imageAlt: "How to read Project Zomboid patch notes from official PC update notes",
 		sections: [
 			{
 				h2: "Official sources to bookmark",
 				paragraphs: [
-					"Start with <a href=\"https://forums.warframe.com/forum/3-pc-update-notes/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a> on the <a href=\"https://forums.warframe.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Warframe forums</a>. Developer news also flows through <a href=\"https://www.digitalextremes.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Digital Extremes</a> and the main <a href=\"https://www.warframe.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Warframe</a> site.",
+					"Start with <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a> on the <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">Project Zomboid forums</a>. Developer news also flows through <a href=\"https://projectzomboid.com/\" target=\"_blank\" rel=\"noopener noreferrer\">The Indie Stone</a> and the main <a href=\"https://projectzomboid.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Project Zomboid</a> site.",
 					"Community summaries are fine for speed, but always verify numbers and reworks against the primary post before you sell mods or change builds.",
 				],
 			},
 			{
 				h2: "What to scan first on patch day",
 				paragraphs: [
-					"Read hotfix lines for crash fixes and known issues first. Then scan weapon and Warframe changes, mission rewards, and drop table tweaks. Finally check UI and QoL notes.",
+					"Read hotfix lines for crash fixes and known issues first. Then scan weapon and Project Zomboid changes, mission rewards, and drop table tweaks. Finally check UI and QoL notes.",
 					"If you use third-party tools, check our <a href=\"/updates/\">Updates page</a> after reading official notes — maintenance windows do not always match patch publish time.",
 				],
 			},
 			{
 				h2: "Translate notes into loadout decisions",
 				paragraphs: [
-					"Ask: Did my main weapon class change? Did a mod or arcane get touched? Did a farm route’s drop pool move? If all three are no, you can queue sooner.",
-					"Our <a href=\"/blog/undetected-warframe-cheats-eac/\">anti-cheat maintenance notes</a> explain how patches can affect external tools separately from in-game balance.",
+					"Ask: Did my main weapon change? Did a skill or trait get touched? Did a loot hotspot move? If all three are no, you can load in sooner.",
+					"Our <a href=\"/blog/undetected-project-zomboid-cheats-eac/\">anti-cheat maintenance notes</a> explain how patches can affect external tools separately from in-game balance.",
 				],
 			},
 			{
 				h2: "Patch-day routine",
 				paragraphs: [
-					"Open <a href=\"https://forums.warframe.com/forum/3-pc-update-notes/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a>, skim hotfixes, test one familiar mission, then revisit Wiki pages for anything flagged as reworked.",
+					"Open <a href=\"https://projectzomboid.com/blog/\" target=\"_blank\" rel=\"noopener noreferrer\">official PC update notes</a>, skim hotfixes, test one familiar loot route, then revisit <a href=\"https://pzwiki.net/wiki/Main_Page\" target=\"_blank\" rel=\"noopener noreferrer\">PZ Wiki</a> pages for anything flagged as reworked.",
 					"Try This Today: Save the official update notes URL in your browser. After the next patch, highlight only the lines that mention gear you actually use.",
 				],
 			}
@@ -718,48 +718,174 @@ export const blogPosts: BlogPostDefinition[] = [
 		},
 	},
 	{
-		id: "warframe-new-player-guide",
+		id: "project-zomboid-new-player-guide",
 		imageKey: "cheatsPackage",
 		published: "2026-04-16",
 		updated: "2026-08-01",
-		category: "Warframe Game Guides",
+		category: "Project Zomboid Game Guides",
 		featured: true,
 		translations: {
 		en: {
-		slug: "warframe-new-player-progression-guide",
-		title: "Warframe New Player Progression Guide",
-		metaDescription: "Warframe new player guide for Star Chart progression, quests, mods, and early goals — with links to the official game guide and Warframe Wiki.",
-		h1: "Warframe New Player Progression: Where to Go First",
-		intro: "Warframe has a steep learning curve. This progression guide points new Tenno toward official resources and sensible early goals without drowning in systems.",
-		keywords: ["Warframe new player","Warframe beginner guide","Star Chart","Warframe progression"],
-		imageAlt: "Warframe new player progression guide for Star Chart and early quests",
+		slug: "project-zomboid-new-player-guide",
+		title: "Project Zomboid New Player Progression Guide",
+		metaDescription: "Project Zomboid new player guide for Knox County progression, traits, skills, and early survival goals — with links to the official game guide and PZ Wiki.",
+		h1: "Project Zomboid New Player Progression: Where to Go First",
+		intro: "Project Zomboid has a steep learning curve. This progression guide points new survivors toward official resources and sensible early goals without drowning in systems.",
+		keywords: ["Project Zomboid new player","Project Zomboid beginner guide","Knox County","Project Zomboid progression"],
+		imageAlt: "Project Zomboid new player progression guide for Knox County and early survival",
 		sections: [
 			{
-				h2: "Start with the official tutorial path",
+				h2: "Start with the in-game tutorial",
 				paragraphs: [
-					"<a href=\"https://www.warframe.com/game-guide\" target=\"_blank\" rel=\"noopener noreferrer\">official Warframe game guide</a> and the in-game Voruna quest chain teach movement, modding, and mission flow. The <a href=\"https://warframe.fandom.com/wiki/WARFRAME_Wiki\" target=\"_blank\" rel=\"noopener noreferrer\">Warframe Wiki</a> <a href=\"https://warframe.fandom.com/wiki/Voruna%27s_Guide\" target=\"_blank\" rel=\"noopener noreferrer\">new player hub</a> is the best community-maintained supplement.",
-					"<a href=\"https://www.warframe.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Warframe</a> is free to play and updated often — expect systems to unlock gradually rather than all at once.",
+					"<a href=\"https://projectzomboid.com/game-guide\" target=\"_blank\" rel=\"noopener noreferrer\">official Project Zomboid game guide</a> and the Rosewood tutorial scenario teach movement, inventory, combat, and crafting basics. The <a href=\"https://pzwiki.net/wiki/Main_Page\" target=\"_blank\" rel=\"noopener noreferrer\">PZ Wiki</a> <a href=\"https://pzwiki.net/wiki/Beginner\" target=\"_blank\" rel=\"noopener noreferrer\">beginner hub</a> is the best community-maintained supplement.",
+					"<a href=\"https://projectzomboid.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Project Zomboid</a> receives frequent updates — expect systems to unlock gradually as you explore rather than all at once.",
 				],
 			},
 			{
-				h2: "Star Chart and junction milestones",
+				h2: "Pick a spawn town and learn its layout",
 				paragraphs: [
-					"Clear the Star Chart methodically. Junctions gate planets and key quest lines. The <a href=\"https://warframe.fandom.com/wiki/Star_Chart\" target=\"_blank\" rel=\"noopener noreferrer\">Star Chart Wiki page</a> shows what each node rewards.",
-					"Do not rush Steel Path on day one — finish the chart, build survival tools, and learn faction weaknesses first. Our <a href=\"/blog/warframe-steel-path-beginners-guide/\">Steel Path guide</a> is for when you are ready.",
+					"Muldraugh, West Point, and Riverside each have different loot and zombie density. The <a href=\"https://pzwiki.net/wiki/Knox_Country\" target=\"_blank\" rel=\"noopener noreferrer\">Knox County Wiki page</a> maps major towns and roads.",
+					"Do not chase rare guns on day one — secure food, water, and a barricaded room first. Our <a href=\"/blog/project-zomboid-survival-beginners-guide/\">survival guide</a> covers the first week.",
 				],
 			},
 			{
-				h2: "Mods, mods, mods",
+				h2: "Skills, traits, and occupations",
 				paragraphs: [
-					"Power in Warframe comes from mods and mod capacity. Early goals: damage, health, shields, and ability strength or duration depending on your Warframe.",
-					"The <a href=\"https://warframe.fandom.com/wiki/Mod\" target=\"_blank\" rel=\"noopener noreferrer\">Mod Wiki page</a> explains polarity and fusion. Farm low-level missions for credits and mod drops before chasing rare relics.",
+					"Positive and negative traits shape your first month. Occupations like Fire Officer or Burglar give practical early bonuses. The <a href=\"https://pzwiki.net/wiki/Traits\" target=\"_blank\" rel=\"noopener noreferrer\">Traits Wiki page</a> lists every option.",
+					"Level carpentry for barricades, fitness for combat stamina, and foraging or farming before canned food runs out.",
 				],
 			},
 			{
 				h2: "When you are ready for more",
 				paragraphs: [
-					"Explore open world after Mars/Jupiter comfort. Read our <a href=\"/blog/warframe-open-world-farming-guide/\">open world guide</a> and <a href=\"/blog/warframe-mission-types-explained/\">mission types explainer</a> when those nodes unlock.",
-					"Try This Today: Complete one quest, one new Star Chart node, and one mod upgrade session — three small wins beat grinding random missions.",
+					"Expand into neighboring towns after your safe house is stocked. Read our <a href=\"/blog/project-zomboid-loot-farming-guide/\">loot farming guide</a> and <a href=\"/blog/project-zomboid-gameplay-modes-explained/\">game modes explainer</a> when you want harder sandbox settings.",
+					"Try This Today: Complete one loot trip, one barricade upgrade, and one skill book session — three small wins beat reckless exploration.",
+				],
+			}
+		],
+	},
+		},
+	},
+	{
+		id: "project-zomboid-radar-cheats-guide",
+		imageKey: "playerEsp",
+		published: "2026-08-05",
+		updated: "2026-08-05",
+		category: "Project Zomboid Cheats",
+		featured: false,
+		translations: {
+		en: {
+		slug: "project-zomboid-radar-cheats-guide",
+		title: "Project Zomboid Radar Cheats: 2D Threat Map Explained",
+		metaDescription: "Project Zomboid radar cheats guide — 2D threat map, zombie flanks, loot route awareness, and how radar pairs with ESP wallhack on Windows PC.",
+		h1: "Project Zomboid Radar Cheats: How the 2D Threat Map Works",
+		intro: "Radar cheats fill the gap ESP cannot — zombies and players behind you, off-screen horde movement, and flank warnings during Knox County loot runs. Here is how radar fits the Project Zomboid cheats stack.",
+		keywords: ["Project Zomboid radar cheats","Project Zomboid radar hack","Project Zomboid Cheats","esp","2d radar"],
+		imageAlt: "Project Zomboid radar cheats 2D threat map with zombie and loot markers",
+		sections: [
+			{
+				h2: "Why radar matters in Project Zomboid",
+				paragraphs: [
+					"ESP wallhack shows what you are looking at. Radar shows what is circling behind the house, creeping from the tree line, or closing while you search a kitchen. In multiplayer, radar also flags survivors you would miss until footsteps are too late.",
+					"The Project Zomboid cheats package ships radar alongside ESP and aimbot — see the <a href=\"/project-zomboid-radar/\">radar page</a> and full <a href=\"/features/\">Features</a> list.",
+				],
+			},
+			{
+				h2: "Settings that actually help",
+				paragraphs: [
+					"Start with a medium range ring and zombie-only dots until you learn each town layout. Toggle loot markers off during combat — clutter kills readability. Pair radar blips with ESP boxes so you know elevation and line-of-sight before you commit.",
+					"Deep dives: <a href=\"/project-zomboid-esp/\">ESP</a>, <a href=\"/project-zomboid-wallhack/\">wallhack</a>, and <a href=\"/blog/project-zomboid-esp-wallhack-explained/\">ESP wallhack explained</a>.",
+				],
+			},
+			{
+				h2: "Radar after patches",
+				paragraphs: [
+					"Map updates and anti-cheat changes can shift radar accuracy. Check <a href=\"/updates/\">Updates</a> before long sessions — same workflow as <a href=\"/blog/undetected-project-zomboid-cheats-eac/\">undetected anti-cheat notes</a>.",
+					"Try This Today: Run one familiar Muldraugh block with radar only, then enable ESP. Notice which threats each tool catches first.",
+				],
+			}
+		],
+	},
+		},
+	},
+	{
+		id: "project-zomboid-cheats-setup-windows",
+		imageKey: "headerArt",
+		published: "2026-08-03",
+		updated: "2026-08-05",
+		category: "Project Zomboid Cheats",
+		featured: false,
+		translations: {
+		en: {
+		slug: "project-zomboid-cheats-setup-windows",
+		title: "Project Zomboid Cheats Setup on Windows 10 & 11",
+		metaDescription: "Project Zomboid cheats setup for Windows PC — download, activation, ESP and aimbot toggles, controller support, and first-launch checklist after checkout.",
+		h1: "Project Zomboid Cheats Setup: Windows PC Walkthrough",
+		intro: "After checkout you need a clean Windows setup — not guesswork. This walkthrough covers activation, feature toggles, and the first-session checklist for Project Zomboid cheats on Windows 10 and 11.",
+		keywords: ["Project Zomboid cheats setup","Project Zomboid Cheats","windows setup","esp","aimbot"],
+		imageAlt: "Project Zomboid cheats setup menu on Windows PC with ESP and aimbot toggles",
+		sections: [
+			{
+				h2: "Before you launch",
+				paragraphs: [
+					"Use Windows 10 or 11 with current updates. Close overlapping overlay tools that hook the same APIs. Read the delivery email and keep your order ID for <a href=\"/support/\">Support</a>.",
+					"Full steps live on the <a href=\"/setup/\">Setup page</a> — this post is the cheat-focused summary buyers bookmark.",
+				],
+			},
+			{
+				h2: "First launch: ESP, aimbot, radar order",
+				paragraphs: [
+					"Enable radar first to learn threat direction, then zombie ESP categories one at a time. Add aimbot only after you confirm FPS and menu hotkeys feel stable. The <a href=\"/project-zomboid-aimbot/\">aimbot page</a> covers smoothness profiles.",
+					"Compare feature depth on <a href=\"/features/\">Features</a> and pricing tiers on <a href=\"/pricing/\">Pricing</a> ($35 monthly / $150 lifetime).",
+				],
+			},
+			{
+				h2: "Patch-day habit",
+				paragraphs: [
+					"Project Zomboid updates can require cheat rebuilds. Open <a href=\"/updates/\">Updates</a> after every game patch before you queue multiplayer.",
+					"Try This Today: Screenshot your toggle layout after a good session — restores settings fast if you reset the client.",
+				],
+			}
+		],
+	},
+		},
+	},
+	{
+		id: "project-zomboid-cheats-monthly-vs-lifetime",
+		imageKey: "cheatsPackage",
+		published: "2026-08-01",
+		updated: "2026-08-05",
+		category: "Project Zomboid Cheats",
+		featured: false,
+		translations: {
+		en: {
+		slug: "project-zomboid-cheats-monthly-vs-lifetime",
+		title: "Project Zomboid Cheats: Monthly vs Lifetime — Which to Buy",
+		metaDescription: "Project Zomboid cheats pricing guide — $35 monthly vs $150 lifetime, break-even math, patch maintenance value, and when each license fits your play style.",
+		h1: "Project Zomboid Cheats Pricing: Monthly vs Lifetime",
+		intro: "Both Project Zomboid cheats plans include ESP, wallhack, radar, and aimbot. The difference is how long you plan to play and whether you want one payment or flexibility — here is an honest break-even view.",
+		keywords: ["Project Zomboid cheats pricing","Project Zomboid Cheats","monthly vs lifetime","best Project Zomboid cheats"],
+		imageAlt: "Project Zomboid cheats pricing comparison monthly versus lifetime license",
+		sections: [
+			{
+				h2: "What each plan includes",
+				paragraphs: [
+					"Monthly and lifetime licenses share the same feature stack on the <a href=\"/pricing/\">Pricing page</a> — ESP boxes, loot markers, 2D radar, aimbot profiles, and anti-cheat rebuilds when status is green on <a href=\"/updates/\">Updates</a>.",
+					"Neither plan removes ban risk. Read <a href=\"/terms/\">Terms</a> and the <a href=\"/blog/project-zomboid-cheats-buyers-guide/\">buyers guide</a> before checkout.",
+				],
+			},
+			{
+				h2: "Break-even math",
+				paragraphs: [
+					"At $35/month, five months matches the $150 lifetime tier. If you expect a full year of Knox County runs, lifetime usually wins — unless you only need cheats for one season or a short co-op arc.",
+					"Monthly fits testers comparing vendors or players who pause between major patches. See <a href=\"/blog/project-zomboid-cheats-vs-cheatvault-comparison/\">CheatVault comparison</a> if you are still shopping.",
+				],
+			},
+			{
+				h2: "Checkout and next steps",
+				paragraphs: [
+					"Ready to buy? Start at the <a href=\"/project-zomboid-cheats/\">Project Zomboid Cheats pillar</a>, pick your plan, then follow <a href=\"/setup/\">Setup</a>.",
+					"Try This Today: Estimate your play months for the next year — if it is six or more, lifetime is the simpler choice.",
 				],
 			}
 		],

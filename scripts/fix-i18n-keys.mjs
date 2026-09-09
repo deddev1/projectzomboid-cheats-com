@@ -8,19 +8,19 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.resolve(ROOT, '..', 'amansand');
 
 const UI_REPLACEMENTS = [
-	['Warzone Cheats', 'Warframe Cheats'],
-	['Warzone cheats', 'Warframe cheats'],
-	['Warzone Cheats', 'Warframe Cheats'],
-	['Call of Duty: Warzone', 'Warframe'],
-	['Call of Duty Warzone', 'Warframe'],
-	['Call of Duty', 'Warframe'],
-	['Warzone PC', 'Warframe PC'],
-	['for Warzone', 'for Warframe'],
-	['Warzone ', 'Warframe '],
+	['Warzone Cheats', 'Project Zomboid Cheats'],
+	['Warzone cheats', 'Project Zomboid cheats'],
+	['Warzone Cheats', 'Project Zomboid Cheats'],
+	['Call of Duty: Warzone', 'Project Zomboid'],
+	['Call of Duty Warzone', 'Project Zomboid'],
+	['Call of Duty', 'Project Zomboid'],
+	['Warzone PC', 'Project Zomboid PC'],
+	['for Warzone', 'for Project Zomboid'],
+	['Warzone ', 'Project Zomboid '],
 	['warzone ', 'rust '],
 	['Ricochet maintenance', 'anti-cheat maintenance'],
-	['Ricochet anti-cheat', 'Digital Extremes anti-cheat (EAC)'],
-	['Ricochet', 'Digital Extremes anti-cheat (EAC)'],
+	['Ricochet anti-cheat', 'Project Zomboid anti-cheat (EAC)'],
+	['Ricochet', 'Project Zomboid anti-cheat (EAC)'],
 	['operatorEsp', 'playerEsp'],
 	['gulagFight', 'rebootFight'],
 	['alMazrah', 'battleRoyaleIsland'],
@@ -28,14 +28,14 @@ const UI_REPLACEMENTS = [
 	['operator', 'player'],
 	['Operators', 'Players'],
 	['Operator', 'Player'],
-	['Al Mazrah', 'Warframe'],
-	['Verdansk', 'Warframe'],
-	['Resurgence', 'mission objectives'],
+	['Al Mazrah', 'Project Zomboid'],
+	['Verdansk', 'Project Zomboid'],
+	['Resurgence', 'loot objectives'],
 	['gulag', 'control point'],
-	['warzonescheats.net', 'warframecheats.net'],
-	['Trucos Warzone', 'Trucos Warframe'],
-	['Triches Warzone', 'Triches Warframe'],
-	['Cheats Warzone', 'Cheats Warframe'],
+	['warzonescheats.net', 'projectzomboidcheats.com'],
+	['Trucos Warzone', 'Trucos Project Zomboid'],
+	['Triches Warzone', 'Triches Project Zomboid'],
+	['Cheats Warzone', 'Cheats Project Zomboid'],
 ];
 
 function apply(content) {
@@ -55,8 +55,8 @@ for (const file of ['ui-strings-part1.mjs', 'ui-strings-part2.mjs']) {
 // Fix pages-en eac key
 let pagesEn = await readFile(path.join(ROOT, 'scripts/i18n-data/pages-en.mjs'), 'utf8');
 pagesEn = pagesEn.replace(/\teac: \{/, "\t'eac-bypass': {");
-pagesEn = pagesEn.replace(/Warframe Warzone/g, 'Warframe');
-pagesEn = pagesEn.replace(/for Warframe Warzone/g, 'for Warframe');
+pagesEn = pagesEn.replace(/Project Zomboid Warzone/g, 'Project Zomboid');
+pagesEn = pagesEn.replace(/for Project Zomboid Warzone/g, 'for Project Zomboid');
 await writeFile(path.join(ROOT, 'scripts/i18n-data/pages-en.mjs'), pagesEn);
 
 // Fix pages-i18n

@@ -3,8 +3,8 @@ Allow: /
 Allow: /images/
 
 # Primary sitemap (lists all 23 sub-sitemaps: English + 21 locales + images):
-#   https://warframecheats.net/sitemap-index.xml
+#   https://projectzomboidcheats.com/sitemap-index.xml
 # English-only shortcut:
-#   https://warframecheats.net/sitemap.xml
-Sitemap: https://warframecheats.net/sitemap-index.xml
-Sitemap: https://warframecheats.net/sitemap.xml
+#   https://projectzomboidcheats.com/sitemap.xml
+Sitemap: https://projectzomboidcheats.com/sitemap-index.xml
+Sitemap: https://projectzomboidcheats.com/sitemap.xml

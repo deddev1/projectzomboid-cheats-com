@@ -30,7 +30,7 @@ async function resolveDistRoot() {
 		'Could not find sitemap.xml in dist/ or dist/client/. Run `astro build` first.',
 	);
 }
-const SITE = 'https://warframecheats.net';
+const SITE = 'https://projectzomboidcheats.com';
 
 const MARKETING_SITEMAP_PAGES = 15;
 const BUILT_MARKETING_PAGES = 25; // thin landings still built; 301 to canonical URLs
@@ -47,15 +47,15 @@ const TOTAL_HTML_PAGES = BUILT_ENGLISH_PAGES + LOCALE_UI_PAGES + EXTERNAL_GUIDE_
 const HREFLANG_PER_URL = 23; // 22 locales + x-default
 const SITEMAP_INDEX_ENTRIES = 23; // English + 21 locales + images
 const I18N_SITEMAP_URLS = I18N_LOCALES * PAGES_PER_LOCALE;
-const IMAGE_SITEMAP_ENTRIES = 11; // all warframeImages.sitemap screenshots
+const IMAGE_SITEMAP_ENTRIES = 11; // all zomboidImages.sitemap screenshots
 
 const ENGLISH_PATHS = [
 	'/',
-	'/warframe-cheats/',
-	'/warframe-esp/',
-	'/warframe-aimbot/',
-	'/warframe-wallhack/',
-	'/warframe-radar/',
+	'/project-zomboid-cheats/',
+	'/project-zomboid-esp/',
+	'/project-zomboid-aimbot/',
+	'/project-zomboid-wallhack/',
+	'/project-zomboid-radar/',
 	'/features/',
 	'/pricing/',
 	'/setup/',
@@ -319,17 +319,17 @@ async function main() {
 		bump();
 	}
 
-	const warframeCheats = path.join(DIST, 'warframe-cheats', 'index.html');
+	const project-zomboidCheats = path.join(DIST, 'project-zomboid-cheats', 'index.html');
 	try {
-		const cheatsStat = await stat(warframeCheats);
+		const cheatsStat = await stat(project-zomboidCheats);
 		if (cheatsStat.size < 2000) {
-			fail(`/warframe-cheats/ built as redirect stub (${cheatsStat.size} bytes)`);
+			fail(`/project-zomboid-cheats/ built as redirect stub (${cheatsStat.size} bytes)`);
 			bump();
 		} else {
-			ok(`/warframe-cheats/ builds as live pillar page (${cheatsStat.size} bytes)`);
+			ok(`/project-zomboid-cheats/ builds as live pillar page (${cheatsStat.size} bytes)`);
 		}
 	} catch {
-		fail('Missing /warframe-cheats/index.html — pillar page not built');
+		fail('Missing /project-zomboid-cheats/index.html — pillar page not built');
 		bump();
 	}
 

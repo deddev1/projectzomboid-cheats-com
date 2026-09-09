@@ -1,0 +1,42 @@
+---
+import type { PageId } from '../data/i18n/content.generated';
+import { siteConfig } from '../data/site';
+import { wingmanConfig } from '../data/wingman';
+
+interface Props {
+	pageId?: PageId;
+}
+
+const { pageId } = Astro.props;
+---
+
+<div
+	class="wingman"
+	data-wingman
+	data-page-id={pageId ?? ''}
+	aria-live="polite"
+	hidden
+>
+	<div class="wingman__stage">
+		<a
+			class="wingman__character-wrap"
+			href={siteConfig.checkoutUrl}
+			rel="noopener noreferrer"
+			data-wingman-link
+			data-wingman-character
+			aria-label="Get Project Zomboid Cheats"
+		>
+			<p class="wingman__tagline" data-wingman-message>{wingmanConfig.message}</p>
+			<img
+				class="wingman__character"
+				src="/images/zomboid-wingman.webp"
+				alt=""
+				width="480"
+				height="480"
+				loading="lazy"
+				decoding="async"
+				fetchpriority="low"
+			/>
+		</a>
+	</div>
+</div>

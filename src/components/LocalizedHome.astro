@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
-import BreadcrumbBar from '../components/BreadcrumbBar.astro';
 import PricingPlans from '../components/PricingPlans.astro';
 import PricingFeatureList from '../components/PricingFeatureList.astro';
 import Gallery from '../components/Gallery.astro';
@@ -16,11 +15,11 @@ import { getLocaleContent, getPageContent } from '../data/i18n';
 import { getCanonicalPath, getLocalizedPath } from '../data/i18n/routing';
 import type { LocaleCode } from '../data/i18n/locales';
 import { defaultLocale } from '../data/i18n/locales';
-import { homeFaqs, productInfo, siteConfig, customerReviewStats, customerReviews } from '../data/site';
-import { warframeImages } from '../data/warframe';
+import { homeFaqs, siteConfig } from '../data/site';
+import { zomboidImages } from '../data/zomboid';
 import {
-	buildAggregateOffer,
 	buildFaqSchemaNode,
+	buildSiteProductSchema,
 	buildSoftwareApplicationSchema,
 } from '../data/schema';
 import { heroPreloadSrc, heroSizes, heroSrcSet, heroIsExternal } from '../lib/responsive-images';
@@ -38,51 +37,20 @@ const description = home.description;
 /** SEO consolidates to English; locale routes remain for UX. */
 const canonicalPath = getCanonicalPath('home', locale);
 const canonicalURL = new URL(canonicalPath, siteConfig.url).href;
-const heroImage = new URL(warframeImages.hero, siteConfig.url).href;
+const heroImage = new URL(zomboidImages.hero, siteConfig.url).href;
 
-const extraGraph: Record<string, unknown>[] =
-	locale === defaultLocale
-		? [
-	{
-		'@type': 'Product',
-		'@id': `${canonicalURL}#product`,
-		name: productInfo.name,
-		description: productInfo.summary,
-		image: heroImage,
-		brand: { '@type': 'Brand', name: productInfo.brand },
-		url: canonicalURL,
-		offers: buildAggregateOffer(canonicalURL),
-		aggregateRating: {
-			'@type': 'AggregateRating',
-			ratingValue: customerReviewStats.averageRating.toFixed(1),
-			reviewCount: customerReviewStats.totalCount,
-			bestRating: '5',
-			worstRating: '1',
-		},
-		review: customerReviews.map((review) => ({
-			'@type': 'Review',
-			author: { '@type': 'Person', name: review.handle },
-			datePublished: review.date,
-			reviewRating: {
-				'@type': 'Rating',
-				ratingValue: String(review.rating),
-				bestRating: '5',
-				worstRating: '1',
-			},
-			reviewBody: review.text,
-		})),
-	},
+const extraGraph: Record<string, unknown>[] = [
+	buildSiteProductSchema(heroImage),
 	buildSoftwareApplicationSchema(canonicalURL, heroImage),
 	buildFaqSchemaNode(canonicalURL, homeFaqs),
-]
-		: [];
+];
 ---
 
 <Layout
 	title={title}
 	description={description}
 	canonicalPath={canonicalPath}
-	ogImage={siteConfig.defaultOgImage}
+	ogImage={zomboidImages.hero}
 	ogImageAlt={home.imageAlt}
 	locale={locale}
 	pageId="home"
@@ -104,10 +72,6 @@ const extraGraph: Record<string, unknown>[] =
 		<section class="site__section site__section--trust">
 			<TrustBar locale={locale} />
 		</section>
-		<BreadcrumbBar
-			locale={locale}
-			items={[{ label: ui.product.title }]}
-		/>
 		<section class="site__section site__section--store" id="store" aria-label={ui.product.title}>
 			<div class="shell store-stack">
 				<PricingPlans locale={locale} showRelatedPages={false} showPageTitle={false} />
@@ -155,7 +119,11 @@ const extraGraph: Record<string, unknown>[] =
 	}
 
 	.site__section--trust {
-		padding-block: 0.25rem 0.4rem;
+		position: relative;
+		z-index: 5;
+		padding-block: 0;
+		margin-top: -2.75rem;
+		background: transparent;
 	}
 
 	.site__section--gallery {
@@ -172,6 +140,10 @@ const extraGraph: Record<string, unknown>[] =
 	@media (max-width: 760px) {
 		.site__section--store {
 			contain-intrinsic-size: 1px 900px;
+		}
+
+		.site__section--trust {
+			margin-top: -2rem;
 		}
 	}
 

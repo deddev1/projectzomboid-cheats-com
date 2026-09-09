@@ -1,5 +1,5 @@
 ---
-import { warframeImages } from '../data/warframe';
+import { zomboidImages } from '../data/zomboid';
 import { getGalleryUi } from '../data/i18n/gallery-ui';
 import { localizeInternalHref } from '../data/i18n/routing';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
@@ -13,7 +13,7 @@ interface Props {
 const locale = Astro.props.locale ?? defaultLocale;
 const gallery = getGalleryUi(locale);
 
-const slides = warframeImages.gallery.map((image) => ({
+const slides = zomboidImages.gallery.map((image) => ({
 	src: contentSrc(image.src),
 	srcset: contentSrcSet(image.src),
 	alt: image.alt,
@@ -23,15 +23,22 @@ const slides = warframeImages.gallery.map((image) => ({
 const marqueeSlides = [...slides, ...slides];
 
 function galleryLinkLabel(href: string, src: string): string {
+	if (src.includes('bBeheXR')) return 'Cheat menu UI shot';
+	if (src.includes('download%20(1)')) return 'ESP overlay shot';
+	if (src.includes('download.jpg')) return 'Client panel shot';
+	if (src.includes('images%20(1)')) return 'Street combat gameplay';
+	if (src.includes('images%20(2)')) return 'Horde defense gameplay';
+	if (src.includes('images%20(3)')) return 'Loot run gameplay';
+	if (src.includes('images%20(4)')) return 'Hero survivor vs horde';
 	const file = src.match(/\/([^/]+?)(?:-\d+w)?\.webp$/)?.[1] ?? '';
 	const labels: Record<string, string> = {
-		'warframe-cheats-main-menu': 'Main menu shot',
-		'warframe-esp-wallhack-overlay': 'ESP overlay shot',
-		'warframe-esp-enemy-boxes': 'ESP boxes shot',
-		'warframe-sortie-aimbot-combat': 'Aimbot combat shot',
-		'warframe-cheats-settings-panel': 'Settings panel shot',
-		'warframe-radar-hack-minimap': 'Radar minimap shot',
-		'warframe-cheats-combat-esp': 'Combat ESP shot',
+		'project-zomboid-cheats-main-menu': 'Main menu shot',
+		'project-zomboid-esp-wallhack-overlay': 'ESP overlay shot',
+		'project-zomboid-esp-enemy-boxes': 'ESP boxes shot',
+		'project-zomboid-sortie-aimbot-combat': 'Aimbot combat shot',
+		'project-zomboid-cheats-settings-panel': 'Settings panel shot',
+		'project-zomboid-radar-hack-minimap': 'Radar minimap shot',
+		'project-zomboid-cheats-combat-esp': 'Combat ESP shot',
 	};
 	if (labels[file]) return labels[file];
 	const slug = href.replace(/^\/|\/$/g, '').split('/').pop() ?? 'page';
@@ -47,7 +54,7 @@ function galleryLinkLabel(href: string, src: string): string {
 	</header>
 
 	<div class="gallery__layout">
-		<div class="gallery__marquee" aria-label="Warframe cheats image gallery">
+		<div class="gallery__marquee" aria-label="Project Zomboid cheats image gallery">
 			<div class="gallery__marquee-track">
 				{
 					marqueeSlides.map((slide, index) => (

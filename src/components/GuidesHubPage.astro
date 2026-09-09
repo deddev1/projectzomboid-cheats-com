@@ -6,26 +6,26 @@ import { siteConfig } from '../data/site';
 import {
 	absoluteGuideUrl,
 	getMixedExternalGuides,
-	getNativeWarframeGuides,
+	getNativeZomboidGuides,
 	guidesBasePath,
 } from '../data/guides/helpers';
-import WarframeAuthorityLinks from './WarframeAuthorityLinks.astro';
+import ZomboidAuthorityLinks from './ZomboidAuthorityLinks.astro';
 import { getLocalizedPath } from '../data/i18n/routing';
 import { defaultLocale } from '../data/i18n/locales';
 
 const locale = defaultLocale;
-const nativeGuides = getNativeWarframeGuides();
+const nativeGuides = getNativeZomboidGuides();
 const externalGuides = getMixedExternalGuides();
 const homeHref = getLocalizedPath('home', locale);
 
 function nativeGuideLabel(title: string): string {
-	const trimmed = title.replace(/^Warframe\s+/i, '').trim();
+	const trimmed = title.replace(/^Project Zomboid\s+/i, '').trim();
 	return trimmed.length <= 38 ? trimmed : `${trimmed.slice(0, 35).trimEnd()}…`;
 }
 
-const title = 'Game Guides Hub | Warframe & Multi-Game Cheats Guides';
+const title = 'Project Zomboid Guides Hub | Survival, Loot & Cheats Tips';
 const description =
-	'Warframe progression guides plus dedicated cheat setup guides for Fortnite, Tarkov, Valorant, Palworld, and dozens more titles.';
+	'Native Project Zomboid guides covering survival basics, Knox County loot routes, zombie types, game modes, patch notes, and cheat feature walkthroughs.';
 
 const canonicalURL = absoluteGuideUrl();
 
@@ -54,17 +54,18 @@ const extraGraph = [
 	<main class="guides">
 		<header class="guides__hero">
 			<p class="guides__eyebrow">Guides hub</p>
-			<h1>Game guides</h1>
+			<h1>Project Zomboid guides</h1>
 			<p class="guides__intro">
-				Start with our native Warframe progression guides, then browse dedicated cheat setup guides for other
-				titles below.
+				Survival walkthroughs, loot routes, zombie types, and patch-day checklists — everything on this hub is
+				written for Project Zomboid players.
 			</p>
 		</header>
 
 		<section class="guides__section guides__section--native" aria-labelledby="native-guides-title">
-			<h2 id="native-guides-title" class="guides__section-title">Warframe guides</h2>
+			<h2 id="native-guides-title" class="guides__section-title">All guides</h2>
 			<p class="guides__section-intro">
-				Our primary guides covering Steel Path, open world farming, factions, mission types, and patch notes.
+				Start with new-player progression, then dive into loot farming, zombie behavior, game modes, and how to
+				read official patch notes.
 			</p>
 			<div class="guides__grid">
 		{
@@ -79,7 +80,7 @@ const extraGraph = [
 						decoding="async"
 					/>
 					<div class="guides__card-body">
-						<span class="guides__cat">Warframe</span>
+						<span class="guides__cat">Project Zomboid</span>
 						<h3 class="guides__card-title">
 							<a href={post.canonicalPath}>{nativeGuideLabel(post.translation.title)}</a>
 						</h3>
@@ -90,7 +91,7 @@ const extraGraph = [
 		}
 			</div>
 
-			<WarframeAuthorityLinks headingLevel="h3" />
+			<ZomboidAuthorityLinks headingLevel="h3" />
 		</section>
 
 		{
@@ -141,7 +142,7 @@ const extraGraph = [
 
 	.guides__eyebrow {
 		margin: 0 0 0.5rem;
-		color: #20bfc0;
+		color: #d2ae76;
 		font-size: 0.75rem;
 		font-weight: 700;
 		letter-spacing: 0.08em;
@@ -168,7 +169,7 @@ const extraGraph = [
 
 	.guides__section--external {
 		padding-top: 2rem;
-		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		border-top: 1px solid rgba(104, 112, 82, 0.22);
 	}
 
 	.guides__section-title {
@@ -194,18 +195,21 @@ const extraGraph = [
 		display: flex;
 		flex-direction: column;
 		border-radius: 0.95rem;
-		border: 1px solid rgba(32, 191, 192, 0.14);
-		background: rgba(20, 24, 30, 0.88);
+		border: 1px solid rgba(104, 112, 82, 0.18);
+		background: linear-gradient(145deg, rgba(23, 27, 26, 0.92) 0%, rgba(17, 21, 20, 0.88) 100%);
 		overflow: hidden;
 		color: inherit;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 		transition:
 			border-color 0.2s ease,
-			transform 0.2s ease;
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
 	}
 
 	.guides__card:hover {
-		border-color: rgba(32, 191, 192, 0.38);
+		border-color: rgba(210, 174, 118, 0.4);
 		transform: translateY(-2px);
+		box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
 	}
 
 	.guides__card img {
@@ -221,7 +225,7 @@ const extraGraph = [
 	}
 
 	.guides__cat {
-		color: #20bfc0;
+		color: #d2ae76;
 		font-size: 0.68rem;
 		font-weight: 800;
 		letter-spacing: 0.06em;
@@ -242,7 +246,7 @@ const extraGraph = [
 	}
 
 	.guides__card-title a:hover {
-		color: #20bfc0;
+		color: #d2ae76;
 	}
 
 	.guides__card-body p:not(.guides__card-title) {

@@ -1,0 +1,46 @@
+---
+/** Inspira UI Floating Card — 3D tilt speech panel (https://inspira-ui.com/docs/en/components/cards/floating-card) */
+interface Props {
+	class?: string;
+	/** Optional tilt intensity 0–1 */
+	tilt?: number;
+}
+
+const { class: className, tilt = 0.35 } = Astro.props;
+const classes = ['inspira-float-card', className].filter(Boolean).join(' ');
+---
+
+<div class={classes} data-inspira-float-card data-tilt={tilt}>
+	<div class="inspira-float-card__glare" aria-hidden="true"></div>
+	<div class="inspira-float-card__content">
+		<slot />
+	</div>
+</div>
+
+<style>
+	.inspira-float-card {
+		position: relative;
+		transform-style: preserve-3d;
+		transform: perspective(900px) rotateX(var(--float-rx, 0deg)) rotateY(var(--float-ry, 0deg));
+		transition: transform 0.15s ease-out;
+	}
+
+	.inspira-float-card__content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.inspira-float-card__glare {
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		background: radial-gradient(
+			circle at var(--glare-x, 50%) var(--glare-y, 20%),
+			rgba(210, 174, 118, 0.22),
+			transparent 55%
+		);
+		opacity: 0.85;
+		pointer-events: none;
+		transition: opacity 0.2s ease;
+	}
+</style>

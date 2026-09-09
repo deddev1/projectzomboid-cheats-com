@@ -1,5 +1,5 @@
 import { siteConfig } from './site';
-import { warframeImages } from './warframe';
+import { zomboidImages } from './zomboid';
 import { englishPaths, sitemapPageIds, type PageId } from './i18n/routing';
 import { pageSitemapMeta } from './sitemap-meta';
 
@@ -28,58 +28,58 @@ const img = (path: string, title: string, caption: string): SitemapImage => ({
 /** Sitemap image assignments for indexable pages only (see sitemapPageIds in routing.ts). */
 const sitemapImagesByPageId: Partial<Record<PageId, SitemapImage[]>> = {
 	home: [
-		img(warframeImages.hero, 'Warframe Cheats', 'Warframe Cheats homepage hero'),
-		img(warframeImages.espWallhack, 'Warframe ESP', 'Warframe ESP wallhack overlay'),
-		img(warframeImages.aimbotCombat, 'Warframe Aimbot', 'Warframe Aimbot combat preview'),
+		img(zomboidImages.hero, 'Project Zomboid Cheats', 'Project Zomboid Cheats homepage hero'),
+		img(zomboidImages.espWallhack, 'Project Zomboid ESP', 'Project Zomboid ESP wallhack overlay'),
+		img(zomboidImages.aimbotCombat, 'Project Zomboid Aimbot', 'Project Zomboid Aimbot combat preview'),
 	],
 	hacks: [
-		img(warframeImages.battleRoyaleCombat, 'Warframe Cheats', 'Warframe cheats Steel Path mission fight preview'),
-		img(warframeImages.espWallhack, 'Warframe Cheats ESP', 'Warframe wallhack ESP on Grineer, Corpus, and Sentient units'),
+		img(zomboidImages.battleRoyaleCombat, 'Project Zomboid Cheats', 'Project Zomboid cheats survival run fight preview'),
+		img(zomboidImages.espWallhack, 'Project Zomboid Cheats ESP', 'Project Zomboid wallhack ESP on zombies, survivors, and special infected'),
 	],
-	'warframe-esp': [
-		img(warframeImages.espWallhack, 'Warframe ESP', 'Warframe ESP wallhack overlay'),
-		img(warframeImages.playerEsp, 'Warframe Enemy ESP', 'Warframe Enemy ESP markers'),
+	'project-zomboid-esp': [
+		img(zomboidImages.espWallhack, 'Project Zomboid ESP', 'Project Zomboid ESP wallhack overlay'),
+		img(zomboidImages.playerEsp, 'Project Zomboid Zombie ESP', 'Project Zomboid Zombie ESP markers'),
 	],
-	'warframe-aimbot': [
-		img(warframeImages.aimbotCombat, 'Warframe Aimbot', 'Warframe Aimbot combat preview'),
-		img(warframeImages.squadFight, 'Warframe Aimbot squad fight', 'Warframe Aimbot in squad combat'),
+	'project-zomboid-aimbot': [
+		img(zomboidImages.aimbotCombat, 'Project Zomboid Aimbot', 'Project Zomboid Aimbot combat preview'),
+		img(zomboidImages.squadFight, 'Project Zomboid Aimbot group fight', 'Project Zomboid Aimbot in squad combat'),
 	],
 	wallhack: [
-		img(warframeImages.espWallhack, 'Warframe Wallhack', 'Warframe wallhack ESP view'),
-		img(warframeImages.cover, 'Warframe Wallhack overlay', 'Warframe ESP boxes through terrain'),
+		img(zomboidImages.espWallhack, 'Project Zomboid Wallhack', 'Project Zomboid wallhack ESP view'),
+		img(zomboidImages.cover, 'Project Zomboid Wallhack overlay', 'Project Zomboid ESP boxes through terrain'),
 	],
 	radar: [
-		img(warframeImages.radarHack, 'Warframe Radar Hack', 'Warframe radar hack minimap overlay'),
-		img(warframeImages.rebootFight, 'Warframe Radar Hack overlay', 'Warframe 2D radar for flank detection'),
+		img(zomboidImages.radarHack, 'Project Zomboid Radar Hack', 'Project Zomboid radar hack minimap overlay'),
+		img(zomboidImages.rebootFight, 'Project Zomboid Radar Hack overlay', 'Project Zomboid 2D radar for flank detection'),
 	],
 	features: [
-		img(warframeImages.hero, 'Warframe Cheats Features', 'Warframe Cheats feature overview'),
-		img(warframeImages.loadoutBuilder, 'Warframe Cheats menu', 'Warframe Cheats in-client controls'),
+		img(zomboidImages.loadoutBuilder, 'Project Zomboid Cheats Features', 'Project Zomboid Cheats feature overview'),
+		img(zomboidImages.cheatsPackage, 'Project Zomboid Cheats menu', 'Project Zomboid Cheats in-client controls'),
 	],
 	pricing: [
-		img(warframeImages.cover, 'Warframe Cheats Pricing', 'Warframe Cheats license plans'),
-		img(warframeImages.cheatsPackage, 'Warframe Cheats package', 'Warframe Cheats product package'),
+		img(zomboidImages.cover, 'Project Zomboid Cheats Pricing', 'Project Zomboid Cheats license plans'),
+		img(zomboidImages.cheatsPackage, 'Project Zomboid Cheats package', 'Project Zomboid Cheats product package'),
 	],
 	setup: [
-		img(warframeImages.squadFight, 'Warframe Cheats Setup', 'Warframe Cheats installation guide'),
+		img(zomboidImages.squadFight, 'Project Zomboid Cheats Setup', 'Project Zomboid Cheats installation guide'),
 	],
 	updates: [
-		img(warframeImages.hero, 'Warframe Cheats Updates', 'Warframe Cheats patch status'),
+		img(zomboidImages.headerArt, 'Project Zomboid Cheats Updates', 'Project Zomboid Cheats patch status'),
 	],
 	faq: [
-		img(warframeImages.loadoutBuilder, 'Warframe Cheats FAQ', 'Warframe Cheats frequently asked questions'),
+		img(zomboidImages.loadoutBuilder, 'Project Zomboid Cheats FAQ', 'Project Zomboid Cheats frequently asked questions'),
 	],
 	support: [
-		img(warframeImages.headerArt, 'Warframe Cheats Support', 'Warframe Cheats help center'),
+		img(zomboidImages.headerArt, 'Project Zomboid Cheats Support', 'Project Zomboid Cheats help center'),
 	],
 	privacy: [
-		img(warframeImages.cover, 'Warframe Cheats Privacy Policy', 'Warframe Cheats privacy policy'),
+		img(zomboidImages.cover, 'Project Zomboid Cheats Privacy Policy', 'Project Zomboid Cheats privacy policy'),
 	],
 	refund: [
-		img(warframeImages.cover, 'Warframe Cheats Refund Policy', 'Warframe Cheats refund policy'),
+		img(zomboidImages.cover, 'Project Zomboid Cheats Refund Policy', 'Project Zomboid Cheats refund policy'),
 	],
 	terms: [
-		img(warframeImages.squadFight, 'Warframe Cheats Terms', 'Warframe Cheats terms of use'),
+		img(zomboidImages.squadFight, 'Project Zomboid Cheats Terms', 'Project Zomboid Cheats terms of use'),
 	],
 };
 
@@ -89,7 +89,7 @@ for (const pageId of sitemapPageIds) {
 	}
 }
 
-/** Canonical English sitemap entries — core warframe-cheats URLs only. */
+/** Canonical English sitemap entries — core project-zomboid-cheats URLs only. */
 export const pageSitemapEntries: PageSitemapEntry[] = sitemapPageIds.map((pageId) => {
 	const meta = pageSitemapMeta[pageId];
 	return {
@@ -102,7 +102,7 @@ export const pageSitemapEntries: PageSitemapEntry[] = sitemapPageIds.map((pageId
 });
 
 /** Unique keyword images for the dedicated image sitemap. */
-export const imageSitemapEntries: SitemapImage[] = warframeImages.sitemap.map((entry) =>
+export const imageSitemapEntries: SitemapImage[] = zomboidImages.sitemap.map((entry) =>
 	img(entry.src, entry.title, entry.caption),
 );
 
